@@ -1,0 +1,17 @@
+
+.\$page-title-section {
+  height: 320px;
+  position: relative;
+
+  .\@text {
+    @include overlay(3, transparent);
+    h1 {
+      font-size: 4rem;
+      color: white;
+    }
+  }
+
+  .\@overlay {
+    @include overlay(1, rgba(black, 0.35));
+  }
+}

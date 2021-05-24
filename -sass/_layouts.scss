@@ -1,0 +1,116 @@
+
+/* Configuration
+============================ */
+@import "bootstrap5/functions";
+@import "bootstrap5/variables";
+// Prevent the usage of custom properties since we don't add them to `:root` in reboot
+$font-family-base: $font-family-sans-serif; // stylelint-disable-line scss/dollar-variable-default
+$font-family-code: $font-family-monospace; // stylelint-disable-line scss/dollar-variable-default
+@import "bootstrap5/mixins";
+@import "bootstrap5/utilities";
+
+
+/* Normalization/browser enhancement
+=========================================== */
+@import "bootstrap5/vendor/rfs";
+@import "bootstrap5/reboot";
+
+
+/* Grid
+============================ */
+
+$include-column-box-sizing: true !default;
+@import "bootstrap5/grid";
+
+
+/* Base components
+=============================== */
+@import "bootstrap5/containers";
+@import "bootstrap5/dropdown";
+@import "bootstrap5/nav";
+@import "bootstrap5/modal";
+
+
+
+/* Utilities
+=============================== */
+// Only use the utilities we need
+// stylelint-disable-next-line scss/dollar-variable-default
+$utilities: map-get-multiple(
+                $utilities,
+                        (
+                                "display",
+                                "order",
+                                "flex",
+                                "text-align",
+                                "flex-direction",
+                                "flex-grow",
+                                "flex-shrink",
+                                "flex-wrap",
+                                "justify-content",
+                                "align-items",
+                                "align-content",
+                                "align-self",
+                                "margin",
+                                "margin-x",
+                                "margin-y",
+                                "margin-top",
+                                "margin-end",
+                                "margin-bottom",
+                                "margin-start",
+                                "negative-margin",
+                                "negative-margin-x",
+                                "negative-margin-y",
+                                "negative-margin-top",
+                                "negative-margin-end",
+                                "negative-margin-bottom",
+                                "negative-margin-start",
+                                "padding",
+                                "padding-x",
+                                "padding-y",
+                                "padding-top",
+                                "padding-end",
+                                "padding-bottom",
+                                "padding-start",
+                        )
+);
+@import "bootstrap5/utilities/api";
+
+/* my own
+================================= */
+
+.flex {
+  display: flex;
+}
+
+.spacer-1 {
+  height: 1rem;
+}
+
+.spacer-2 {
+  height: 2rem;
+}
+
+.spacer-3 {
+  height: 3rem;
+}
+
+.spacer-4 {
+  height: 4rem;
+}
+
+.spacer-5 {
+  height: 5rem;
+}
+
+.spacer-6 {
+  height: 6rem;
+}
+
+.spacer-7 {
+  height: 8rem;
+}
+
+.w100 {
+  width:100%;
+}
