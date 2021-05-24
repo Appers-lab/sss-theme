@@ -2032,22 +2032,25 @@ menu > li > a {
   display: block;
   padding: 0 1rem;
 }
+menu.menu--column {
+  flex-direction: column;
+}
 
-menu.--fill > li > a,
-menu.--fill > li {
+.menu--fill > li > a,
+.menu--fill > li {
   flex: 1 1 auto;
   text-align: center;
 }
 
-menu.--justified > li > a,
-menu.--justified > li {
+.menu--justified > li > a,
+.menu--justified > li {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
 }
 
-menu.--fill > li > button,
-menu.--justified > li > button {
+.menu--fill > li > button,
+.menu--justified > li > button {
   width: 100%;
 }
 
