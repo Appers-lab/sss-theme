@@ -1,7 +1,7 @@
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
-// consistent naming. Ex: $menu-link-disabled-color and $modal-content-box-shadow-xs.
+// consistent naming. Ex: $modal-content-box-shadow-xs.
 
 // Color system
 
@@ -910,31 +910,6 @@ $zindex-tooltip:                    1080 !default;
 // scss-docs-end zindex-stack
 
 
-// Menu
-
-// scss-docs-start menu-variables
-$menu-link-padding-y:                .5rem !default;
-$menu-link-font-size:                null !default;
-$menu-link-font-weight:              null !default;
-$menu-link-color:                    $link-color !default;
-$menu-link-hover-color:              $link-hover-color !default;
-$menu-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
-$menu-link-disabled-color:           $gray-600 !default;
-
-$menu-tabs-border-color:             $gray-300 !default;
-$menu-tabs-border-width:             $border-width !default;
-$menu-tabs-border-radius:            $border-radius !default;
-$menu-tabs-link-hover-border-color:  $gray-200 $gray-200 $menu-tabs-border-color !default;
-$menu-tabs-link-active-color:        $gray-700 !default;
-$menu-tabs-link-active-bg:           $body-bg !default;
-$menu-tabs-link-active-border-color: $gray-300 $gray-300 $menu-tabs-link-active-bg !default;
-
-$menu-pills-border-radius:           $border-radius !default;
-$menu-pills-link-active-color:       $component-active-color !default;
-$menu-pills-link-active-bg:          $component-active-bg !default;
-// scss-docs-end menu-variables
-
-
 // Navbar
 
 // scss-docs-start navbar-variables
@@ -945,7 +920,7 @@ $navbar-nav-link-padding-x:         .5rem !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
-$nav-link-height:                   $font-size-base * $line-height-base + $menu-link-padding-y * 2 !default;
+$nav-link-height:                   $font-size-base * $line-height-base !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) / 2 !default;
 $navbar-brand-margin-end:           1rem !default;
