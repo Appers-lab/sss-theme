@@ -1,5 +1,5 @@
 
-Web standards
+Web Standards
 ----------------------------------
 We adhere to HTML5 standards, patocularly its semantic usage of elements. So instead of using ```<div>``` for everything we use the more semantically meaninful tags such as ```<article>```, ```<section>```, ```<header>```, ```<menu>```, etc. For a full list of html5 tags and their definition/usage see [chapter 4](https://html.spec.whatwg.org/multipage/#toc-semantics) of web standards. Here are some of these rules:
 
@@ -27,12 +27,12 @@ We adhere to HTML5 standards, patocularly its semantic usage of elements. So ins
 - Use ```<div>``` ONLY for creating layout (e.g., grids, columns, etc)
   
 
-- etc.
+- etc. [Add some more useful tags, no need to add all of them just the ones you think are useful]
 
 > Following these rules results in a more professional website with better SEO and accessibility scores.
 
 
-CSS frameworks introduction
+CSS Architencture Introduction
 ----------------------------------
 Currently there are several well-known CSS architecture/model out there, all aiming at making it easy to write css for a *"big project"* as they claim. Here are links to three most famous ones:
 
@@ -64,6 +64,8 @@ Now in BEM framework, if you call the class for the main list (```<ul>```) *myli
 
 Here the notation double underscore (__) is used to mean that this element is the *"item"* (class) OF the *mylist* (class) ...
 
+[A summary of BEM]
+
 Our framework
 -----------------------------
 In our projects we mainly use BEM as the base architecture, though we will add some specific rules to that as well. For a quick overview of BEM refer to [this](https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/). The language we use is SCSS, and the files can be found in the *-sass* folder of the frontend project you cloned.  
@@ -80,7 +82,7 @@ Also inspired by SMACSS we divide our css into three files (or layers):
 Below are more introduction to these three layers with examples.
 
 
-Layer 0: barebone layout
+Layer 0: Barebone layout
 ------------------------------
 These classes are defined in layouts.scss and their names do not start with s- or ss-. At the moment these classes are mostly taken from the layour/grid classes of Bootstrap 5.0 source code, which is to be found in the folder boostrap5. You may notice that certain css files of bootstrap5 folder are included in the layouts.scss such as grid, container, flex utilities, etc. 
 
@@ -105,7 +107,7 @@ The styles in layer 0 must be totally indepedant from upper layers. For example,
 If your style breaks when elements become big or small then it is not independant from the style and must be redesigned. Layer 0 styles must be standalone and style-independent. They are not really styles to change the look and appearance, but more like *extensions of the browser* which enable us to place and position elements more easily (browser only allows us to stack elements on top of each other, no native support for grid, menu, etc.)
 
 
-Layer 1: opinionated styles
+Layer 1: Opinionated styles
 ----------------------------------
 These are opinionated styles containing font-size, color, background-color, etc. They are defined in styles.scss and the class names beging with "s-". These styles are meant to be "general purpose" and contain "common structures used in many project". Here are the areas that these styles are concern about:
 
@@ -120,7 +122,7 @@ These are opinionated styles containing font-size, color, background-color, etc.
 
 - Styling the common components used in many websites, such as main header, landing page banner, footer, login forms, alrt boxes
 
-Layer 2: project specific styles
+Layer 2: Project specific styles
 -------------------------------------
 They project specific styles. They are defined in project.scss and the class names begin with ss-. They are to define specific components for the project, like the product summary card, search bar (with special controls), etc. These styles are mainly "blocks" (in the BEM model). Each such block should be defined i na separate scss file in the "components" folder and then imported into projec.scss  
 

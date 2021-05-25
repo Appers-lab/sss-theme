@@ -1,3 +1,24 @@
 @import "_layouts.scss";
 @import "_styles.scss";
 @import "_project.scss";
+
+/* temporary
+==================== */
+.ss-search-map {
+  width:100%;
+  height:600px;
+
+  &__topbar {
+    padding: 0.5rem;
+    //background-color: #eee;
+    border: 4px double #bbb;
+  }
+
+  data-map {
+    display: block;
+    @include cover();
+  }
+
+
+
+}
