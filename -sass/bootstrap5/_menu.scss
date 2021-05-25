@@ -12,7 +12,7 @@ menu {
 
   & > li > a {
     display: block;
-    padding: 0 $nav-link-padding-x;
+    padding: 0 $menu-link-padding-x;
   }
 
   &.menu--column {
@@ -24,7 +24,7 @@ menu {
 // Justified variants
 //
 
-.menu--fill {
+menu.menu--fill {
   > li > a,
   > li {
     flex: 1 1 auto;
@@ -32,7 +32,7 @@ menu {
   }
 }
 
-.menu--justified {
+menu.menu--justified {
   > li > a,
   > li {
     flex-basis: 0;
@@ -41,8 +41,8 @@ menu {
   }
 }
 
-.menu--fill,
-.menu--justified {
+menu.menu--fill,
+menu.menu--justified {
   & > li > button {
     width: 100%; // Make sure button will grow
   }

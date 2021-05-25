@@ -1,3 +1,5 @@
+/* theme variables
+============================ */
 /* Configuration
 ============================ */
 /* Normalization/browser enhancement
@@ -2036,21 +2038,21 @@ menu.menu--column {
   flex-direction: column;
 }
 
-.menu--fill > li > a,
-.menu--fill > li {
+menu.menu--fill > li > a,
+menu.menu--fill > li {
   flex: 1 1 auto;
   text-align: center;
 }
 
-.menu--justified > li > a,
-.menu--justified > li {
+menu.menu--justified > li > a,
+menu.menu--justified > li {
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
 }
 
-.menu--fill > li > button,
-.menu--justified > li > button {
+menu.menu--fill > li > button,
+menu.menu--justified > li > button {
   width: 100%;
 }
 
