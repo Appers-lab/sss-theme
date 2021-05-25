@@ -13,60 +13,9 @@ body, .container {
     min-width: 993px;
 }
 
-
-/* modal
-=========================== */
-
-.modal-stretch {
-    max-width: calc(100vw - (#{$details-modal-y-margin} * 2)); 
-}
-
-.modal-header {
-
-    color: $primary-color;
-
-    h4 {
-        margin-bottom: unset;
-    }
-
-}
-
-.modal-body {
-    padding: 2rem;
-}
-
-/*.re-banner {
-    height:100vh;
-
-    h1 {
-        font-size: 2rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 700;
-        line-height: 1;
-        margin-bottom: 0;
-        color: $primary-color;
-    }
-
-    p.-lead {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        font-size: 1.5rem;
-    }
-
-    .-caption {
-        max-width:992px;
-        margin-top:100px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
-
-}*/
-
 /* prop card 2
 =========================*/
-.prop-card2 {
+.ss-prop-card {
     
     @include rounded();
 
@@ -525,54 +474,10 @@ body, .container {
     }
 }
 
-/* content
-========================== */
-.re-content {
-
-    max-width:992px;
-    margin-left:auto;
-    margin-right:auto;
-
-    p, ul li {
-        line-height: 1.8;
-        font-size:18px;
-    }
-
-    ul li {
-        margin-left: 20px;
-    }
-}
-
-
-/* little miscs
-========================
- */
-.re-qmark {
-    font-weight: bold;
-    margin-left: 5px;
-    padding: 1px 8px;
-    border-radius: 50%;
-    background-color: $primary-color;
-    color: white;
-    cursor: pointer;
-
-    &:hover {
-        background-color: $primary-color;
-    }
-}
-
-.re-required {
-    color: red;
-    font-size:16px;
-    &:after {
-        content: "*"
-    }
-}
-  
 
 /* page menu
 ======================= */
-#search-page-menu {
+.ss-search-page-title-bar {
     background-color: $primary-bg-light;
 }
 
@@ -646,7 +551,7 @@ location-filler {
 
 /* banner
 ============================ */
-.\$banner {
+.ss-banner {
 
     position: relative;
 
