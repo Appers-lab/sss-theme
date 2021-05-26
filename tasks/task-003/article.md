@@ -1,17 +1,17 @@
 What is the difference between px, em, and rem?
 ===============================================
 
-### px 
+### px:
 It is an absolute value whose size is fixed regardless of the variable screen size or the units and size of other elements.
 
-### em
+### em:
 It is a unit of measure that is affected by the font size of the parent element.
 
-### rem
+### rem:
 It is based on the font size of the root element. If nothing is specified, the root is usually 16px. When you change the font size of the root, the size of the rem specified for each element will also be changed at once.
 
 
-Why it is better to use rem instead of px?
+Why is it better to use rem instead of px?
 ==========================================
 
 ### Font size:
