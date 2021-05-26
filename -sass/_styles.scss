@@ -1,4 +1,3 @@
-
 /* functions
 ======================= */
 // scss-docs-start color-functions
@@ -14,13 +13,16 @@
 
 // Shade the color if the weight is positive, else tint it
 @function shift-color($color, $weight) {
-  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+  @return if(
+    $weight > 0,
+    shade-color($color, $weight),
+    tint-color($color, -$weight)
+  );
 }
-
 
 /* theme variables
 ============================ */
-$primary-color: #3F48CC;
+$primary-color: #3f48cc;
 $primary-color-shade: shift-color($primary-color, 50%);
 $primary-bg-light: shift-color($primary-color, -95%);
 
@@ -30,12 +32,11 @@ $light-grey: #e5e5e5;
 $grey: #aaa;
 $dark-grey: #777;
 
-
 $font-size-base: 1rem;
 
-$box-shadow: 0 .5rem 1rem rgba(black, .15);
-$box-shadow-sm: 0 .125rem .25rem rgba(black, .075);
-$box-shadow-lg: 0 1rem 3rem rgba(black, .175);
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(black, 0.175);
 
 /* theme mixins
 ========================== */
@@ -53,37 +54,93 @@ $box-shadow-lg: 0 1rem 3rem rgba(black, .175);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
   } @else if ($horizontal) {
     left: 50%;
     transform: translate(-50%, 0);
-
   } @else if ($vertical) {
     top: 50%;
     transform: translate(0, -50%);
   }
 }
 
-
 @mixin cover() {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
 @mixin overlay($zindex, $bg-color) {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index:$zindex;
+  z-index: $zindex;
   @include cover();
   background-color: $bg-color;
 }
 
 @mixin md-shadow() {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@mixin rounded-top() {
+  border-top-left-radius: $border-rounded;
+  border-top-right-radius: $border-rounded;
+}
+
+@mixin rounded-bottom() {
+  border-bottom-left-radius: $border-rounded;
+  border-bottom-right-radius: $border-rounded;
+}
+
+@mixin rounded() {
+  @include rounded-top();
+  @include rounded-bottom();
+}
+
+@mixin dot-text-overflow() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin center($vertical: true, $horizontal: true) {
+  position: absolute;
+
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin cover() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin overlay($zindex, $opacity: 75%) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex;
+  @include cover();
+  background-color: black;
+  opacity: $opacity;
+}
+
+@mixin image-hover-grow() {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
 
 /* reboots
 ======================= */
@@ -103,7 +160,12 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: black;
   font-weight: 500;
 }
@@ -114,7 +176,8 @@ img {
   object-fit: cover;
 }
 
-input, select {
+input,
+select {
   width: 100%;
   border: 1px solid $grey;
   padding: 0.5rem;
@@ -135,9 +198,6 @@ select {
   background-color: white;
 }
 
-
-
-
 /* fragment styles
 ======================== */
 .thin {
@@ -152,7 +212,6 @@ select {
   font-weight: 700;
 }
 
-
 /* dividers
 ===================== */
 .\$divider {
@@ -161,8 +220,7 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  border-top:1px solid $light-grey;
-
+  border-top: 1px solid $light-grey;
 
   div {
     @include center(false, true);
@@ -177,32 +235,29 @@ select {
   }
 }
 
-
 /* md style button
 =========================== */
 .\$btn {
-
   background-color: $primary-color;
   color: white;
 
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
 
   -webkit-font-smoothing: antialiased;
 
-  height:40px;
+  height: 40px;
 
   padding: 0rem 1rem;
   //text-transform: uppercase;
-  font-size: .875rem;
-  letter-spacing: .0892857143em;
+  font-size: 0.875rem;
+  letter-spacing: 0.0892857143em;
   min-width: 64px;
 
   vertical-align: middle;
   border-radius: 4px;
   user-select: none;
-
-
 
   &:hover {
     background-color: $primary-color-shade;
@@ -234,32 +289,28 @@ select {
     background-color: #f5f5f5;
     font-weight: bold;
   }
-
 }
-
-
 
 /* main header
 ============================ */
 #main-header {
-
   padding-top: 1rem;
   padding-bottom: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   .\@logo {
     img {
       width: unset;
-      height: unset
+      height: unset;
     }
   }
 
   .\@left-nav {
-    margin-left:50px;
+    margin-left: 50px;
   }
 
   .\@right-nav {
-    margin-left:auto;
+    margin-left: auto;
   }
 
   menu > li > a {
@@ -283,15 +334,13 @@ select {
   &.\$--no-shadow {
     box-shadow: unset;
   }
-
-
 }
 
 /* menu style
 ============================= */
 
-
-menu > li > a, menu > li > button {
+menu > li > a,
+menu > li > button {
   font-size: $font-size-base;
   font-weight: normal;
   color: $grey; //$primary-color;
@@ -301,7 +350,7 @@ menu > li > a, menu > li > button {
   cursor: pointer;
 }
 
-  //@include transition($nav-link-transition);
+//@include transition($nav-link-transition);
 menu > li > a {
   &:hover,
   &:focus {
@@ -326,8 +375,6 @@ menu > li > a {
   }
 }
 
-
-
 /* Dropdown
 =========================== */
 .dropdown-menu {
@@ -336,16 +383,14 @@ menu > li > a {
   background-color: white;
   background-clip: padding-box;
 
-  border:1px solid #dee2e6;
-  border-radius: .25rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
   box-shadow: $box-shadow;
 
   hr {
-
     overflow: hidden;
-    border-top: 1px solid rgba(black, .15);
+    border-top: 1px solid rgba(black, 0.15);
   }
-
 }
 
 .dropdown-item {
@@ -367,7 +412,6 @@ menu > li > a {
   &:active {
     color: white;
     background-color: $primary-color;
-
   }
 
   &.disabled,
@@ -390,10 +434,6 @@ menu > li > a {
 /* Pagination
 ======================= */
 
-
-
-
-
 /* content section
 (blog post, static pages, etc)
 ===================================== */
@@ -407,15 +447,20 @@ menu > li > a {
   letter-spacing: 0.063px;
   line-height: 2.2rem;
   font-size: 1.3rem;
-  font-weight:300;
+  font-weight: 300;
   margin-right: auto;
-  margin-left:auto;
+  margin-left: auto;
 
   p:not(:last-child) {
     margin-bottom: 2rem;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 1rem;
   }
 
@@ -429,7 +474,7 @@ menu > li > a {
 .\$input-error {
   font-size: 0.875rem;
   color: red;
-  margin-top:0.25rem;
+  margin-top: 0.25rem;
 }
 
 label.disabled {
@@ -446,23 +491,21 @@ label.disabled {
   width: 100%;
 
   @include dot-text-overflow();
-
 }
 
 /* min-max-box
 ======================== */
 min-max-box {
-
   label {
     margin-right: 0.5rem;
   }
 
-  .\@first-input-wr, .\@second-input-wr {
+  .\@first-input-wr,
+  .\@second-input-wr {
     margin-right: 1rem;
   }
 
   input {
-
     max-width: 120px;
 
     &:focus {
@@ -476,7 +519,100 @@ min-max-box {
       color: $body-color;
     }
   }
+}
 
+/* modal
+=========================== */
+
+$details-modal-y-margin: 72px;
+$details-modal-col2-width: 500px;
+
+.modal-stretch {
+  max-width: calc(100vw - (#{$details-modal-y-margin} * 2));
+}
+
+.modal-header {
+  color: $primary-color;
+
+  h4 {
+    margin-bottom: unset;
+  }
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+/*.re-banner {
+  height:100vh;
+
+  h1 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0;
+      color: $primary-color;
+  }
+
+  p.-lead {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+  }
+
+  .-caption {
+      max-width:992px;
+      margin-top:100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+
+}*/
+
+/* content
+========================== */
+.s-content {
+  max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p,
+  ul li {
+    line-height: 1.8;
+    font-size: 18px;
+  }
+
+  ul li {
+    margin-left: 20px;
+  }
+}
+
+/* little miscs
+========================
+ */
+.s-qmark {
+  font-weight: bold;
+  margin-left: 0.3125rem;
+  padding: 1px 8px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.s-required {
+  color: red;
+  font-size: 1rem;
+  &:after {
+    content: "*";
+  }
 }
 
 /* components

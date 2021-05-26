@@ -35,4 +35,14 @@ Modify the following classes (within _project.scss) to make them comply with BEM
 
 Class names change log
 -----------------------------------
-your answer here ...
+- `.re-content` -> `.s-content`
+
+- `.re-qmark` -> `.s-qmark`
+  
+- `.re-required` -> `.s-required`
+
+- `#search-page-menu` -> `.ss-search-page-title-bar`
+
+- `.\$banner` -> `.ss-banner`
+
+- `prop-card2` -> `.ss-prop-card`
