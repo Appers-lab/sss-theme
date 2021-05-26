@@ -10,9 +10,13 @@ menu {
   margin-bottom: 0;
   list-style: none;
 
-  & > li > a{
-      display: block;
-      padding: 0 $nav-link-padding-x;
+  & > li > a {
+    display: block;
+    padding: 0 $menu-link-padding-x;
+  }
+
+  &.menu--column {
+    flex-direction: column;
   }
 }
 
@@ -20,7 +24,7 @@ menu {
 // Justified variants
 //
 
-menu.--fill {
+menu.menu--fill {
   > li > a,
   > li {
     flex: 1 1 auto;
@@ -28,7 +32,7 @@ menu.--fill {
   }
 }
 
-menu.--justified {
+menu.menu--justified {
   > li > a,
   > li {
     flex-basis: 0;
@@ -37,8 +41,8 @@ menu.--justified {
   }
 }
 
-menu.--fill,
-menu.--justified {
+menu.menu--fill,
+menu.menu--justified {
   & > li > button {
     width: 100%; // Make sure button will grow
   }
