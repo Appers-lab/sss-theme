@@ -81,37 +81,36 @@ $border-rounded: 20px;
     div {
       @include dot-text-overflow();
     }
+  }
 
-    &--date {
-      //@include dot-text-overflow();
-      //font-size:10px;
-      font-style: italic;
-      margin-right: 0.25rem;
-    }
+  &__date {
+    //@include dot-text-overflow();
+    //font-size:10px;
+    font-style: italic;
+    margin-right: 0.25rem;
+  }
 
-    &--address {
-      color: $dark-grey;
-    }
+  &__address {
+    color: $dark-grey;
+  }
 
-    &--price-psf {
-      font-style: italic;
-      margin-left: 0.3125rem;
-      /* text-decoration: underline; */
-      color: #212529;
-      background-color: #eee;
-      border-radius: 2px;
-      padding: 0.125rem;
-    }
+  &__essentials {
+    font-weight: 500;
+    color: $body-color;
+  }
 
-    &--essentials {
-      font-weight: 500;
-      color: $body-color;
-    }
-
-    &--price {
-      font-size: 0.8125rem;
-      margin-right: 0.3125rem;
-      color: #ff6d00;
-    }
+  &__price {
+    font-size: 0.8125rem;
+    margin-right: 0.3125rem;
+    color: #ff6d00;
+  }
+  &__price-psf {
+    font-style: italic;
+    margin-left: 0.3125rem;
+    /* text-decoration: underline; */
+    color: #212529;
+    background-color: #eee;
+    border-radius: 2px;
+    padding: 0.125rem;
   }
 }

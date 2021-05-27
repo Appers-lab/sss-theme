@@ -14267,14 +14267,23 @@ radio-box.default.active > div > div:first-child div {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.ss-prop-card__content--date {
+.ss-prop-card__date {
   font-style: italic;
   margin-right: 0.25rem;
 }
-.ss-prop-card__content--address {
+.ss-prop-card__address {
   color: #777;
 }
-.ss-prop-card__content--price-psf {
+.ss-prop-card__essentials {
+  font-weight: 500;
+  color: #222;
+}
+.ss-prop-card__price {
+  font-size: 0.8125rem;
+  margin-right: 0.3125rem;
+  color: #ff6d00;
+}
+.ss-prop-card__price-psf {
   font-style: italic;
   margin-left: 0.3125rem;
   /* text-decoration: underline; */
@@ -14282,15 +14291,6 @@ radio-box.default.active > div > div:first-child div {
   background-color: #eee;
   border-radius: 2px;
   padding: 0.125rem;
-}
-.ss-prop-card__content--essentials {
-  font-weight: 500;
-  color: #222;
-}
-.ss-prop-card__content--price {
-  font-size: 0.8125rem;
-  margin-right: 0.3125rem;
-  color: #ff6d00;
 }
 
 /* Basis
