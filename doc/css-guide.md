@@ -64,11 +64,30 @@ Now in BEM framework, if you call the class for the main list (```<ul>```) *myli
 
 Here the notation double underscore (__) is used to mean that this element is the *"item"* (class) OF the *mylist* (class) ...
 
-[A summary of BEM]
+In our projects we mainly use BEM as the base architecture
+
+A summary of BEM
+-----------------------------
+For a quick overview of BEM refer to [this](https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/).
+
+BEM: Consists of Block, Element and Modifier.
+
+*Block:* Standalone entity that is meaningful on its own. Examples: header, menu, input
+
+*Element:* A part of a block that has no standalone meaning and is semantically tied to its block. Examples: header title, menu item, list item
+
+*Modifier:* A flag on a block or element. Use them to change appearance or behaviour. Examples: disabled, checked, size big, color primary
+
+*Naming rules:*
+- Block: Block names may consist of Latin letters, digits, and dashes. To form a CSS class, add a short prefix for namespacing: `.menu`
+
+*Element:* Element names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block name plus two underscores plus element name: `.menu__list`
+
+*Modifier:* Modifier names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block’s or element’s name plus two dashes: `.menu__list--active`, `.button--disabled`, `.button--color-red` (Spaces in complicated modifiers are replaced by dash.)
 
 Our framework
 -----------------------------
-In our projects we mainly use BEM as the base architecture, though we will add some specific rules to that as well. For a quick overview of BEM refer to [this](https://css-tricks.com/building-a-scalable-css-architecture-with-bem-and-utility-classes/). The language we use is SCSS, and the files can be found in the *-sass* folder of the frontend project you cloned.  
+In our projects we mainly use BEM as the base architecture, though we will add some specific rules to that as well. The language we use is SCSS, and the files can be found in the *-sass* folder of the frontend project you cloned.  
 
 Also inspired by SMACSS we divide our css into three files (or layers):
 - **Layer 0:** layouts.scss: universal classes to build basic layouts. The main goal of these classes is to allow you to "place" elements in the right place (such as arranging elements as a horizontal menu) This file is 100% un-opinionated, and is to be used in each project and each device (dekstop/tablet/mobile) WITHOUT any modification.
