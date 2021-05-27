@@ -118,7 +118,7 @@
 (blog post, static pages, etc)
 ===================================== */
 
-.\$content {
+.s-content {
   max-width: 744px;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -147,11 +147,21 @@
   section {
     margin-bottom: 3rem;
   }
+
+  p,
+  ul li {
+    line-height: 1.8;
+    font-size: 18px;
+  }
+
+  ul li {
+    margin-left: 20px;
+  }
 }
 
 /* form
 ======================== */
-.\$input-error {
+.s-input-error {
   font-size: 0.875rem;
   color: red;
   margin-top: 0.25rem;
@@ -180,8 +190,8 @@ min-max-box {
     margin-right: 0.5rem;
   }
 
-  .\@first-input-wr,
-  .\@second-input-wr {
+  .min-max-box__first-input-wr,
+  .min-max-box__second-input-wr {
     margin-right: 1rem;
   }
 
@@ -251,24 +261,6 @@ $details-modal-col2-width: 500px;
   }
 
 }*/
-
-/* content
-========================== */
-.s-content {
-  max-width: 992px;
-  margin-left: auto;
-  margin-right: auto;
-
-  p,
-  ul li {
-    line-height: 1.8;
-    font-size: 18px;
-  }
-
-  ul li {
-    margin-left: 20px;
-  }
-}
 
 /* little miscs
 ========================
