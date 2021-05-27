@@ -1,0 +1,44 @@
+/* main header
+============================ */
+#l-main-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .\@logo {
+    img {
+      width: unset;
+      height: unset;
+    }
+  }
+
+  .\@left-nav {
+    margin-left: 50px;
+  }
+
+  .\@right-nav {
+    margin-left: auto;
+  }
+
+  menu > li > a {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    &:hover {
+      font-size: $font-size-base;
+    }
+
+    &.active {
+      border-bottom: unset;
+      color: $body-color;
+      &:hover {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  &.l-main-header--no-shadow {
+    box-shadow: unset;
+  }
+}

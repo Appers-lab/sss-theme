@@ -1,0 +1,52 @@
+:root {
+  //font-size: 16px;
+}
+
+body {
+  color: $body-color;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    color: $primary-color-shade;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid $grey;
+  padding: 0.5rem;
+  color: $body-color;
+  //font-size: .875rem;
+  border-radius: 0.25rem;
+  height: 40px;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    box-shadow: $box-shadow-sm;
+    font-size: 1.3rem;
+  }
+}
+
+select {
+  max-width: 120px;
+  background-color: white;
+}

@@ -1,0 +1,17 @@
+/* theme variables
+============================ */
+$primary-color: #3f48cc;
+$primary-color-shade: shift-color($primary-color, 50%);
+$primary-bg-light: shift-color($primary-color, -95%);
+
+$body-color: #222;
+
+$light-grey: #e5e5e5;
+$grey: #aaa;
+$dark-grey: #777;
+
+$font-size-base: 1rem;
+
+$box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(black, 0.075);
+$box-shadow-lg: 0 1rem 3rem rgba(black, 0.175);
