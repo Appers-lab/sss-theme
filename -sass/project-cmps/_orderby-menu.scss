@@ -1,0 +1,34 @@
+
+/* orderby menu
+======================== */
+.re-orderby {
+
+  h4 {
+    radio-box {
+      font-weight: 400;
+      font-size: $font-size-base;
+      color: $primary-color;
+      text-decoration: underline;
+      cursor: pointer;
+
+      &.active {
+        color: $grey;
+        text-decoration: none;
+        cursor: auto;
+      }
+    }
+  }
+
+  .\@rows-wr {
+    .row {
+      padding: 0.5rem 0rem;
+
+      &:nth-child(even) {
+        background-color: $primary-bg-light;
+      }
+    }
+  }
+
+
+
+}

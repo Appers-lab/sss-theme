@@ -1,0 +1,62 @@
+
+/* typography styles
+======================== */
+.s-thin {
+  font-weight: 300;
+}
+
+.s-bold {
+  font-weight: 500;
+}
+
+.s-very-bold {
+  font-weight: 700;
+}
+
+.s-text-center {
+  text-align: center;
+}
+
+/* dividers
+===================== */
+.s-divider {
+  position: relative;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  border-top: 1px solid $light-grey;
+
+  div {
+    @include center(false, true);
+    top: -1.1rem;
+
+    padding: 0.35rem 0.45rem;
+    border-radius: 50%;
+    background-color: $primary-bg-light;
+    color: $grey;
+
+    @include md-shadow();
+  }
+}
+
+/* Miscs
+======================== */
+.s-qmark {
+  font-weight: bold;
+  margin-left: 0.3125rem;
+  padding: 1px 8px;
+  border-radius: 50%;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+.s-sticky {
+  position: sticky;
+  top: 0;
+}

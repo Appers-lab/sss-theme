@@ -1,0 +1,47 @@
+
+/* VOW login needed span
+=========================== */
+.ss-vow-login-needed {
+
+  padding: 0.375rem;
+  border-radius: 5px;
+  background-image: linear-gradient(180deg, white, #dc35453d);
+  color: #791326;
+
+  &__text {
+    color: #791326;
+  }
+
+  &__qmark {
+    font-weight: bold;
+    margin-left: 0.3125rem;
+    padding: 1px 8px;
+    border-radius: 50%;
+    background-color: #791326;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}
+
+/* MLS
+======================= */
+.ss-mls-cmp {
+
+  &__logo {
+    width: 106px;
+    height: 43px;
+    float: left;
+  }
+
+  &__text {
+    font-style: italic;
+    /* font-weight: 300; */
+    /*color: #000;*/
+    margin-top: 0.5rem;
+  }
+
+}

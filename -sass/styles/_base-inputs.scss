@@ -1,4 +1,7 @@
 
+/* default check-box
+============================ */
+
 check-box.default {
 
   display: block;
@@ -43,6 +46,9 @@ check-box.default {
   }
 
 }
+
+/* default radio-box
+============================ */
 
 radio-box.default {
 
@@ -89,5 +95,33 @@ radio-box.default {
       }
     }
 
+  }
+}
+
+/* min-max-box
+======================== */
+min-max-box {
+  label {
+    margin-right: 0.5rem;
+  }
+
+  .min-max-box__first-input-wr,
+  .min-max-box__second-input-wr {
+    margin-right: 1rem;
+  }
+
+  input {
+    max-width: 120px;
+
+    &:focus {
+      font-size: $font-size-base;
+    }
+  }
+
+  button {
+    color: $grey;
+    &:hover {
+      color: $body-color;
+    }
   }
 }

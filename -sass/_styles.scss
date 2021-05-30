@@ -1,59 +1,25 @@
+
 /* Configuration
 ============================ */
-@import "layouts/functions";
-@import "layouts/variables";
-@import "layouts/mixins";
-
+@import "styles/functions";
+@import "styles/variables";
+@import "styles/mixins";
 
 /* Normalization/browser enhancement
 =========================================== */
-@import "layouts/reboot";
-
+@import "styles/reboot";
 
 /* Base components
 =============================== */
-@import "layouts/btn";
-@import "layouts/headers";
-@import "layouts/menu";
-
-
-/* fragment styles
-======================== */
-.s-thin {
-  font-weight: 300;
-}
-
-.s-bold {
-  font-weight: 500;
-}
-
-.s-very-bold {
-  font-weight: 700;
-}
-
-/* dividers
-===================== */
-.s-divider {
-  position: relative;
-
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
-  border-top: 1px solid $light-grey;
-
-  div {
-    @include center(false, true);
-    top: -1.1rem;
-
-    padding: 0.35rem 0.45rem;
-    border-radius: 50%;
-    background-color: $primary-bg-light;
-    color: $grey;
-
-    @include md-shadow();
-  }
-}
-
+@import "styles/btn";
+@import "styles/headers";
+@import "styles/page-title";
+@import "styles/menu";
+@import "styles/content";
+@import "styles/inputs";
+@import "styles/base-inputs";
+@import "styles/page-title";
+@import "styles/utilities";
 
 /* Dropdown
 =========================== */
@@ -111,106 +77,6 @@
   //color: $dropdown-link-color;
 }
 
-/* Pagination
-======================= */
-
-/* content section
-(blog post, static pages, etc)
-===================================== */
-
-.s-content {
-  max-width: 744px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  -webkit-font-smoothing: antialiased;
-  color: $body-color;
-  letter-spacing: 0.063px;
-  line-height: 2.2rem;
-  font-size: 1.3rem;
-  font-weight: 300;
-  margin-right: auto;
-  margin-left: auto;
-
-  p:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 1rem;
-  }
-
-  section {
-    margin-bottom: 3rem;
-  }
-
-  p,
-  ul li {
-    line-height: 1.8;
-    font-size: 18px;
-  }
-
-  ul li {
-    margin-left: 20px;
-  }
-}
-
-/* form
-======================== */
-.s-input-error {
-  font-size: 0.875rem;
-  color: red;
-  margin-top: 0.25rem;
-}
-
-label.disabled {
-  color: $grey;
-}
-
-.dropdown.selectbox .dropdown-toggle {
-  text-decoration: none;
-  color: #222;
-  display: block;
-  padding: 0.45rem;
-  border: 1px solid $grey;
-  border-radius: 5px;
-  width: 100%;
-
-  @include dot-text-overflow();
-}
-
-/* min-max-box
-======================== */
-min-max-box {
-  label {
-    margin-right: 0.5rem;
-  }
-
-  .min-max-box__first-input-wr,
-  .min-max-box__second-input-wr {
-    margin-right: 1rem;
-  }
-
-  input {
-    max-width: 120px;
-
-    &:focus {
-      font-size: $font-size-base;
-    }
-  }
-
-  button {
-    color: $grey;
-    &:hover {
-      color: $body-color;
-    }
-  }
-}
-
 /* modal
 =========================== */
 
@@ -262,32 +128,3 @@ $details-modal-col2-width: 500px;
 
 }*/
 
-/* little miscs
-========================
- */
-.s-qmark {
-  font-weight: bold;
-  margin-left: 0.3125rem;
-  padding: 1px 8px;
-  border-radius: 50%;
-  background-color: $primary-color;
-  color: white;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $primary-color;
-  }
-}
-
-.s-required {
-  color: red;
-  font-size: 1rem;
-  &:after {
-    content: "*";
-  }
-}
-
-/* components
-====================== */
-@import "components/page-title";
-@import "components/base-inputs";

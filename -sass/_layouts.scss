@@ -1,6 +1,8 @@
-/* layout variables
+
+/* layout variables (subset of bootstrap variables)
 ============================ */
-$menu-link-padding-x: 1rem !default;
+$menu-link-padding-x: 1rem;
+$enable-smooth-scroll: true;
 
 
 /* Configuration
@@ -82,10 +84,6 @@ $utilities: map-get-multiple(
 
 /* my own
 ================================= */
-
-.flex {
-  display: flex;
-}
 
 .spacer-1 {
   height: 1rem;

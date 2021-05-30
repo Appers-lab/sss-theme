@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: unset;
+}
+
 
 // Root
 //
@@ -150,25 +154,25 @@ abbr[data-bs-original-title] { // 1
 
 // Address
 
-/*address {
-  margin-bottom: 1rem;
+address {
+  margin-bottom: 0;
   font-style: normal;
   line-height: inherit;
-}*/
+}
 
 
 // Lists
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 ol ol,
@@ -185,9 +189,11 @@ dt {
 // 1. Undo browser default
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0;
   margin-left: 0; // 1
 }
+
+
 
 
 // Blockquote
@@ -243,15 +249,16 @@ sup { top: -.5em; }
 
 // Links
 
-/*a {
-  color: $link-color;
+a {
+  cursor: pointer;
+  /*color: $link-color;
   text-decoration: $link-decoration;
 
   &:hover {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
-  }
-}*/
+  }*/
+}
 
 // And undo these styles for placeholder links/named anchors (without href).
 // It would be more straightforward to just use a[href] in previous block, but that

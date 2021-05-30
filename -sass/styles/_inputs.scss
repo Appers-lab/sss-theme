@@ -1,0 +1,30 @@
+
+.s-input-error {
+  font-size: 0.875rem;
+  color: red;
+  margin-top: 0.25rem;
+}
+
+label.disabled {
+  color: $grey;
+}
+
+.dropdown.selectbox .dropdown-toggle {
+  text-decoration: none;
+  color: #222;
+  display: block;
+  padding: 0.45rem;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  width: 100%;
+
+  @include dot-text-overflow();
+}
+
+.s-required {
+  color: red;
+  font-size: 1rem;
+  &:after {
+    content: "*";
+  }
+}

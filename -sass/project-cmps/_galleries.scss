@@ -1,0 +1,177 @@
+
+/* modal gallery
+=================== */
+
+.re-gallery {
+
+  .modal-content {
+    background-color: black;
+    color: white;
+    padding: 0px 20px 55px 20px;
+
+    .close, h4 {
+      color: white;
+    }
+
+    .close {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+  }
+
+  .modal-header {
+    border-bottom: unset;
+  }
+
+  .-wrapper {
+    height: 533px;
+    position: relative;
+
+  }
+
+  .-img {
+    @include cover();
+
+    img {
+      @include cover();
+      @include rounded();
+      object-fit:cover;
+    }
+  }
+
+  .-next, .-prev {
+    @include center(true, false);
+    color: white;
+    border: unset;
+    background-color: transparent;
+    font-size: 2.625rem;
+
+    &:hover {
+      background-color: #999;
+      font-weight:bold;
+    }
+  }
+
+  .-prev {
+    left:-50px;
+
+    &:after {
+      content: "<";
+    }
+  }
+
+  .-next {
+    right:-50px;
+
+    &:after {
+      content: ">";
+    }
+  }
+
+  .-page-num {
+    color: white;
+    text-align: center;
+    padding-top:0.5rem;
+  }
+}
+
+
+/* prop gallery
+========================= */
+.re-modal-gallery {
+
+  width: calc(100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2)));
+
+  .-card {
+
+    margin: 2.5px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      @include cover();
+      object-fit: cover;
+
+      height: calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
+
+      &:hover {
+        @include image-hover-grow();
+      }
+    }
+  }
+
+  .-iframe-card {
+
+    margin: 2.5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+
+    height: calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
+
+    .-overlay {
+      @include overlay(1000);
+
+      &:hover {
+        opacity: 100%;
+
+        .-text.-showhover {
+          display: block;
+        }
+
+        .-text.-hidehover {
+          display: none;
+        }
+
+      }
+    }
+
+    .-text {
+
+      @include overlay(1000, 100%);
+      background-color: transparent;
+
+      h4 {
+        color: white;
+        margin-bottom: unset;
+      }
+
+      div {
+        @include center(true, true);
+      }
+
+      & .-showhover {
+        display: none;
+      }
+
+      & .-hidehover {
+        display: block;
+      }
+
+      &:hover {
+
+        background-color: black;
+
+        & .-showhover {
+          display: block;
+        }
+
+        & .-hidehover {
+          display: none;
+        }
+      }
+
+    }
+
+
+    img {
+      @include cover();
+      object-fit: cover;
+
+
+    }
+
+
+  }
+
+}

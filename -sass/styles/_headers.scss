@@ -1,22 +1,22 @@
 /* main header
 ============================ */
-#l-main-header {
+.s-main-header {
   padding-top: 1rem;
   padding-bottom: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-  .l-main-header__logo {
+  &__logo {
     img {
       width: unset;
       height: unset;
     }
   }
 
-  .l-main-header__left-nav {
-    margin-left: 50px;
+  &__left-nav {
+    margin-left: 3rem;
   }
 
-  .l-main-header__right-nav {
+  &__right-nav {
     margin-left: auto;
   }
 
@@ -38,7 +38,7 @@
     }
   }
 
-  &.l-main-header--no-shadow {
+  &--no-shadow {
     box-shadow: unset;
   }
 }

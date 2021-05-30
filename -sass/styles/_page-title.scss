@@ -1,0 +1,24 @@
+
+.ss-content-title-sec {
+  height: 320px;
+  position: relative;
+
+  &__title {
+    @include overlay(3, transparent);
+    h1 {
+      font-size: 4rem;
+      color: white;
+      @include center(true, false);
+      text-align: center;
+    }
+  }
+
+  &__shade {
+    @include overlay(2, rgba(black, 0.35));
+  }
+
+  &__img {
+    @include overlay(1, transparent);
+  }
+
+}

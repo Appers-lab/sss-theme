@@ -1,0 +1,61 @@
+
+/* banner
+============================ */
+.ss-banner {
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("/img/banner1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .\@caption {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+
+    }
+
+    p {
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    p,a {
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    button {
+      a {
+        font-size: 1rem;
+        color: white;
+      }
+    }
+
+  }
+
+  footer {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    color: $grey;
+
+    a {
+      color: $grey;
+    }
+  }
+
+}

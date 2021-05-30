@@ -1,0 +1,44 @@
+/* virtual tour display
+============================ */
+.re-vt-modal {
+
+  .modal-dialog {
+    max-width: unset;
+    margin: unset;
+  }
+
+  .modal-content {
+    background-color: black;
+    color: white;
+    padding: 0px 20px 55px 20px;
+    height:100vh;
+
+    .close, h4 {
+      color: white;
+    }
+
+    .close {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+  }
+
+  .modal-header {
+    border-bottom: unset;
+  }
+
+  .-wrapper {
+
+
+  }
+
+  .-iframe {
+
+    height: calc(100vh - 120px);
+
+    iframe {
+      @include cover();
+      @include rounded();
+    }
+  }
+}

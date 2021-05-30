@@ -1,0 +1,45 @@
+
+/* content section
+(blog post, static pages, etc)
+===================================== */
+
+.s-content {
+  max-width: 744px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  -webkit-font-smoothing: antialiased;
+  color: $body-color;
+  letter-spacing: 0.063px;
+  line-height: 2.2rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-right: auto;
+  margin-left: auto;
+
+  p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  p,
+  ul li {
+    line-height: 1.8;
+    font-size: 18px;
+  }
+
+  ul li {
+    margin-left: 20px;
+  }
+}
