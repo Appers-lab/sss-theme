@@ -14295,9 +14295,6 @@ radio-box.default.active > div > div:first-child div {
 
 /* Basis
 ==================*/
-/* desktop setting */
-body, .container {
-  min-width: 993px;
 }
 
 /* gallery

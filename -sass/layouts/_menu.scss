@@ -1,0 +1,35 @@
+menu > li > a,
+menu > li > button {
+  font-size: $font-size-base;
+  font-weight: normal;
+  color: $grey; //$primary-color;
+  text-decoration: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+//@include transition($nav-link-transition);
+menu > li > a {
+  &:hover,
+  &:focus {
+    color: $primary-color-shade;
+    font-size: 1.05em;
+  }
+
+  &.active {
+    color: $primary-color;
+    cursor: default;
+    border-bottom: 2px solid $primary-color;
+    &:hover {
+      font-size: $font-size-base;
+    }
+  }
+
+  // Disabled state lightens text
+  &[disabled] {
+    color: $grey;
+    pointer-events: none;
+    cursor: default;
+  }
+}
