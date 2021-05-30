@@ -1,7 +1,7 @@
+@import "./components/prod-card";
 
 $secondary-color: #FF0000;
 
-$border-rounded: 20px;
 $details-modal-y-margin: 72px;
 $details-modal-col2-width: 500px;
 
@@ -12,127 +12,6 @@ $details-modal-col2-width: 500px;
 body, .container {
     min-width: 993px;
 }
-
-/* prop card 2
-=========================*/
-.ss-prop-card {
-    
-    @include rounded();
-
-    .-img {
-        position: relative;
-        width:100%;
-        height:191px;
-        cursor: pointer;
-        
-        @include rounded();
-
-        img {
-            @include rounded();
-            @include cover();
-            object-fit:cover;
-        };
-
-        .overlay {
-            visibility: hidden;
-            @include overlay(100);
-            @include rounded();
-        }
-
-        &:hover .overlay, &:hover .overlay-btn-group {
-            visibility: visible;
-        }
-    };
-
-    .overlay-btn-group {
-
-        visibility: hidden;
-
-        @include cover();
-        position:absolute;
-        top:0;
-
-        .-cell {
-            position: relative;
-            height: 33.33%;
-            border:1px solid #eee;
-            cursor: pointer;
-            z-index:200;
-
-            &:hover {
-                background-color: $primary-color;
-                opacity: 100%;
-                color: white;
-                font-weight: bold;
-                font-size: 1.125rem;
-            }
-
-            .-text {
-                @include center();
-                color: #eee;
-
-            }
-
-            &.-c1 {
-                border-top-left-radius: $border-rounded;
-            }
-
-            &.-c2 {
-                border-top-right-radius: $border-rounded;
-            }
-
-            &.-c3 {
-                border-bottom-left-radius: $border-rounded;
-            }
-
-            &.-c4 {
-                border-bottom-right-radius: $border-rounded;
-            }
-        }
-
-    }
-
-    .-content {
-        font-size: 0.6875rem;
-        color:black;
-
-        div {
-            @include dot-text-overflow();    
-        }
-    }
-
-    .-date {
-        //@include dot-text-overflow();
-        //font-size:10px;
-        font-style:italic;
-        margin-right: 0.25rem;    
-    }
-
-    .-address {
-        color: $dark-grey;
-    }
-
-    .-price-psf {
-        font-style: italic;
-        margin-left: 0.3125rem;
-        /* text-decoration: underline; */
-        color: #212529;
-        background-color: #eee;
-        border-radius: 2px;
-        padding: 0.125rem;
-    }
-
-    .-essentials {
-        font-weight: 500;
-        color: $body-color;
-    }
-
-    .-price {
-        font-size: 0.8125rem;
-        margin-right: 0.3125rem;
-        color: #FF6D00;
-    }
-};
 
 
 /* gallery
