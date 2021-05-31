@@ -3,8 +3,9 @@ body {
   color: $body-color;
 }
 
-a {
+a, button {
   color: $primary-color;
+  background-color: transparent;
   &:hover {
     color: $primary-color-shade;
   }
@@ -33,7 +34,7 @@ select {
   padding: 0.5rem;
   color: $body-color;
   border-radius: 0.25rem;
-  height: 40px;
+  height: $input-height;
 
   &:focus {
     border: 1px solid $primary-color;
@@ -45,4 +46,8 @@ select {
 select {
   max-width: 120px;
   background-color: white;
+}
+
+button {
+  height: $input-height;
 }

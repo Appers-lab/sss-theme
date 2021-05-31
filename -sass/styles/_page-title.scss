@@ -4,21 +4,23 @@
   position: relative;
 
   &__title {
-    @include overlay(3, transparent);
+    @include overlay(3);
     h1 {
       font-size: 4rem;
       color: white;
       @include center(true, false);
       text-align: center;
+      width:100%;
     }
   }
 
   &__shade {
-    @include overlay(2, rgba(black, 0.35));
+    @include overlay(2);
+    background-color: rgba(black, 0.35);
   }
 
   &__img {
-    @include overlay(1, transparent);
+    @include overlay(1);
   }
 
 }

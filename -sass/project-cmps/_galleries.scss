@@ -111,6 +111,7 @@
 
     .-overlay {
       @include overlay(1000);
+      background-color: rgba(black, 0.75);
 
       &:hover {
         opacity: 100%;
@@ -128,7 +129,7 @@
 
     .-text {
 
-      @include overlay(1000, 100%);
+      @include overlay(1000);
       background-color: transparent;
 
       h4 {

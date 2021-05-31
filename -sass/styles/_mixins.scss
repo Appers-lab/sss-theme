@@ -25,13 +25,12 @@
   height: 100%;
 }
 
-@mixin overlay($zindex, $bg-color) {
+@mixin overlay($zindex) {
   position: absolute;
   top: 0;
   left: 0;
   z-index: $zindex;
   @include cover();
-  background-color: $bg-color;
 }
 
 @mixin md-shadow() {
@@ -80,16 +79,6 @@
 @mixin cover() {
   width: 100%;
   height: 100%;
-}
-
-@mixin overlay($zindex, $opacity: 75%) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $zindex;
-  @include cover();
-  background-color: black;
-  opacity: $opacity;
 }
 
 @mixin image-hover-grow() {

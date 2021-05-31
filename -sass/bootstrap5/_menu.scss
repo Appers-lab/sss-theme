@@ -10,7 +10,7 @@ menu {
   margin-bottom: 0;
   list-style: none;
 
-  & > li > a {
+  & > li > a, & > li > button {
     display: block;
     padding: 0 $menu-link-padding-x;
   }

@@ -10,7 +10,7 @@ menu > li > button {
 }
 
 //@include transition($nav-link-transition);
-menu > li > a {
+menu > li > a, menu > li > button {
   &:hover,
   &:focus {
     color: $primary-color-shade;
