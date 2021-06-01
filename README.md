@@ -2,7 +2,7 @@
 Quick start with Git
 ===============================
 
-###To clone a branch:
+### To clone a branch:
 
 ```
 git clone https://bitbucket.org/pmvald/frontend.git
@@ -31,7 +31,7 @@ git branch
 The above command shows a list of branches downloaded with the current branch having a * beside it.
 
 
-###Commit/Push changes
+### Commit/Push changes
 Once you made your changes you need to push the changes to the bitbucket repository. From the project root folder:
 
 ```
@@ -42,7 +42,7 @@ git push
 
 Then using browser login to your bitbucket account, go to this repository section and create a "pull request". When you create a pull requet, I (and others) can see what changes you made in your branch and give you feedback. You may need to make additional changes and push again (using the commands above). When we approve your changes then we will "merge" your changes into the master branch, and basically your code will be incuded in the main version of the program. 
 
-###Pull changes - conflict resolution
+### Pull changes - conflict resolution
 
 To download the latest changes from the online repository (upstream repo) to your local use the following command from the project root:
 
@@ -87,3 +87,10 @@ sudo chmod +x sass-start
 ```
 
 Now you can start editing teh scss files and see the results live by including the `css/bundle` file in a html file.
+
+
+Using Canvas Theme
+============================
+In some of the tasks we use a theme called *Canvas* as a model. We do not include anything of its code, but only refer to that as a starting point of how things should look like. You may read its code but eventually you need to produce/reproduce its components from scratch by coding. Dowload this theme from [This link](https://drive.google.com/file/d/1lNdPJPjFbvhf7WCYtgcIFwR5M-CbfyQ5/view?usp=sharing)
+
+That's a big zip file. Once you unpack it, all the html pages can be found at `/Package-HTML/HTML`. I would refer to some pages in this folder and some componens withing these pages and ask you to make something similar to that (with some modification) 
