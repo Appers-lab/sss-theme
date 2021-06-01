@@ -5,7 +5,7 @@ Quick start with Git
 ### To clone a branch:
 
 ```
-git clone https://bitbucket.org/pmvald/frontend.git
+git clone https://github.com/Appers-lab/billihomes-frontend.git
 
 cd frotnend
 
@@ -15,12 +15,12 @@ git checkout <your-branch>
 Or alternatively you can combine the above two command into one:
 
 ```
-git clone -b <your-branch> https://bitbucket.org/pmvald/frontend.git
+git clone -b <your-branch> https://github.com/Appers-lab/billihomes-frontend.git
 
 cd frotnend
 ```
 
-You may need to enter your username/password (your bitbucket account).
+You may need to enter your username/password (your github account).
 
 Note that using `git checkout` you can switch between branches. Before doing project make sure you are in your branch. To double-check which branch you are in, from the project root run:
 
@@ -40,7 +40,7 @@ git commit -m "your commit message"
 git push
 ```
 
-Then using browser login to your bitbucket account, go to this repository section and create a "pull request". When you create a pull requet, I (and others) can see what changes you made in your branch and give you feedback. You may need to make additional changes and push again (using the commands above). When we approve your changes then we will "merge" your changes into the master branch, and basically your code will be incuded in the main version of the program. 
+Then using browser login to your bitbucket account, go to this repository section and create a "pull request". When you create a pull requet, I (and others) can see what changes you made in your branch and give you feedback. You may need to make additional changes and push again (using the commands above). When we approve your changes then we will "merge" your changes into the main branch, and basically your code will be incuded in the main version of the program. 
 
 ### Pull changes - conflict resolution
 
@@ -52,13 +52,13 @@ git pull
 
 The above command is useful if you have an old clone of the repository and some changes are made to the online repo after your cloning. In this case use the above command instead of cloning a whole new project.
 
-Sometimes it may so happen that while you are working on your branch we push/merge some new changes in the master branch. To get these changes in your branch you need to "pull" changes from the master branch to your branch:
+Sometimes it may so happen that while you are working on your branch we push/merge some new changes in the main branch. To get these changes in your branch you need to "pull" changes from the main branch to your branch:
 
 ```
 // making sure you are in your branch
 git checkout <your-branch>
 
-git pull origin master
+git pull origin main
 
 ```
 
