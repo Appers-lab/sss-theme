@@ -1,4 +1,19 @@
 
+General instructions:
+======================================
+Before do the task make sure you have read the design guide (css-guide.md) in the doc folder of the project folder. Note that this is a [markdown](https://guides.github.com/features/mastering-markdown/) document (you need to learn what markdown is and will require writing markdown docs yourself.)
+
+The tasks are posted in the project page (link given to you through email). Your also assigned a branch (based on your name) to work in. Your branch name is also given to you through email. When you are assigned a task: 
+
+* Clone your branch (refer to the next section for a handy guide on Git)
+* Do your task
+* Commit and push the changes to the branch and make a pull request
+* If you have any question/problem about the task tag me on the pull request.
+* If you have a general question make a new issue (in the repository) and tag me there.
+* I will review your pull request, make comments there, and you will apply the comments. Once the changes are ok we will merge it and your task is done. 
+* Throughout the review process there would be new concepts/topics, and you may be asked to read some articles to learn more about them, and sometimes you may need to write a brief summary of what you learned.
+
+
 Quick start with Git
 ===============================
 
@@ -66,6 +81,8 @@ If conflicts happen, then the above command shows a list of conflicted files. Th
 
 Using SCSS
 ===================================
+
+For a more detailed introduction to SCSS/SASS you may refer to their website, particularly [this link](https://sass-lang.com/guide) is a good place to start. 
 
 You need to have sass installed globally:
 
