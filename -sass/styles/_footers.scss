@@ -1,0 +1,27 @@
+
+$background-color: #282828;
+$text-color: #eee;
+$link-color: rgb(214, 205, 205);
+
+.ss-footer{
+    height: 40vh;
+    color: $text-color;
+    background-color: $background-color;
+    padding: 60px 0;
+    
+    & .icon{
+        margin-right: 2px;
+    }
+    
+    & .copyright-links{
+        a{
+            text-decoration: none;
+            color: $link-color;
+
+            &:hover{
+                color: white;
+            }
+        }
+    }
+}
+
