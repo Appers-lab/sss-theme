@@ -1,27 +1,33 @@
 
-$background-color: #282828;
-$text-color: #eee;
-$link-color: rgb(214, 205, 205);
+$footer-bg-color: #282828;
+$footer-text-color: #eee;
+$footer-link-color: rgb(214, 205, 205);
 
-.ss-footer{
-    height: 40vh;
-    color: $text-color;
-    background-color: $background-color;
-    padding: 60px 0;
-    
-    & .icon{
-        margin-right: 2px;
-    }
-    
-    & .copyright-links{
-        a{
-            text-decoration: none;
-            color: $link-color;
+.s-footer{
+    height: fit-content;
+    color: $footer-text-color;
+    background-color: $footer-bg-color;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
 
-            &:hover{
+    &__contact{
+        display: flex;
+        
+        &__child{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 10px;
+
+            &__icon{
+                width: 25px;
+                height: 25px;
                 color: white;
+                margin-right: 10px;
             }
         }
     }
+
 }
 

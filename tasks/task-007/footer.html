@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../css/bundle.css">
 </head>
 <body>
@@ -12,7 +11,7 @@
 <footer>
   
   <!-- copyright -->
-  <article class="ss-footer">
+  <article class="s-footer">
     <div class="container">
 
       <div class="row col-mb-30">
@@ -25,14 +24,24 @@
           <p class="mb-0">
             Real Estate Brokerage License X033279 Optim Pacific Realty
           </p>
-          
-          <i class="far fa-envelope icon"></i> support@billihomes.ca <span class="middot">.</span> <i class="fas fa-phone icon"></i> +1 (604) 975-2547
+          <div class="s-footer__contact">
+            <div class="s-footer__contact__child">
+              <img src="../../icons/envelope.svg" class=" bi bi-envelope-fill s-footer__contact__child__icon"/>
+              <p class="s-footer__contact__value">support@billihomes.ca</p>
+            </div>
+            <div class="s-footer__contact__child">
+              <img src="../../icons/headset.svg" class="bi bi-headset s-footer__contact__child__icon"/>
+              <p class="s-footer__contact__value">+1(604) 975-2547</p>
+            </div>
+
+          </div>
+          <!-- <img src="../../icons/envelope.svg" class=" bi bi-envelope-fill"/> support@billihomes.ca <span class="middot">.</span> <i class="fas fa-phone s-footer__icon"></i> +1 (604) 975-2547 -->
         </div>
 
         <div class="col-md-6 text-right">
 
           Copyrights &#169; 2020 All Rights Reserved by Billihomes.ca
-          <div class="copyright-links mt-2"><a href="/terms-of-service">Terms of Service</a> / <a href="/privacy-policy">Privacy Policy</a></div>
+          <div class="s-footer__links mt-2"><a href="/terms-of-service">Terms of Service</a> / <a href="/privacy-policy">Privacy Policy</a></div>
 
           <div class="clear"></div>
 
@@ -48,7 +57,7 @@
 
     <div class="container">
 
-      <div class="">
+      <div class="container__child">
         <div class="ss-mls-cmp__logo me-h">
           <img src="mls.gif">
         </div>

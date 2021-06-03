@@ -32,10 +32,12 @@
 .ss-mls-cmp {
   color: white;
   background-color: black;
-  height: 20vh;
-  padding: 22px 0;
+  min-height: 120px;
+  width: auto;
+  display: flex;
+  align-items: center;
   
-
+  
   &__logo {
     width: 106px;
     height: 43px;
