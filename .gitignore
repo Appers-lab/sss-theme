@@ -3,6 +3,8 @@ css
 
 .idea
 *.rdb
+/.sass-cache
+.sass-cache
 
 # Editor related
 *.code-workspace
