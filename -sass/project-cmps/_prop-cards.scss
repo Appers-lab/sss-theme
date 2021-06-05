@@ -75,13 +75,43 @@
     }
   }*/
 
+  &__mls{
+    position: absolute;
+    top: 5%;
+    left: 2.5%;
+    p{
+      color: $dark-grey;
+      font-size: 0.5rem;
+    }
+  }
+  &__brokerage{
+    position: absolute;
+    top: 88%;
+    right: 2.5%;
+    p{
+      color: $primary-color-shade;
+      font-size: 0.5rem;
+    }
+  }
+
   &__content {
     font-size: 0.6875rem;
     color: black;
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
-
+    
     * {
-      @include dot-text-overflow();
+      // @include dot-text-overflow();
+    }
+     
+    &--addressCtn {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    a {
+      font-size: 0.9rem;
+      display: flex;
     }
   }
 
@@ -94,6 +124,7 @@
 
   &__address {
     color: $dark-grey;
+    @include dot-text-overflow();
   }
 
   &__essentials {
@@ -116,9 +147,43 @@
     padding: 0.125rem;
   }
 
+  // &__brokerage{
+  //   p{
+  //     color: $dark-grey;
+  //     text-align: center;
+  //     font-size: ss-prop-card__price-psf;
+  //   }
+
+
   &:focus {
     //outline: none;
     border: 1px solid red;
-  }
-
+    box-shadow: 0 0 0 rgb(226, 26, 36);
+    animation: pulse 2s infinite;
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      }
+      70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      }
+      100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 68, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+      }
+      70% {
+          -moz-box-shadow: 0 0 0 10px rgba(235, 17, 17, 0);
+          box-shadow: 0 0 0 10px rgba(204, 44, 44, 0);
+      }
+      100% {
+          -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+          box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+      }
+    }
+   }
 }
