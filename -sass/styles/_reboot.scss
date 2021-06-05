@@ -39,7 +39,12 @@ select {
   &:focus {
     border: 1px solid $primary-color;
     box-shadow: $box-shadow-sm;
-    font-size: 1.3rem;
+    //font-size: 1.3rem;
+  }
+
+  &:disabled {
+    color: $grey;
+    border: 1px solid $light-grey;
   }
 }
 

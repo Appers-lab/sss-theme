@@ -26,12 +26,18 @@
   border-radius: 4px;
   font-weight: bold;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: $primary-color-shade;
   }
 
   &:focus {
     box-shadow: none;
+  }
+
+  &:disabled {
+    box-shadow: unset;
+    color: $grey;
+    background-color: #f5f5f5;
   }
 
   &.s-btn--round {
@@ -44,5 +50,15 @@
     color: #3f48cc;
     background-color: #f5f5f5;
 
+    &:disabled {
+      color: $grey;
+    }
   }
+}
+
+.s-close-btn {
+
+  @include btn();
+  color: $grey;
+
 }
