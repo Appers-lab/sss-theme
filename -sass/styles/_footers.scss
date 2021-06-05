@@ -7,27 +7,15 @@ $footer-link-color: rgb(214, 205, 205);
     height: fit-content;
     color: $footer-text-color;
     background-color: $footer-bg-color;
-    display: flex;
-    align-items: center;
     padding: 40px 0;
 
-    &__contact{
-        display: flex;
-        
-        &__child{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-right: 10px;
-
-            &__icon{
-                width: 25px;
-                height: 25px;
-                color: white;
-                margin-right: 10px;
-            }
-        }
+    &__icon{
+        width: 25px;
+        height: 25px;
+        color: white;
+        margin-right: 10px;
     }
-
+    
 }
+
 
