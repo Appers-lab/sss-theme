@@ -106,12 +106,29 @@ sudo chmod +x sass-start
 Now you can start editing teh scss files and see the results live by including the `css/bundle` file in a html file.
 
 
+Notes on doing tasks
+===========================
+Each task will have a folder after its three digit index number in the path `/tasks` (like `/tasks/task-007` for Task 7). Feel free to add/modify file within this folder. Usually there is an html file within this folder which is used to show the component/items you have designed. In otehr words, this file serves as a demo of your work and it is important that it has a good presentation of the component/items you designed. So we have to add some meaninful content to that (similar to what html theme packages do). A convention of frontend designers is to use the well-known [Lorem Ipsum](https://www.lipsum.com/) text to present a sample text.
+
+
 Using Canvas Theme
 ============================
 In some of the tasks we use a theme called *Canvas* as a model. We do not include anything of its code, but only refer to that as a starting point of how things should look like. You may read its code but eventually you need to produce/reproduce its components from scratch by coding. Dowload this theme from [This link](https://drive.google.com/file/d/1lNdPJPjFbvhf7WCYtgcIFwR5M-CbfyQ5/view?usp=sharing)
 
-That's a big zip file. Once you unpack it, all the html pages can be found at `/Package-HTML/HTML`. I would refer to some pages in this folder and some componens withing these pages and ask you to make something similar to that (with some modification) 
+That's a big zip file. Once you unpack it, all the html pages can be found at `/Package-HTML/HTML`. I would refer to some pages in this folder and some componens withing these pages and ask you to make something similar to that (with some modification)
 
-Notes on doing tasks
-===========================
-Each task will have a folder after its three digit index number in the path `/tasks` (like `/tasks/task-007` for Task 7). Feel free to add/modify file within this folder. Usually there is an html file within this folder which is used to show the component/items you have designed. In otehr words, this file serves as a demo of your work and it is important that it has a good presentation of the component/items you designed. So we have to add some meaninful content to that (similar to what html theme packages do). A convention of frontend designers is to use the well-known [Lorem Ipsum](https://www.lipsum.com/) text to present a sample text.
+Using Bootstrap icons
+=================================
+To be on the same page, lets use bootstrap icons for all the designs. The bootstrap icons are downloaded in the folder `/font`. To include them in your html files just include the file `bootstrap-icons.css` in the header:
+
+```html
+<link rel="stylesheet" href="../../font/bootstrap-icons.css">
+```
+
+And then use the icons, like:
+
+```html
+<i class="bi bi-alarm"></i>
+```
+
+See [here](https://icons.getbootstrap.com/) for a complete list of icons and their class name. 

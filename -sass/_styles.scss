@@ -89,6 +89,11 @@ $details-modal-col2-width: 500px;
   max-width: calc(100vw - (#{$details-modal-y-margin} * 2));
 }
 
+.modal-xxl {
+  max-width: 1200px;
+  width: 1200px;
+}
+
 .modal-header {
   color: $primary-color;
 
