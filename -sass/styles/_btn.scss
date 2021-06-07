@@ -1,8 +1,15 @@
 /* md style button
 =========================== */
 
+button:disabled {
+  color: $grey;
+
+  :hover {
+    color: $grey;
+  }
+}
+
 @mixin btn() {
-  padding: 0rem 1rem;
   min-width: 4rem;
   vertical-align: middle;
   user-select: none;
@@ -16,6 +23,7 @@
 
 .s-btn {
   @include btn();
+  padding: 0rem 1rem;
   font-size: 0.875rem;
   background-color: $primary-color;
   color: white;

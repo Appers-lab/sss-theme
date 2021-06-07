@@ -13,9 +13,20 @@
   font-weight: 700;
 }
 
+// TODO: to be moved to layouts
 .s-text-center {
   text-align: center;
 }
+
+.s-mute {
+  color: $grey;
+}
+
+.s-light-border {
+  border: 1px solid $light-grey;
+}
+
+
 
 /* dividers
 ===================== */
