@@ -9,11 +9,17 @@ $footer-link-color: rgb(214, 205, 205);
     background-color: $footer-bg-color;
     padding: 40px 0;
 
-    &__icon{
-        width: 25px;
-        height: 25px;
+    i {
+        font-size: 1.5rem;
         color: white;
-        margin-right: 10px;
+        margin-right: 0.5rem;
+    }
+
+    &__link {
+        color: $grey;
+        &:hover {
+            color: $light-grey;
+        }
     }
     
 }
