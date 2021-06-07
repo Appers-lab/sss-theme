@@ -77,8 +77,8 @@
 
   &__mls{
     position: absolute;
-    top: 5%;
-    left: 2.5%;
+    top: 8px;
+    left: 5px;
     p{
       color: $dark-grey;
       font-size: 0.5rem;
@@ -86,8 +86,8 @@
   }
   &__brokerage{
     position: absolute;
-    top: 88%;
-    right: 2.5%;
+    bottom: 8px;
+    right: 5px;
     p{
       color: $primary-color-shade;
       font-size: 0.5rem;
@@ -103,7 +103,7 @@
       // @include dot-text-overflow();
     }
      
-    &--addressCtn {
+    &--address-ctn {
       display: flex;
       justify-content: start;
       align-items: center;
