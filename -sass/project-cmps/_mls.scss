@@ -30,18 +30,19 @@
 /* MLS
 ======================= */
 .ss-mls-cmp {
+  color: white;
+  background-color: black;
+  padding: 25px 0;
 
   &__logo {
     width: 106px;
     height: 43px;
     float: left;
+    margin-right: 0.5rem;
   }
 
   &__text {
     font-style: italic;
-    /* font-weight: 300; */
-    /*color: #000;*/
-    margin-top: 0.5rem;
   }
 
 }

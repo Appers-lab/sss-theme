@@ -1,0 +1,27 @@
+
+$footer-bg-color: #282828;
+$footer-text-color: #eee;
+$footer-link-color: rgb(214, 205, 205);
+
+.s-footer{
+    height: fit-content;
+    color: $footer-text-color;
+    background-color: $footer-bg-color;
+    padding: 40px 0;
+
+    i {
+        font-size: 1.5rem;
+        color: white;
+        margin-right: 0.5rem;
+    }
+
+    &__link {
+        color: $grey;
+        &:hover {
+            color: $light-grey;
+        }
+    }
+    
+}
+
+
