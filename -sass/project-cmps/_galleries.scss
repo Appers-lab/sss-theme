@@ -80,7 +80,7 @@
 ========================= */
 .re-modal-gallery {
 
-  width: calc(100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2)));
+  //width: calc(100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2)));
 
   .-card {
 
@@ -92,7 +92,7 @@
       @include cover();
       object-fit: cover;
 
-      height: calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
+      height: 100px; //calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
 
       &:hover {
         @include image-hover-grow();
@@ -107,7 +107,7 @@
     cursor: pointer;
     position: relative;
 
-    height: calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
+    height: 100px; //calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
 
     .-overlay {
       @include overlay(1000);
@@ -166,8 +166,8 @@
 
 
     img {
-      @include cover();
-      object-fit: cover;
+      //@include cover();
+      //object-fit: cover;
 
 
     }

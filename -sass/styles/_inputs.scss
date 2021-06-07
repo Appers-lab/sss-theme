@@ -28,3 +28,8 @@ label.disabled {
     content: "*";
   }
 }
+
+input.s-input-error, select.s-input-error {
+  border-color: red;
+  font-size: 1rem;
+}

@@ -9,7 +9,7 @@
 
 .re-modal-details {
 
-  width: $details-modal-col2-width;
+  //width: $details-modal-col2-width;
   padding: 0px 25px;
   margin-bottom: 35px;
 
@@ -88,4 +88,12 @@
 
     }
   }
+}
+
+.ss-prop-appos {
+  padding: 2rem;
+  border: 1px solid $light-grey;
+  background-color: $primary-bg-light;
+
+  @include md-shadow();
 }
