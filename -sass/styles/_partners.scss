@@ -1,0 +1,18 @@
+// Grid initialization
+.Grid > dev{
+    background: #eee;
+    padding: 1em;
+}
+
+// Grid configuration
+.Grid{
+    display: grid;
+    grid-gap: 2em 2em;
+    grid-template-columns: repeat(6,1fr);
+}
+
+// Image constraints
+.Partner-logo{
+    display: block;
+    width: 100%;
+}

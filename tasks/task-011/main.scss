@@ -1,0 +1,19 @@
+// Grid initialization
+.Grid {
+    background: #eee;
+    padding: 1em;
+}
+
+// Grid configuration
+.Grid{
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    // Image constraints
+    img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
