@@ -1,0 +1,48 @@
+.s-steps-leftbar{
+  position:relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 0;
+    height: 100%;
+    border-left: 1px dashed $dark-grey;
+    z-index: -1;
+  }
+  li{
+    list-style: none;
+    display: flex;
+  }
+ 
+  &__step{
+    position: relative;
+    background-color: white;
+    padding: 2.5px;
+    width: 120px;
+    height: 100%;
+    border: solid 3px $grey;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 12px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &:hover{
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+    div{
+      position: absolute;
+      top: 50%;
+      left: 45px;
+      width: 100px;
+      height: 0;
+      border-top: 1px dashed $dark-grey;
+      z-index: -1;
+    }
+  }
+  &__content{
+    margin-left: 50px;   
+  }
+}
+
