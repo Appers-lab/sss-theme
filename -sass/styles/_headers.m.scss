@@ -1,0 +1,44 @@
+$header-bg-color: #282828;
+$header-text-color: #eee;
+$header-link-color: rgb(214, 205, 205);
+
+.s-page-header {
+    width: 100%;
+    display: table;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $header-bg-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    &__logo {
+        img {
+            width: unset;
+            height: unset;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        h1 {
+            color: $header-text-color;
+        }
+    }
+
+    &__left-menu {
+        margin: auto;
+        float: left;
+    }
+
+    &__right-menu {
+        margin: auto;
+        float: right;
+    }
+
+    a {
+        color: $header-link-color;
+    }
+
+    &--no-shadow {
+        box-shadow: unset;
+    }
+}
