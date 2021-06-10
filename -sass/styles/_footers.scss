@@ -1,8 +1,9 @@
+
 $footer-bg-color: #282828;
 $footer-text-color: #eee;
 $footer-link-color: rgb(214, 205, 205);
 
-.s-footer {
+.s-footer{
     height: fit-content;
     color: $footer-text-color;
     background-color: $footer-bg-color;
@@ -20,4 +21,6 @@ $footer-link-color: rgb(214, 205, 205);
             color: $light-grey;
         }
     }
+    
 }
+

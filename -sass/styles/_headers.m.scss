@@ -4,8 +4,7 @@ $header-link-color: black;
 
 .s-page-header {
     display: flexbox;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     position: relative;
 
@@ -13,7 +12,7 @@ $header-link-color: black;
         text-align: center;
         img {
             width: unset;
-            height: unset;
+            height: 100%;
         }
     }
 
@@ -25,14 +24,10 @@ $header-link-color: black;
     }
 
     &__left-menu {
-        margin-top: 1rem;
-        margin-left: 1rem;
         float: left;
     }
 
     &__right-menu {
-        margin-top: -2.5rem;
-        margin-right: 2rem;
         float: right;
     }
 
@@ -42,11 +37,5 @@ $header-link-color: black;
 
     &--no-shadow {
         box-shadow: unset;
-    }
-
-    .someicon {
-        button {
-            margin-top: -1rem;
-        }
     }
 }
