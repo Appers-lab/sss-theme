@@ -1,16 +1,16 @@
 $header-bg-color: #282828;
-$header-text-color: #eee;
-$header-link-color: rgb(214, 205, 205);
+$header-text-color: black;
+$header-link-color: black;
 
 .s-page-header {
-    width: 100%;
-    display: table;
+    display: flexbox;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: $header-bg-color;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
 
     &__logo {
+        text-align: center;
         img {
             width: unset;
             height: unset;
@@ -25,12 +25,14 @@ $header-link-color: rgb(214, 205, 205);
     }
 
     &__left-menu {
-        margin: auto;
+        margin-top: 1rem;
+        margin-left: 1rem;
         float: left;
     }
 
     &__right-menu {
-        margin: auto;
+        margin-top: -2.5rem;
+        margin-right: 2rem;
         float: right;
     }
 
@@ -40,5 +42,11 @@ $header-link-color: rgb(214, 205, 205);
 
     &--no-shadow {
         box-shadow: unset;
+    }
+
+    .someicon {
+        button {
+            margin-top: -1rem;
+        }
     }
 }
