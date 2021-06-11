@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="../../css/bundle.m.css">
+  <link rel="stylesheet" href="../../font/bootstrap-icons.css">
+<body>
+  <div class="s-drawer">
+    This is the panel
+  </div>
+  <div class="container">
+    <button onclick="openModal('left')"> Open left </button>
+    <button onclick="openModal('right')"> Open right </button>
+  </div>
+
+  <div id="modalLeft" class="modal">
+      <!-- Modal content -->
+      <div class="modal__content--left">
+          <button onclick="closeModal()" class="modal__button-close"><i class="bi bi-x"></i></button>
+      </div>
+  </div>
+
+  <div id="modalRight" class="modal">
+    <!-- Modal content -->
+    <div class="modal__content--right">
+        <button onclick="closeModal()" class="modal__button-close"><i class="bi bi-x"></i></button>
+    </div>
+</div>
+</div>
+
+  <script>
+   const modalLeft = document.getElementById("modalLeft");
+   const modalRight = document.getElementById("modalRight");
+   function openModal(direction) {
+    // code here
+    if(direction==="left"){
+      modalLeft.classList.add('modal--open-left')
+    }else if(direction==="right"){
+      modalRight.classList.add('modal--open-right')
+    }
+   }
+
+    function closeModal() {
+    // code here
+     modalLeft.classList.remove('modal--open-left')
+     modalRight.classList.remove('modal--open-right')
+   }
+
+    window.onclick = function (e) {
+      if (e.target == modalLeft) {
+        modalLeft.classList.remove('modal--open-left');
+      }else if(e.target == modalRight){
+        modalRight.classList.remove('modal--open-right');
+      }
+    }
+  </script>
+</body>
+
+</html>
