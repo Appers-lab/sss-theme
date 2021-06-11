@@ -249,6 +249,28 @@ But now suppose we want to further customize this component to:
 }
 ```
 
+Margin vs padding
+--------------------------
+Padding is to *separate* a *wrapper* from its *content*. To add vertical space *between* blocks margin is the standard choice, or you can just add a vertical space using a spacer block, like this one which we included in our project:
+
+```html
+<div class="spacer-2"></div>
+```
+
+The above block adds a vertical space of size 2-rem (currently we have spacers from 1 to 4 rems).
+
+padding is usually used to separate a wrapper from its contents:
+
+```html
+<!-- wrapper block, with possibly a border -->
+<div style="padding:4px; border: 1px solid grey"> 
+  ... lot of content
+</div>
+```
+
+The padding for wrapper is usually a full padding (=> includes all four directions) and mostly has the same value for all directions (like padding: 4px). The wrapper also usually has a border around it, so it basically adds a border with a nice padding around your content and allow you to group and organize your contents.
+
+
 Using Bootstrap icons
 ---------------------------
 The bootstrap icons are downloaded in the folder `/font`. To include them in your html files just include the file `bootstrap-icons.css` in the header:
