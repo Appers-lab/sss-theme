@@ -2,6 +2,14 @@
 Design guide for mobile pages
 =================================
 
+Add viewport
+--------------------
+When designing a web page for mobile device don't forget to add the following viewport code to your html `<head>`:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+```
+
 File structure
 --------------------
 We use the same concepts of BEM and 3-layer css as explained in the general design guide. For mobile pages we the `bundle.m.css` (instead of `bundle.css`) which joins together the 3 design layers:
@@ -13,6 +21,15 @@ We use the same concepts of BEM and 3-layer css as explained in the general desi
 3. Layer 2: `_project.scss`: For now we don't have to worry about layer 2 mobile components, as they are mostly going to be the same as the desktop version. Basically we hope that the layer 2 components are responsive enough to be used in both devices. However, in case that in the future we had to split designs then maybe we create a separate `_project.m.scss` file ...
 
 Note that in the `bundle.m.scss` we also changed some of the layout variables (like $font-size-root which is from the bootstrap). This is to adjust more to the mobile page. If need be, we can change more variables and later we re-organize changes into a separate file.  
+
+
+Using developer tools to view your mobile design
+--------------------------------------------------
+When designing mobile pages you can use the browser developer tools to get a *mobile view* of your design. You can choose different mobile devices (-> different screen sizes) and check how your design looks on them. Here is an screenshot:
+
+![alt text](./dev-tools-mobile.png "Developer tools for mobile pages")
+
+
 
 MobileKit theme
 ---------------------
