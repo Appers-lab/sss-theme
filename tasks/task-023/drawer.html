@@ -5,6 +5,8 @@
   <title>Test</title>
   <link rel="stylesheet" href="../../css/bundle.m.css">
   <link rel="stylesheet" href="../../font/bootstrap-icons.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
 <body>
   <div class="s-drawer">
     This is the panel
@@ -14,9 +16,9 @@
     <button onclick="openModal('right')"> Open right </button>
   </div>
 
-  <div id="modalLeft" class="modal">
+  <div id="modalLeft" class="modal" >
       <!-- Modal content -->
-      <div class="modal__content--left">
+      <div class="modal__content--left" style="background-color:yellow">
           <button onclick="closeModal()" class="modal__button-close"><i class="bi bi-x"></i></button>
       </div>
   </div>
@@ -27,6 +29,7 @@
         <button onclick="closeModal()" class="modal__button-close"><i class="bi bi-x"></i></button>
     </div>
 </div>
+
 </div>
 
   <script>
