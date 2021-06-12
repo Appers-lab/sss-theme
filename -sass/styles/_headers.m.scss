@@ -3,7 +3,7 @@ $header-text-color: black;
 $header-link-color: black;
 
 .s-page-header {
-    display: flexbox;
+    display: inline-flexbox;
     padding: 1rem 0 5rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
@@ -17,22 +17,38 @@ $header-link-color: black;
             width: unset;
             height: 1rem;
         }
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    menu {
+        font-size: 1.5rem;
+        line-height: 0.9rem;
     }
 
     &__left-menu {
+        float: left;
         width: 25%;
         padding: 1rem 0;
-        float: left;
     }
 
     &__right-menu {
-        padding: 1rem 1rem 0;
         float: right;
+        padding: 1rem 1rem 0;
     }
 
     a {
         color: $header-link-color;
         text-decoration: none;
+    }
+
+    i {
+        font-style: normal;
+    }
+
+    button {
+        padding-bottom: 1rem;
     }
 
     &--no-shadow {
