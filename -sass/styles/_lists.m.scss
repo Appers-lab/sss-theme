@@ -1,40 +1,31 @@
 .s-listview {
-  border-top: 1px solid $light-grey;
-  border-bottom: 1px solid $light-grey;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
-  position: relative;
-  min-height: 50px;
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 16px;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: $light-grey;
-  }
-
-  &--left {
-    display: flex;
-    align-items: center;
-  }
 
   &__img {
     img {
       width: 36px;
       border-radius: 50%;
-      margin-right: 16px;
+      margin-left: 16px;
     }
   }
 
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-grey;
+    padding: 10px 16px;
+    min-height: 50px;
+  }
+
   &__menu {
+    display: flex;
+    align-items: center;
+
     li {
-      margin: auto 0;
+      list-style: none;
       
       a {
         text-decoration: none;
@@ -44,6 +35,7 @@
       button {
         color: $grey;
         height: auto;
+        margin-left: 8px;
       }
     }
   }
