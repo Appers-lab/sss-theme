@@ -1,63 +1,31 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.modal {
+.s-drawer {
   display: none;
   position: fixed;
   z-index: 1;
   left: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-
-  /* Modal Content */
-  &__content--left {
-    position: fixed;
-    height: 100%;
-    background-color: #fefefe;
-    width: 80%;
-    left: 0;
-  }
-
-  &__content--right {
-    position: fixed;
-    height: 100%;
-    background-color: #fefefe;
-    width: 80%;
-    right: 0;
-  }
-
+  
   &--open-left {
     display: block;
-    -webkit-animation-name: slideLeft;
-    -webkit-animation: slideLeft 0.4s ease-in-out;
-    animation-name: slideLeft;
-    animation: slideLeft 0.4s ease-in-out;
+    -webkit-animation-name: slide-left-ani;
+    -webkit-animation: slide-left-ani 0.4s ease-in-out;
+    animation-name: slide-left-ani;
+    animation: slide-left-ani 0.4s ease-in-out;
   }
 
   &--open-right {
     display: block;
-    -webkit-animation-name: slideRight;
-    -webkit-animation: slideRight 0.4s ease-in-out;
-    animation-name: slideRight;
-    animation:slideRight  0.4s ease-in-out;
-   
-  }
-  /* The Close Button */
-  &__button-close {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    font-size: 2rem;
-    &:hover {
-      cursor: pointer;
-    }
+    position: fixed;
+    -webkit-animation-name: slide-right-ani;
+    -webkit-animation: slide-right-ani 0.4s ease-in-out;
+    animation-name: slide-right-ani;
+    animation: slide-right-ani 0.4s ease-in-out;
+    left: 20%;
   }
 
   /* Add Animation */
-  @-webkit-keyframes slideLeft {
+  @-webkit-keyframes slide-left-ani {
     from {
       left: -300px;
       opacity: 0;
@@ -68,7 +36,7 @@
     }
   }
 
-  @keyframes slideLeft {
+  @keyframes slide-left-ani  {
     from {
       left: -300px;
       opacity: 0;
@@ -76,11 +44,10 @@
     to {
       left: 0;
       opacity: 1;
-    
     }
   }
 
-  @-webkit-keyframes slideRight {
+  @-webkit-keyframes slide-right-ani {
     from {
       right: -300px;
       opacity: 0;
@@ -91,7 +58,7 @@
     }
   }
 
-  @keyframes slideRight {
+  @keyframes slide-right-ani  {
     from {
       right: -300px;
       opacity: 0;
