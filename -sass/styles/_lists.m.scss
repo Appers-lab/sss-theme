@@ -1,0 +1,52 @@
+
+.s-listview {
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-left: $spacer;
+      margin-right: $spacer;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $light-grey;
+    padding: 0.6*$spacer $spacer;
+    min-height: 3.5*$spacer;
+  }
+
+  @at-root &--no-border &__content {
+    border-bottom: unset;
+  }
+
+  &__img + &__content {
+    padding-left: 0;
+  }
+
+  menu {
+    & > li > a, & > li > button {
+      padding: 0 0.3*$spacer;
+      color: $grey;
+    }
+  }
+
+  &__link-btn {
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: $spacer;
+    height: $spacer;
+    background-image: url("data:image/svg+xml,%0A%3Csvg width='10px' height='16px' viewBox='0 0 10 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg id='Listview' transform='translate(-112.000000, -120.000000)' stroke='%23A1A1A2' stroke-width='2.178'%3E%3Cpolyline id='Path' points='114 122 120 128 114 134'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+}
