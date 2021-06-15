@@ -11,7 +11,7 @@ Uee template lit instead of jsx
 ------------------------------------
 It is common to use JSX with react, but modern javascript offers [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), and now it is possible use native js template instead of jsx. To do so you'll need to use the [htm tool](https://github.com/developit/htm)(in this link there are examplses provided). 
 
-The bottomline is you can use react directly in the browser `<script>` without having to use webpack and babel to compile your jsx. That being said, we still use webpack/babel in our project order to use javascript ES6 syntax. But for your design tasks the browser should be enough. Just use a modern browser and hopefully it supports all the js features we need. In the future we may need to use webpack for more advanced tasks.
+The bottomline is you can use react directly in the browser `<script>` without having to use webpack and babel to compile your jsx. This is good for quick testing on the browser. However, for the your design tasks we will still use jsx. 
 
 For a sample in-browser basic react component example see `p1.html` in the samples folder.
 
