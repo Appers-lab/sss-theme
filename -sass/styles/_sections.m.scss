@@ -1,0 +1,30 @@
+.s-section {
+  background: $light-grey;
+
+  h2 {
+    padding: 0.375*$spacer $spacer;
+    font-size: 0.93rem;
+  }
+
+  .s-section__content {
+    background: $white;
+    padding: $spacer;
+  }
+  button {
+    background: #6C7C94;
+    color: #ffffff;
+    padding: 0.19*$spacer 1.125*$spacer;
+    margin: $spacer 0;
+    font-size: 0.81rem;
+    border-radius: 0.375*$spacer;
+    cursor: pointer;
+
+    &:hover {
+    background: #566376;
+  }
+  }
+  p {
+    color: #4F5050;
+  }
+  
+}
