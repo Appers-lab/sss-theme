@@ -4,6 +4,13 @@
 $menu-link-padding-x: 1rem;
 $enable-smooth-scroll: true;
 
+$h1-font-size:                2rem;
+$h2-font-size:                1.5rem;
+$h3-font-size:                1rem;
+$h4-font-size:                1rem;
+$h5-font-size:                1rem;
+$h6-font-size:                1rem;
+
 
 /* Configuration
 ============================ */
@@ -35,6 +42,7 @@ $include-column-box-sizing: true !default;
 @import "bootstrap5/dropdown";
 @import "layouts/menus";
 @import "bootstrap5/modal";
+@import "bootstrap5/tables";
 
 
 
