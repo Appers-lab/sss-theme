@@ -1,0 +1,40 @@
+/* admin-bars
+============================ */
+
+.s-admin-sidebar {
+    width: 15rem;
+    background-color: #19222a;
+
+    menu > li {
+        color: $grey;
+        line-height: 4.5rem;
+
+        & > a {
+            font-size: 1.25rem;
+            &:after {
+                position: absolute;
+                left: 13.7rem;
+                content: ">";
+            }
+            &:hover {
+                background-color: black;
+                color: white;
+                transition: 0.5s;
+            }
+
+            & > i {
+                font-size: 1.5rem;
+                padding-right: 0.4em;        
+            }
+        }
+    }
+
+    &__header {
+        background-color: #09f;
+        color: black;
+        padding-left: 1rem;
+        font-size: 1.25rem;
+        height:3rem;
+        line-height: 3rem;
+    }
+}
