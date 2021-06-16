@@ -4,28 +4,16 @@
     line-height: 1.2em;
     display: flex;
     position: relative;
+    button {
+        color: black;
+        &:hover {
+            color: #1E74FD;
+        }
+    }
+    i {
+        font-size: 1.5em;
+    }
+    p {
+        margin-top: 0.5em;
+    }
 }
-
-.s-btn-menu,
-button {
-    color: black;
-    padding: 1em;
-}
-
-.s-btn-menu,
-button:hover {
-    color: #1E74FD;
-}
-
-.s-btn-menu,
-i {
-    font-size: 1.5em;
-}
-
-.s-btn-menu,
-p {
-    font-size: 1em;
-    padding-top: 0.5em;
-}
-
-
