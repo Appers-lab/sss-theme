@@ -20,3 +20,5 @@ Make sure you:
 Let me know if you have any problem before doing the next learning module. For this project we are going to write some web components.
 
 Next, learn more about the shadow DOM by reading [this guide](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM), in particular learn about how to style a custom element that is inside a shadow DOM. Note that regular css styles will not go inside a shadow DOM. But [custom css styles](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) can go inside. In our projects we use css custom styles for custom elements. So make sure you learn about custom css style and css variables.  
+
+Next, learn about *slots* in [this guide](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots). Slots are a modern feature and they make it very easy to make more complex items from simple items within the custom element. We definitely use slots a lot in our projects. 
