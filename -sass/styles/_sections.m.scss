@@ -2,29 +2,32 @@
   background: $light-grey;
 
   h2 {
-    padding: 0.375*$spacer $spacer;
-    font-size: 0.93rem;
+    padding: 1.125*$spacer $spacer 0.375*$spacer $spacer;
+    font-size: 0.9375rem;
+    color: $gray-900;
   }
 
   .s-section__content {
     background: $white;
-    padding: $spacer;
-  }
-  button {
-    background: #6C7C94;
-    color: #ffffff;
-    padding: 0.19*$spacer 1.125*$spacer;
-    margin: $spacer 0;
-    font-size: 0.81rem;
-    border-radius: 0.375*$spacer;
-    cursor: pointer;
+    padding: 0.5*$spacer $spacer;
 
-    &:hover {
-    background: #566376;
+    .s-section__content__btn {
+      background: #6C7C94;
+      color: $white;
+      padding: 0.1875*$spacer 1.125*$spacer;
+      margin: $spacer 0;
+      font-size: 0.8125rem;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+      background: #566376;
+      }
+    }
   }
-  }
+  
   p {
-    color: #4F5050;
+    color: $gray-800;
   }
   
 }

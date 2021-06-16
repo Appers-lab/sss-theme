@@ -1,3 +1,29 @@
-// .s-action-sheet {
+.s-action-sheet {
+  h2 {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: $gray-900;
+    padding: 0.375*$spacer;
+    border-bottom: 1px solid $gray-300;
+  }
 
-// }
+  section {
+    border-bottom: 1px solid $gray-300;
+    .menu-column {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      li {
+        padding: 0.625*$spacer $spacer;
+      }
+      a {
+        font-size: 0.9375rem;
+      }
+    }
+
+    .close-item {
+      color: $red;
+    }
+  }
+}
