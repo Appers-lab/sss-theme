@@ -2,20 +2,16 @@
 ============================ */
 
 .s-admin-sidebar {
-    width: 15rem;
+    width: 15*$spacer;
     background-color: #19222a;
 
     menu > li {
         color: $grey;
-        line-height: 4.5rem;
-
+        
         & > a {
             font-size: 1.25rem;
-            &:after {
-                position: absolute;
-                left: 13.7rem;
-                content: ">";
-            }
+            padding: 1.5*$spacer 1*$spacer;
+
             &:hover {
                 background-color: black;
                 color: white;
@@ -24,17 +20,15 @@
 
             & > i {
                 font-size: 1.5rem;
-                padding-right: 0.4em;        
+                padding-right: 0.4*$spacer;        
             }
         }
     }
 
-    &__header {
+    header {
         background-color: #09f;
         color: black;
-        padding-left: 1rem;
         font-size: 1.25rem;
-        height:3rem;
-        line-height: 3rem;
+        padding: 1*$spacer 1*$spacer;
     }
 }

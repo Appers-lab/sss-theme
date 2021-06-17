@@ -38,6 +38,18 @@
     }
   }
 
+  &--dark {
+    background-color: $primary-color;
+
+    menu > li > a {
+      color: white;
+      &:hover {
+        color: $primary-color-shade;
+        font-size: $font-size-base;
+      }
+    }
+  }
+  
   &--no-shadow {
     box-shadow: unset;
   }
