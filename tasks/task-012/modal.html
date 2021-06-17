@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task 12 Modal</title>
+    <!-- <link rel="stylesheet" href="../../css/bundle.css"> -->
+
+    <!-- Hard Code Styling -->
+    <style>
+      body.s-modal--open {
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+      }
+      .s-modal {
+        background-color: white;
+        border: 2px solid red;
+        border-radius: 15px;
+        width: 500px;
+        margin: 2rem auto;
+        align-self: center;
+        transition: all 1s ease-in;
+        display: none;
+        padding: 15px;
+        overflow-y: auto;
+        -webkit-overflow-y: auto;
+        height: 80vh;
+      }
+  
+      .s-modal--slide-left.opening {
+        -webkit-animation: slide-left-ani 1s ease-in-out;
+        animation: slide-left-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-left.closing {
+        -webkit-animation: slide-close-left-ani 1s ease-in-out;
+        animation: slide-close-left-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-right.opening {
+        -webkit-animation: slide-right-ani 1s ease-in-out;
+        animation: slide-right-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-right.closing {
+        -webkit-animation: slide-close-right-ani 1s ease-in-out;
+        animation: slide-close-right-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-below.opening {
+        -webkit-animation: slide-below-ani 1s ease-in-out;
+        animation: slide-below-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-below.closing {
+        -webkit-animation: slide-close-below-ani 1s ease-in-out;
+        animation: slide-close-below-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-vertical.opening {
+        -webkit-animation: slide-vertical-ani 1s ease-in-out;
+        animation: slide-vertical-ani 1s ease-in-out;
+      }
+
+      .s-modal--slide-vertical.closing {
+        -webkit-animation: slide-close-vertical-ani 1s ease-in-out;
+        animation: slide-close-vertical-ani 1s ease-in-out;
+      }
+
+      .opening, .closing{
+        display: block;
+      }
+
+      /* Add Animation */
+      @-webkit-keyframes slide-left-ani {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes slide-left-ani {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @-webkit-keyframes slide-close-left-ani {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes slide-close-left-ani {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @-webkit-keyframes slide-right-ani {
+        0% {
+          transform: translateX(1000px);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes slide-right-ani {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @-webkit-keyframes slide-close-right-ani {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes slide-close-right-ani {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      @-webkit-keyframes slide-below-ani {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide-below-ani {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @-webkit-keyframes slide-close-below-ani {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(1000px);
+        }
+      }
+
+      @keyframes slide-close-below-ani {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(1000px);
+        }
+      }
+      @-webkit-keyframes slide-below-ani {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slide-below-ani {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      @-webkit-keyframes slide-close-below-ani {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      @keyframes slide-close-below-ani {
+        0% {
+          transform: translateY(0%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+
+      @-webkit-keyframes slide-vertical-ani {
+        0% {
+          transform: translateY(-50%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slide-vertical-ani {
+        0% {
+          transform: translateY(-50%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @-webkit-keyframes slide-close-vertical-ani {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+      @keyframes slide-close-vertical-ani {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-50%);
+        }
+      }
+
+      /* s-modal-content--header */
+      .s-modal__content--header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      h4 {
+        margin: 0;
+      }
+
+      /* s-modal-content--body */
+      .s-modal__content--body {
+        margin: 0 auto;
+      }
+      p {
+        text-align: justify;
+        text-indent: 0.5em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div style="position:fixed; width:100%; height:100%; top:0; left:0;">
+    <div class="s-modal--button">
+      <button onclick="openModal('left')">Open Modal Left</button>
+      <button onclick="openModal('right')">Open Modal Right</button>
+      <button onclick="openModal('below')">Open Modal Below</button>
+      <button onclick="openModal('vertical')">Open Modal Vertical Center Y</button>
+    </div>
+
+    <!-- content wrapper: feel free to add more styles if need be (maybe add display:flex for better alignment?), but i guess these are enough. No need to make these styles into css class. They will be generated by the javascript modal controller -->
+  
+      <!-- this is the modal content element which you have to write style for -->
+      <!-- Modal -->
+      <article class="s-modal" id="s-modal">
+        <div class="s-modal__dialogue">
+          <div class="s-modal__content">
+            <div class="s-modal__content--header">
+              <h4>Modal</h4>
+              <button class="s-modal__content--closebtn" onclick="closeModal()">
+                <span>&times;</span>
+              </button>
+            </div>
+
+            <div class="s-modal__content--body">
+              <!-- any content here, you may use Lorem text to fill it up ... -->
+              <p>  
+                <!-- Lorem ipsum -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magni minus doloremque corporis sapiente quam pariatur perferendis unde dignissimos quibusdam ab nobis, iusto eum in nulla autem doloribus magnam. Quos?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur odit, aliquam optio laboriosam sunt dolores. Vel numquam quis neque dicta error odio earum, eaque accusamus soluta laboriosam sequi amet repellat!
+                Id tenetur nostrum accusamus doloremque earum nemo provident, magni voluptate adipisci hic voluptatibus molestias porro assumenda dicta consequuntur eum! Cum nulla debitis veniam dolore cumque ea eligendi corrupti iusto quaerat!
+                Placeat, ea itaque corporis beatae, sequi maiores numquam sed facere architecto pariatur nulla rem velit sit unde nihil. Consectetur, laborum molestias ipsum praesentium similique saepe? Numquam voluptas optio iusto exercitationem.
+                Reprehenderit molestiae expedita laborum cum natus, perferendis sed autem culpa vitae nemo adipisci excepturi nostrum quis ipsum? Ducimus voluptatum sequi in dolorem! Quam, aut voluptas deserunt modi cupiditate alias! Officia.
+                <br/> 
+                Ullam, cumque! Aliquid amet eaque fuga repellendus sequi dolore? Enim cumque praesentium unde doloribus, tenetur voluptate? Dignissimos ducimus consequuntur fuga adipisci eveniet. Eligendi fuga, quibusdam exercitationem rerum hic temporibus ab!
+                Deserunt animi odio unde ullam amet in iusto, consectetur aliquid, voluptates consequatur ratione cum? Mollitia repellat, ad voluptas fuga sint atque amet magnam obcaecati beatae modi eveniet, error nisi eligendi!
+                <br/>
+                Itaque, corporis officiis reprehenderit atque impedit maxime! Expedita dignissimos unde enim, explicabo natus nobis, harum optio tenetur aperiam eum maxime rerum magni deleniti consectetur dolorum labore? Earum aliquam eos quas?
+                Nostrum consequuntur esse laborum eligendi fugiat vitae quod aliquam commodi in, omnis harum aperiam itaque doloremque sapiente. Mollitia facilis corporis quis assumenda, at pariatur quod suscipit perspiciatis reprehenderit sapiente natus!
+                <br/>
+                Itaque adipisci, nulla expedita atque id necessitatibus ad natus, vel autem sequi, corporis consequatur illum repellendus tempora nihil cumque illo dolores unde neque eveniet impedit doloribus dignissimos consectetur velit? Quae.
+                <br/>
+                Fugit impedit id ratione consequatur maxime corporis enim? Sapiente libero nesciunt, veritatis eum ex quo provident, magnam quam animi nisi porro atque ducimus, voluptas sequi ab debitis saepe odit ut.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, non esse assumenda atque quidem ipsum quod quisquam, iure ducimus cupiditate error, consequuntur eos debitis? Repellat cupiditate adipisci nam quas nihil.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ipsum consequuntur, consectetur beatae nisi corrupti asperiores mollitia voluptas magni voluptatum quas in molestiae quia eos at, corporis quidem! Id, ea.
+                Odio nobis aliquid id. Ullam mollitia quidem sed reprehenderit fugiat blanditiis voluptatum, pariatur cupiditate nulla quisquam sunt doloremque perspiciatis minima repudiandae, rerum similique reiciendis. Odit unde molestiae quis provident ipsum!
+                Ex asperiores laborum mollitia necessitatibus deserunt! Vitae quas voluptas ullam iusto alias deserunt maiores doloremque culpa? Totam, nulla quo. Laborum cumque et sed. Nemo asperiores exercitationem illum facilis, voluptatibus voluptatem!
+                Reprehenderit nisi nulla officiis quod totam quo possimus saepe, doloremque consequuntur cum necessitatibus quis tempora quaerat quos illum similique esse amet minus dolorem ipsum obcaecati maxime? Delectus cupiditate quis illum!
+                Aperiam nam aliquid illum non inventore? Facere adipisci vel illum odit dignissimos quae, aspernatur commodi assumenda? Repellendus, distinctio officiis. Necessitatibus molestias esse ducimus repudiandae quam officiis consequuntur voluptatibus voluptate cupiditate.
+                Repellendus optio ipsa, possimus rem voluptatem veritatis similique fugit aliquam aliquid doloribus reiciendis maiores odit iusto culpa dignissimos nostrum inventore voluptas reprehenderit officiis quaerat excepturi. Necessitatibus voluptates nesciunt omnis neque?
+                Ab exercitationem quam, eum sint minus nihil. Dolor quis animi eius, excepturi illum sit, aperiam quae aut minima numquam mollitia fuga aspernatur veniam tenetur magnam dolores placeat dolorem dicta saepe!
+                Maxime, alias ex dicta necessitatibus sed ad doloribus sequi non eum dolorem ab beatae repellat vitae? Ipsa, aperiam! Perspiciatis veritatis odit dignissimos provident nulla quos repellat ipsum et voluptatibus inventore.
+                Excepturi quae fugiat veniam, inventore repudiandae, cumque delectus ad quasi aperiam culpa doloremque quidem. Molestiae repellat optio repudiandae libero necessitatibus numquam, perspiciatis totam eos corrupti recusandae nisi nostrum at asperiores.
+                Perspiciatis officiis eveniet, doloribus, veritatis velit enim explicabo eaque accusantium quo iure qui modi nesciunt, itaque non assumenda! Enim beatae veritatis nemo natus laborum minima hic sunt reprehenderit aliquid nam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <script>
+      const modal = document.getElementById("s-modal");
+      function openModal(direction) {
+        // code here
+        modal.classList.add("opening");
+        document.body.classList.add("s-modal--open")
+        if (direction === "left") {
+          modal.classList.add("s-modal--slide-left");
+        } else if (direction === "right") {
+          modal.classList.add("s-modal--slide-right");
+        } else if (direction === "below") {
+          modal.classList.add("s-modal--slide-below");
+        } else if (direction === "vertical") {
+          modal.classList.add("s-modal--slide-vertical");
+        }
+      }
+
+      function closeModal(direction) {
+        // code here
+        modal.classList.add("closing");
+        modal.classList.remove("opening");
+        document.body.classList.remove("s-modal--open")
+        setTimeout(function () {
+          modal.classList.remove(
+            "s-modal--slide-left",
+            "s-modal--slide-right",
+            "s-modal--slide-below",
+            "s-modal--slide-vertical"
+          );
+          modal.classList.remove("closing");
+        }, 800);
+      }
+    </script>
+  </body>
+</html>
