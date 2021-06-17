@@ -1,19 +1,5 @@
 .s-btn-menu {
-    letter-spacing: 0;
-    height: 56px;
-    line-height: 1.2em;
-    display: flex;
-    position: relative;
-    button {
-        color: black;
-        &:hover {
-            color: #1E74FD;
-        }
-    }
     i {
         font-size: 1.5em;
-    }
-    p {
-        margin-top: 0.5em;
     }
 }
