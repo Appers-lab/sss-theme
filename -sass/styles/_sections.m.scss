@@ -2,32 +2,13 @@
   background: $light-grey;
 
   h2 {
-    padding: 1.125*$spacer $spacer 0.375*$spacer $spacer;
-    font-size: 0.9375rem;
-    color: $gray-900;
+    padding: 1.125 * $spacer $spacer 0.375 * $spacer $spacer;
+    font-size: $font-size-lg;
+    color: $dark-grey;
   }
 
   .s-section__content {
-    background: $white;
-    padding: 0.5*$spacer $spacer;
-
-    .s-section__content__btn {
-      background: #6C7C94;
-      color: $white;
-      padding: 0.1875*$spacer 1.125*$spacer;
-      margin: $spacer 0;
-      font-size: 0.8125rem;
-      border-radius: 6px;
-      cursor: pointer;
-
-      &:hover {
-      background: #566376;
-      }
-    }
+    background: white;
+    padding: 0.5 * $spacer $spacer;
   }
-  
-  p {
-    color: $gray-800;
-  }
-  
 }
