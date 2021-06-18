@@ -1,71 +1,70 @@
-<header class="s-main-header">
-				
-    <div class="container d-flex align-items-center">
-        
-        <div class="s-main-header__logo">
-            
-            <a href="/home">
-                
-                <img src="/img/logo.png" alt="Billihomes">
-                
-                
-            </a>
-            
+<head>
+    <link rel="stylesheet" href="../../css/bundle.css" />
+    <link rel="stylesheet" href="../../font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- admin-page-header -->
+    <header class="s-main-header s-main-header--dark s-main-header--no-shadow s-main-header--narrow">
+        <div class="container d-flex align-items-center">
+            <!-- company logo -->
+            <div class="s-main-header__logo">
+                <a href="/home">
+                    Admin Console
+                </a>
+            </div>
+
+            <!-- right menu -->
+            <nav class="s-main-header__right-nav">
+                <menu class="">
+                    <li>
+                        <a>
+                            Link 1
+                        </a>
+                    </li>
+                    <li>
+                        <button class="s-btn s-btn--round s-btn--light">
+                            Logout
+                        </button>
+                    </li>
+                </menu>
+            </nav>
         </div>
-        
-        <nav class="s-main-header__left-nav">
-            
-            <menu class="menu--fill">
-                
+    </header>
+
+    <div class="temporary-wrapper d-flex" style="min-height: 100%;">
+        <!-- admin-page-sidebar -->
+        <nav class="s-admin-sidebar">
+            <header>
+                Menu
+            </header>
+
+            <menu class="menu--column">
                 <li>
-                    
-                    <a class="" href="/our-deal">
-                        our deal
-                    </a>
-                    
+                    <a href="/something">
+                        <i class="bi bi-calendar3"></i> 
+                        Appointments 
+                    </a> 
                 </li>
-                
-                
                 <li>
-                    
-                    <a class="" href="/about-us">
-                        About us
-                    </a>
-                    
+                    <a href="/something">
+                        <i class="bi bi-percent"></i> 
+                        Mortgage rates 
+                    </a> 
                 </li>
-                
                 <li>
-                    
-                    <a class="" href="/contact-us">
-                        Contact us
-                    </a>
-                    
+                    <a href="/something">
+                        <i class="bi bi-file-ruled"></i> 
+                        Contact forms 
+                    </a> 
                 </li>
-                
             </menu>
-            
         </nav>
-        
-        <nav class="s-main-header__right-nav">
-            
-            <menu class="">
-                
-                <li>
-                    <button class="s-btn s-btn--round s-btn--light">
-                        Login
-                    </button>
-                </li>
-                
-                <li>
-                    <button class="s-btn s-btn--round s-btn--light">
-                        Signup
-                    </button>
-                </li>
-                
-            </menu>
-            
-        </nav>
-        
+       
+        <!-- admin-page-content -->
+        <div class="future-content">
+
+            <p>Future Content is here</p>
+        </div>
     </div>
-    
-</header>
+</body>
