@@ -1,24 +1,21 @@
 .s-action-sheet {
   h2 {
     text-align: center;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     color: $dark-grey;
     padding: 0.375 * $spacer;
     border-bottom: 1px solid $light-grey;
   }
 
   section {
-    border-bottom: 1px solid $gray-300;
+    border-bottom: 1px solid $light-grey;
 
-    li {
+    menu > li {
       padding: 0.625 * $spacer $spacer;
-    }
-    a {
-      font-size: $font-size-sm;
-    }
 
-    .close-item {
-      color: $red;
+      & > a {
+        font-size: $font-size-base;
+      }
     }
   }
 }

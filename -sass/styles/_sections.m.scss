@@ -1,14 +1,18 @@
+
 .s-section {
-  background: $light-grey;
+  background: #F9F9F9;
 
   h2 {
     padding: 1.125 * $spacer $spacer 0.375 * $spacer $spacer;
-    font-size: $font-size-lg;
-    color: $dark-grey;
+    font-size: $font-size-base;
+    color: black;
+    font-weight: 400;
   }
 
-  .s-section__content {
+  &__content {
     background: white;
     padding: 0.5 * $spacer $spacer;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
   }
 }
