@@ -1,0 +1,32 @@
+
+.s-admin-sidebar {
+    width: 15*$spacer;
+    background-color: #19222a;
+
+    menu > li {
+        color: $grey;
+        
+        & > a {
+            font-size: 1.25rem;
+            padding: 1.5*$spacer 1*$spacer;
+
+            &:hover {
+                background-color: black;
+                color: white;
+                transition: 0.5s;
+            }
+
+            & > i {
+                font-size: 1.5rem;
+                padding-right: 0.4*$spacer;        
+            }
+        }
+    }
+
+    header {
+        background-color: #09f;
+        color: black;
+        font-size: 1.25rem;
+        padding: 1*$spacer 1*$spacer;
+    }
+}
