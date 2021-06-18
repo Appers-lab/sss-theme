@@ -1,5 +1,19 @@
+
 .s-btn-menu {
+
     i {
         font-size: 1.5em;
+    }
+
+    li > button {
+        color: inherit;
+
+        & > p {
+            font-size: $font-size-sm;
+        }
+
+        &.active {
+            color: $primary-color;
+        }
     }
 }
