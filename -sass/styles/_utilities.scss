@@ -18,6 +18,20 @@
   text-align: center;
 }
 
+.s-text-shadow {
+  text-shadow: $box-shadow;
+}
+
+.s-text-display1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-shadow: $box-shadow;
+}
+
+.s-text-lead {
+  font-size: 1.3rem;
+}
+
 .s-mute {
   color: $grey;
 }
@@ -26,6 +40,12 @@
   border: 1px solid $light-grey;
 }
 
+
+.s-shadow {
+  box-shadow: $box-shadow;
+}
+
+
 .s-border {
   border: 1px solid $grey;
 }
@@ -33,6 +53,7 @@
 .s-bg-white {
   background-color: white;
 }
+
 
 
 
