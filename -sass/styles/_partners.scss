@@ -1,18 +1,46 @@
-// Grid initialization
-.Grid > dev{
-    background: #eee;
-    padding: 1em;
-}
+$opacity: 0.6;
+$s-partner-logos__logo: #ddd;
 
-// Grid configuration
-.Grid{
-    display: grid;
-    grid-gap: 2em 2em;
-    grid-template-columns: repeat(6,1fr);
-}
+.s-partner-logos {
+  position: relative;
+  display: flex;
+  overflow: hidden;
 
-// Image constraints
-.Partner-logo{
+  &__col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: -1px;
+      border-left: 1px dashed $s-partner-logos__logo;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      bottom: -1px;
+      border-bottom: 1px dashed $s-partner-logos__logo;
+    }
+  }
+
+  &__logo {
     display: block;
+    height: auto;
     width: 100%;
+    opacity: $opacity;
+
+    &:hover {
+      transition: all 0.5s ease;
+      opacity: 1;
+    }
+  }
 }
