@@ -4,8 +4,8 @@ menu > li > button {
   font-weight: normal;
   color: $grey;
   text-decoration: none;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5*$spacer;
+  padding-bottom: 0.5*$spacer;
   cursor: pointer;
 }
 

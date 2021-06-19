@@ -40,13 +40,21 @@
   border: 1px solid $light-grey;
 }
 
+
 .s-shadow {
   box-shadow: $box-shadow;
 }
 
-.s-bg-w {
+
+.s-border {
+  border: 1px solid $grey;
+}
+
+.s-bg-white {
   background-color: white;
 }
+
+
 
 
 

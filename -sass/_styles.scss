@@ -1,4 +1,10 @@
 
+//desktop setting
+body, .container {
+  min-width: 1200px;
+}
+
+
 /* Configuration
 ============================ */
 @import "styles/functions";
@@ -15,6 +21,7 @@
 @import "styles/headers";
 @import "styles/page-title";
 @import "styles/menus";
+@import "styles/admin-bars";
 @import "styles/contents";
 @import "styles/inputs";
 @import "styles/utilities";
