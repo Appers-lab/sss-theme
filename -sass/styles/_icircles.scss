@@ -1,43 +1,3 @@
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 0;
-    background-image: url(../../tasks/task-010/bg.jpg);
-    text-align: center;
-}
-
-.title {
-    margin: 30px 10px;
-    font-size: 72px;
-    font-weight: 700;
-    color: $primary-color;
-    text-shadow: $box-shadow;
-}
-
-.subtitle {
-    width: 80%;
-    margin: 0 auto;
-    background-color: $light-grey;
-    font-size: 1.3rem;
-    border-radius: 10px;
-}
-
-.bottom-section {
-    background-color: $primary-color-shade;
-    color: $light-grey;
-    width: 100%;
-    margin-top: 300px;
-    margin-bottom: 0;
-    padding: 30px;
-    
-    .link {
-        width: 600px;
-        margin: 50px auto;
-        font-size: 1.7rem;
-        font-weight: 600;
-        border: 2px solid #fff;
-        border-radius: 5px;
-}
 
 .s-icircle {
     margin-left: 50px;
@@ -62,25 +22,28 @@
     }
     
     &__icon {
-        padding-top: 24px;
+        //padding-top: 24px;
         font-size: 90px;
         transition: font-size 0.2s ease-in-out;
     }
     
     &:hover &__icon {
-        font-size: 80px;
+        font-size: 100px;
+    }
+
+    h2 {
+        //margin-top: 20px;
+        font-size: 1.5rem;
+        //font-weight: 600;
+        color: #fff;
+        //font-size: 2rem;
+        transition: font-size 0.2s ease-in-out;
+    }
+
+    &:hover h2 {
+        font-size: 1.8rem;
     }
 }
 
-.s-icircle__text {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
 
-    &__title {
-        font-size: 2.3rem;
-    }
-}
 
-}
