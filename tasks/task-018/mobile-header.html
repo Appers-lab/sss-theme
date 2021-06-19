@@ -4,37 +4,17 @@
     <meta charset="UTF-8" />
     <title>Mobile Header</title>
 
+    <link rel="stylesheet" href="../../font/bootstrap-icons.css" />
     <link rel="stylesheet" href="../../css/bundle.m.css" />
   </head>
   <body>
-    <!--Default Style-->
-    <h4>Default Style</h4>
-    <article class="s-page-header">
-      <menu class="s-page-header__left-menu">
-        <li>
-          <a href=""><i class="someicon">&#8249; </i>Back</a>
-        </li>
-      </menu>
-
-      <section class="s-page-header__title">
-        <h1>Title</h1>
-      </section>
-
-      <menu class="s-page-header__right-menu">
-        <li>
-          <a href=""><i class="someicon">Search</i></a>
-        </li>
-      </menu>
-    </article>
-    <!--with Button-->
     <br />
-    <h4>with Button</h4>
+    <!--Default Style-->
+    <h4 style="padding-left: 1rem">Default Style</h4>
     <article class="s-page-header">
       <menu class="s-page-header__left-menu">
         <li>
-          <button>
-            <i class="someicon">Back</i>
-          </button>
+          <a href=""><i class="bi-chevron-left"></i></a>
         </li>
       </menu>
 
@@ -44,18 +24,38 @@
 
       <menu class="s-page-header__right-menu">
         <li>
-          <a href=""><i class="someicon">Search</i></a>
+          <a href=""><i class="bi-search"></i></a>
         </li>
       </menu>
     </article>
     <!--with Logo-->
     <br />
-    <h4>with Logo</h4>
+    <h4 style="padding-left: 1rem">with Logo</h4>
     <article class="s-page-header">
       <menu class="s-page-header__left-menu">
         <li>
-          <button><i class="someicon">Back</i></button>
+          <a href=""><i class="bi-chevron-left"></i></a>
         </li>
+      </menu>
+
+      <section class="s-page-header__title">
+        <img src="logo.png" />
+      </section>
+
+      <menu class="s-page-header__right-menu">
+        <li>
+          <a href=""><i class="bi-search"></i></a>
+        </li>
+      </menu>
+    </article>
+    <!--Text Buttons-->
+    <br />
+    <h4 style="padding-left: 1rem" 4>Text Buttons</h4>
+    <article class="s-page-header">
+      <menu class="s-page-header__left-menu">
+        <button>
+          <a href=""><i class="bi-chevron-left">Back</i></a>
+        </button>
       </menu>
 
       <section class="s-page-header__title">
@@ -63,9 +63,72 @@
       </section>
 
       <menu class="s-page-header__right-menu">
-        <li>
-          <a href=""><i class="someicon">Search</i></a>
-        </li>
+        <button>
+          <i class="">Search</i>
+        </button>
+      </menu>
+    </article>
+    <!--Multiple Buttons-->
+    <br />
+    <h4 style="padding-left: 1rem">Multiple Buttons</h4>
+    <article class="s-page-header">
+      <menu class="s-page-header__left-menu">
+        <button>
+          <a href=""><i class="bi-chevron-left">Back</i></a>
+        </button>
+      </menu>
+
+      <section class="s-page-header__title">
+        <h1>Title</h1>
+      </section>
+
+      <menu class="s-page-header__right-menu">
+        <button>
+          <i class="bi-search"></i>
+        </button>
+        <button>
+          <i class="bi-cart"></i>
+        </button>
+      </menu>
+    </article>
+    <!--Transparent-->
+    <br />
+    <h4 style="padding-left: 1rem">Transparent</h4>
+    <article class="s-page-header s-page-header--no-shadow">
+      <menu class="s-page-header__left-menu">
+        <button>
+          <a href=""><i class="bi-chevron-left">Back</i></a>
+        </button>
+      </menu>
+
+      <section class="s-page-header__title">
+        <h1>Title</h1>
+      </section>
+
+      <menu class="s-page-header__right-menu">
+        <button>
+          <i class="bi-search"></i>
+        </button>
+      </menu>
+    </article>
+    <!--Background Logo-->
+    <br />
+    <h4 style="padding-left: 1rem">Background Logo</h4>
+    <article class="s-page-header s-page-header__background-color">
+      <menu class="s-page-header__left-menu">
+        <button>
+          <a href=""><i class="bi-chevron-left">Back</i></a>
+        </button>
+      </menu>
+
+      <section class="s-page-header__title">
+        <img src="logo.png" />
+      </section>
+
+      <menu class="s-page-header__right-menu">
+        <button>
+          <i class="bi-search"></i>
+        </button>
       </menu>
     </article>
   </body>

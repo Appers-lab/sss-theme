@@ -1,10 +1,9 @@
-$header-bg-color: #282828;
+$header-bg-color: cyan;
 $header-text-color: black;
 $header-link-color: black;
 
 .s-page-header {
-    display: inline-flexbox;
-    padding: 1rem 0 5rem 0;
+    padding: 0.5rem 0 5rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     &__title {
@@ -12,12 +11,14 @@ $header-link-color: black;
         width: 50%;
         text-align: center;
         color: $header-text-color;
+
         img {
-            padding: 1rem 0;
-            width: unset;
-            height: 1rem;
+            padding: 0 0 0.5rem 0;
+            width: 20rem;
+            height: 5rem;
         }
         h1 {
+            padding: 0.5rem 0 0 0;
             font-size: 2rem;
         }
     }
@@ -30,12 +31,12 @@ $header-link-color: black;
     &__left-menu {
         float: left;
         width: 25%;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
     }
 
     &__right-menu {
         float: right;
-        padding: 1rem 1rem 0;
+        padding: 1.5rem 1rem 0;
     }
 
     a {
@@ -48,10 +49,15 @@ $header-link-color: black;
     }
 
     button {
-        padding-bottom: 1rem;
+        color: $header-text-color;
+        padding: 0 1rem 2rem 1rem;
     }
 
     &--no-shadow {
         box-shadow: unset;
+    }
+
+    &__background-color {
+        background-color: $header-bg-color;
     }
 }
