@@ -1,10 +1,4 @@
 
-//desktop setting
-body, .container {
-  min-width: 1200px;
-}
-
-
 /* Configuration
 ============================ */
 @import "styles/functions";
@@ -18,22 +12,24 @@ body, .container {
 /* Base components
 =============================== */
 @import "styles/btns";
-@import "styles/headers";
-@import "styles/page-title";
-@import "styles/menus";
-@import "styles/admin-bars";
-@import "styles/contents";
+@import "styles/headers.m";
+@import "styles/contents.m";
+@import "styles/menus.m";
+@import "styles/lists.m";
 @import "styles/inputs";
 @import "styles/utilities";
-@import "styles/footers";
+@import "styles/footers.m";
 @import "styles/iboxes";
-@import "styles/partners";
-@import "styles/steps";
-@import "styles/icircles";
-@import "styles/panels";
+@import "styles/sections.m";
+@import "styles/action-sheet.m";
+
+
+/* To be moved/refactored
+========================================= */
+
 
 /* Dropdown
-=========================== */
+----------------- */
 .dropdown-menu {
   font-size: $font-size-base;
   color: $body-color;
@@ -89,7 +85,7 @@ body, .container {
 }
 
 /* modal
-=========================== */
+--------------- */
 
 $details-modal-y-margin: 72px;
 $details-modal-col2-width: 500px;
@@ -143,3 +139,4 @@ $details-modal-col2-width: 500px;
   }
 
 }*/
+

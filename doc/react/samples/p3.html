@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .bg-green {background-color: #0dcaf0}
+        .bg-blue {background-color: #3f48cc}
+        .bg-yellow {background-color: #fd7e14}
+    </style>
+</head>
+<body>
+
+<h1> A react component with slots </h1>
+<p style="margin-bottom: 50px"> Hopefully your browser supports latest javascript syntax!</p>
+
+<section>
+    <h2>Below is the element hosting the react component </h2>
+    <span id="host1"></span>
+</section>
+
+
+<script type="module">
+    import { h, render } from 'https://unpkg.com/preact@latest?module';
+    import { useState, useEffect } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module';
+    import htm from 'https://unpkg.com/htm?module';
+
+    // Initialize htm with Preact
+    const html = htm.bind(h);
+
+    // your react component
+    function Something(props) {
+
+
+        /* in case you wan to iterate over children, this is how
+        props.children.forEach(child => {
+            console.log("Hey this is child", child);
+        });*/
+
+        return html`
+        <article>
+
+            <div style="display:flex">
+
+                <!-- the slot "left-side"-->
+                <section style="width:50%;" class="bg-green">
+                    ${getSlot("left-side", props.children)}
+                </section>
+
+                <!-- the slot "right-side"-->
+                <section style="width:50%" class="bg-blue">
+                    ${getSlot("right-side", props.children)}
+                </section>
+
+            </div>
+
+            <!-- slot no name -->
+            <section class="bg-yellow">
+                ${getSlot(undefined, props.children)}
+            </section>
+
+
+
+        </article>
+        `;
+    }
+
+    // useful function, maybe we should make into a hook?
+    function getSlot(name, children) {
+        return children.filter(el=>el.props.slot===name);
+    }
+
+    // rendering the component on the host element
+    var host = document.getElementById("host1");
+
+    // this component has four children (li elements) which will be repositioned based on their slot props.
+    render(html`
+        <${Something} name="World">
+            <li slot="left-side"> item 1 for left side</li>
+            <li slot="right-side"> item 2 for right side</li>
+            <li slot="left-side"> item 3 for left side</li>
+            <li> item 4 no slot name (undefined slot) </li>
+            <li slot="right-side"> item 5 for right side</li>
+        </${Something}>
+    `, host);
+</script>
+
+
+
+</body>
+</html>

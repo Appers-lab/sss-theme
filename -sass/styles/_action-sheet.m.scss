@@ -1,0 +1,21 @@
+.s-action-sheet {
+  h2 {
+    text-align: center;
+    font-size: $font-size-base;
+    color: $dark-grey;
+    padding: 0.375 * $spacer;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  section {
+    border-bottom: 1px solid $light-grey;
+
+    menu > li {
+      padding: 0.625 * $spacer $spacer;
+
+      & > a {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

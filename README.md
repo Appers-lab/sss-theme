@@ -1,21 +1,21 @@
 
-General instructions:
+General instructions
 ======================================
 Before do the task make sure you have read the design guide (css-guide.md) in the doc folder of the project folder. Note that this is a [markdown](https://guides.github.com/features/mastering-markdown/) document (you need to learn what markdown is and will require writing markdown docs yourself.)
 
 The tasks are posted in the project page (link given to you through email). Your also assigned a branch (based on your name) to work in. Your branch name is also given to you through email. When you are assigned a task: 
 
 * Clone your branch (refer to the next section for a handy guide on Git)
-* Do your task
-* Commit and push the changes to the branch and make a pull request
-* If you have any question/problem about the task tag me on the pull request.
+* Do your task. Any question? type your question in the task description asa comment and tag me (@pmvald)
+* Commit and push the changes to the branch and make a pull request. Use the same as the task for the pull request. Assign this pull request to the task (using the right menu when creating the pull request)
 * If you have a general question make a new issue (in the repository) and tag me there.
-* I will review your pull request, make comments there, and you will apply the comments. Once the changes are ok we will merge it and your task is done. 
-* Throughout the review process there would be new concepts/topics, and you may be asked to read some articles to learn more about them, and sometimes you may need to write a brief summary of what you learned.
+* I will review your pull request by writing comments for your lines of code in the pull request. You will find them in the pull request conversation tab. Make the changes as requested in the pull request review and once the changes are ok we will merge it and your task is done. 
+* Throughout the review process there would be new concepts/topics, and you may be asked to read some articles to learn more about them,
+* After finishing your task you will be doing a *follow-up* activity, which is in fact a learning module. You will be asked to write a brief summary of what you learned about some topics related to the task. It may require you to do some online research as well. You will write your answers in markdown language.
 
 
 Quick start with Git
-===============================
+----------------------
 
 ### To clone a branch:
 
@@ -80,7 +80,7 @@ git pull origin main
 If conflicts happen, then the above command shows a list of conflicted files. These files will contain "conflict-markers". You need to open these files using some IDE editor (like VS code or WebStorm) and these editors will show you the conflicting parts and ask you to choose one of the possible options for each conflict (by clicking on buttons). Once you resolve these conflicts save your files. Then commit/push again to your branch (see the previous section) and the conflicts are resolved.
 
 Using SCSS
-===================================
+---------------------
 
 For a more detailed introduction to SCSS/SASS you may refer to their website, particularly [this link](https://sass-lang.com/guide) is a good place to start. 
 
@@ -106,29 +106,10 @@ sudo chmod +x sass-start
 Now you can start editing teh scss files and see the results live by including the `css/bundle` file in a html file.
 
 
-Notes on doing tasks
-===========================
-Each task will have a folder after its three digit index number in the path `/tasks` (like `/tasks/task-007` for Task 7). Feel free to add/modify file within this folder. Usually there is an html file within this folder which is used to show the component/items you have designed. In otehr words, this file serves as a demo of your work and it is important that it has a good presentation of the component/items you designed. So we have to add some meaninful content to that (similar to what html theme packages do). A convention of frontend designers is to use the well-known [Lorem Ipsum](https://www.lipsum.com/) text to present a sample text.
+On html and demo files
+--------------------------
+Each task will have a folder after its name within the folder `/tasks` (like `/tasks/task-007` for Task 7). The rule is to use a three digit number for the task index, like 007 for 7, and the name becomes `task-007`. Feel free to add/modify files within this folder. It belongs to you to test your design. You can also add additional files to this folder such as images, videos, etc. Usually there is an html file within this folder which is used to show the component/items you have designed. In other words, this file serves as a demo of your work, and it is important that it has a good presentation of the component/items you designed. So we have to add some meaningful content to that (similar to what html theme packages do). A convention of frontend designers is to use the well-known [Lorem Ipsum](https://www.lipsum.com/) text to present a sample text.
 
 
-Using Canvas Theme
-============================
-In some of the tasks we use a theme called *Canvas* as a model. We do not include anything of its code, but only refer to that as a starting point of how things should look like. You may read its code but eventually you need to produce/reproduce its components from scratch by coding. Dowload this theme from [This link](https://drive.google.com/file/d/1lNdPJPjFbvhf7WCYtgcIFwR5M-CbfyQ5/view?usp=sharing)
-
-That's a big zip file. Once you unpack it, all the html pages can be found at `/Package-HTML/HTML`. I would refer to some pages in this folder and some componens withing these pages and ask you to make something similar to that (with some modification)
-
-Using Bootstrap icons
-=================================
-To be on the same page, lets use bootstrap icons for all the designs. The bootstrap icons are downloaded in the folder `/font`. To include them in your html files just include the file `bootstrap-icons.css` in the header:
-
-```html
-<link rel="stylesheet" href="../../font/bootstrap-icons.css">
-```
-
-And then use the icons, like:
-
-```html
-<i class="bi bi-alarm"></i>
-```
 
 See [here](https://icons.getbootstrap.com/) for a complete list of icons and their class name. 

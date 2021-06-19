@@ -1,0 +1,49 @@
+.s-steps-leftbar{
+  position:relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 3rem;
+    width: 0;
+    height: 100%;
+    border-left: 1px dashed $dark-grey;
+    z-index: -1;
+  }
+  li{
+    //list-style: none;
+    display: flex;
+    margin-bottom: 2rem;
+  }
+ 
+  &__step{
+    position: relative;
+    background-color: white;
+    padding: 0.12rem;
+    width: 8rem;
+    height: 100%;
+    border: solid 3px $grey;
+    border-radius: 3rem;
+    text-align: center;
+    margin-top: 0.7rem;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    &:hover{
+      color: $primary-color;
+      border-color: $primary-color;
+    }
+    div{
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+      width: 5.5rem;
+      height: 0;
+      border-top: 1px dashed $dark-grey;
+      z-index: -1;
+    }
+  }
+  &__content{
+    margin-left: 3rem;
+  }
+}
+

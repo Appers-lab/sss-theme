@@ -1,108 +1,76 @@
 
 .ss-prop-card {
-  @include rounded();
+  //@include rounded();
 
   &__img {
     position: relative;
     width: 100%;
     height: 170px;
     cursor: pointer;
+    margin-bottom: 0.25rem;
+    //overflow: hidden;
 
-    @include rounded();
-
-    img {
-      @include rounded();
-      @include cover();
-      object-fit: cover;
-
+    img:hover {
       //@include image-hover-grow();
     }
-
-    /*.overlay {
-      visibility: hidden;
-      @include overlay(100);
-      @include rounded();
-    }
-
-    &:hover .overlay,
-    &:hover .overlay-btn-group {
-      visibility: visible;
-    }*/
+    //@include rounded();
   }
 
-  /*.overlay-btn-group {
-    visibility: hidden;
-
-    @include cover();
+  &__mls{
     position: absolute;
-    top: 0;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+    background-color: white;
+    color: black;
+    font-size: 0.7rem;
+    padding: 0.25rem;
+    font-style: italic;
+  }
 
-    &__cell {
-      position: relative;
-      height: 33.33%;
-      border: 1px solid #eee;
-      cursor: pointer;
-      z-index: 200;
-
-      &:hover {
-        background-color: $primary-color;
-        opacity: 100%;
-        color: white;
-        font-weight: bold;
-        font-size: 1.125rem;
-      }
-
-      &--text {
-        @include center();
-        color: #eee;
-      }
-
-      &--c1 {
-        border-top-left-radius: $border-rounded;
-      }
-
-      &--c2 {
-        border-top-right-radius: $border-rounded;
-      }
-
-      &--c3 {
-        border-bottom-left-radius: $border-rounded;
-      }
-
-      &--c4 {
-        border-bottom-right-radius: $border-rounded;
-      }
-    }
-  }*/
+  &__brokerage{
+    position: absolute;
+    bottom: -0.4rem;
+    right: 0px;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    font-size: 0.7rem;
+  }
 
   &__content {
     font-size: 0.6875rem;
     color: black;
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
-
-    * {
+    
+    div, span {
       @include dot-text-overflow();
     }
   }
 
-  &__date {
-    //@include dot-text-overflow();
-    //font-size:10px;
+  /*&__date {
     font-style: italic;
     margin-right: 0.25rem;
-  }
+  }*/
 
   &__address {
     color: $dark-grey;
+
+  }
+
+  &__map-btn {
+    font-size: 0.9rem;
+    display: flex;
   }
 
   &__essentials {
     font-weight: 500;
+    font-size: 0.8rem;
     color: $body-color;
   }
 
   &__price {
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     margin-right: 0.3125rem;
     color: #ff6d00;
   }
@@ -116,9 +84,56 @@
     padding: 0.125rem;
   }
 
+
   &:focus {
     //outline: none;
-    border: 1px solid red;
-  }
+    border: 3px solid rgba(235, 17, 17, 0.5);
 
+
+    animation: pulse 0.5s 6;
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      }
+      70% {
+          -webkit-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+      }
+      100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 68, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 44, 44, 0.4);
+      }
+      70% {
+          -moz-box-shadow: 0 0 0 10px rgba(235, 17, 17, 0);
+          box-shadow: 0 0 0 20px rgba(204, 44, 44, 0);
+      }
+      100% {
+          -moz-box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+          box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
+      }
+    }
+   }
+}
+
+.ss-prop-selection-section {
+  background-color: $primary-color-shade;
+  //color: $light-grey;
+  padding: 2rem;
+  text-align: center;
+
+  &__q {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding:0.25rem;
+    color: white;
+  }
 }
