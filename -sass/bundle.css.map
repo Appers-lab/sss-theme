@@ -57,6 +57,7 @@
         "styles/_utilities.scss",
         "styles/_footers.scss",
         "styles/_iboxes.scss",
+        "_project.scss",
         "project-cmps/_banners.scss",
         "project-cmps/_galleries.scss",
         "project-cmps/_location-filler.scss",
