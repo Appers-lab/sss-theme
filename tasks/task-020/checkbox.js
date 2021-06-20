@@ -18,7 +18,6 @@ class CheckBox extends HTMLElement {
     }
 
     this.state = !!this.getAttribute("value");
-    this.updateClass();
     this.render();
   }
 
@@ -31,10 +30,15 @@ class CheckBox extends HTMLElement {
   }
 
   updateClass() {
-    if (this.state) this.classList.add("active");
-    else this.classList.remove("active");
+    if (this.state) {
+      this.classList.add("active");
+      this.shadowRoot.querySelector(".s-check-box").classList.add("s-check-box--active");
+    } else {
+      this.classList.remove("active");
+      this.shadowRoot.querySelector(".s-check-box").classList.remove("s-check-box--active");
+    }
 
-    console.log(this.classList.contains('active'))
+    console.log(this.classList.contains("active"));
   }
 
   render() {
@@ -55,6 +59,14 @@ class CheckBox extends HTMLElement {
           }
           label {
             cursor: pointer;
+          }
+          .s-check-box.s-check-box--active {
+            background-color: var(--box-background-color-checked);
+            border: 1px solid var(--box-border-checked);
+          }
+          .s-check-box.s-check-box > div {
+            display: var(--box-content);
+            color: var(--box-color-checked);
           }
         </style>
 
@@ -100,22 +112,3 @@ class CheckBox extends HTMLElement {
 }
 
 customElements.define("check-box", CheckBox);
-
-
-// Create some CSS to apply to the shadow dom
-    // const style = document.createElement('style');
-    // if (this.classList.contains('active') == true ) {
-      
-    //   style.textContent = `
-    //     .s-check-box {
-    //       background-color: var(--box-background-color-checked);
-    //       border: 1px solid var(--box-border-checked);
-    //     }
-    //     .s-check-box > div {
-    //       display: var(--box-content);
-    //       color: var(--box-color-checked);
-    //     }
-    //   `;
-
-    // }
-    // this.shadowRoot.appendChild(style);
