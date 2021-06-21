@@ -1,46 +1,17 @@
-$opacity: 0.6;
-$s-partner-logos__logo: #ddd;
-
 .s-partner-logos {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-
-  &__col {
-    position: relative;
+  div {
+    border-right: 1px dotted $light-grey;
+    border-bottom: 1px dotted $light-grey;
     display: flex;
     align-items: center;
-    padding: 20px 0;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      top: 0;
-      left: -1px;
-      border-left: 1px dashed $s-partner-logos__logo;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      bottom: -1px;
-      border-bottom: 1px dashed $s-partner-logos__logo;
-    }
   }
-
-  &__logo {
-    display: block;
+  img {
     height: auto;
-    width: 100%;
-    opacity: $opacity;
-
-    &:hover {
-      transition: all 0.5s ease;
-      opacity: 1;
-    }
+  }
+  & :nth-child(6n + 6) {
+    border-right: none;
+  }
+  & :nth-child(n + 13):nth-child(-n + 16) {
+    border-bottom: none;
   }
 }
