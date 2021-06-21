@@ -1,24 +1,32 @@
+
 class CheckBox extends HTMLElement {
+
   static get observedAttributes() {
     return ["value"];
   }
 
-  // componentDidMount()
+  // componentDidMount() -> YES!
   connectedCallback() {
-    this.state = false;
 
-    // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" });
+    // Regular checkbox has a box that can be checked, etc. custom checkbox has no box and contains any html content as its inner html. Its set/get text methods cannot be used. The component applies no style/class change to custom checkbox and it it entirely up to the external stylesheet to style it
+    this.isRegular = !this.hasAttribute("custom");
 
-    if (!this.hasAttribute("custom")) {
-      this.contentType = "default";
-      this.labelText = this.getAttribute("label") || this.innerHTML;
-    } else {
-      this.contentType = "custom";
-    }
+    // shadow dom only if it's a regular checkbox
+    if (this.isRegular)
+      this.attachShadow({ mode: "open" });
 
+    // state of the checkbox
     this.state = !!this.getAttribute("value");
+
+    // event handlers
+    this.addEventListener("click", this.toggle.bind(this));
+
+    // initial render
     this.render();
+
+    // element refs
+    if (this.isRegular)
+      this.article = this.shadowRoot.querySelector("article");
   }
 
   toggle() {
@@ -32,57 +40,62 @@ class CheckBox extends HTMLElement {
   updateClass() {
     if (this.state) {
       this.classList.add("active");
-      this.shadowRoot.querySelector(".s-check-box").classList.add("s-check-box--active");
+      this.isRegular && this.article.classList.add("active"); // only if it's a regular checkbox
     } else {
       this.classList.remove("active");
-      this.shadowRoot.querySelector(".s-check-box").classList.remove("s-check-box--active");
+      this.isRegular && this.article.classList.remove("active"); // only if it's a regular checkbox
     }
-
-    console.log(this.classList.contains("active"));
   }
 
   render() {
-    if (this.contentType === "default") {
-      this.classList.add("default");
-      this.shadowRoot.innerHTML = `
-        <style>
-          .s-check-box {
-            width: 1.25rem;
-            height: 1.25rem;
-            margin-right: var(--gutter-width);
-            border: 1px solid var(--box-border);
+
+    // custom checkbox has its own html contents, no need to generate/render content for it
+    if (!this.isRegular) return;
+
+    this.shadowRoot.innerHTML = `
+      <style>
+      
+          article {
+              cursor: pointer;
           }
-          .s-check-box > div {
-            text-align: center;
-            display: none;
-            margin-top: -2px;
-          }
-          label {
+      
+        article > div {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-right: var(--gutter-width);
+          border: 1px solid var(--box-border);
+        }
+        article > div > div {
+          text-align: center;
+          display: none;
+          margin-top: -2px;
+        }
+        
+        article.active > div {
+          background-color: var(--box-background-color-checked);
+          border: 1px solid var(--box-border-checked);
+        }
+        
+        article.active > div > div {
+          display: var(--box-content);
+          color: var(--box-color-checked);
+        }
+        
+        article label {
             cursor: pointer;
-          }
-          .s-check-box.s-check-box--active {
-            background-color: var(--box-background-color-checked);
-            border: 1px solid var(--box-border-checked);
-          }
-          .s-check-box.s-check-box > div {
-            display: var(--box-content);
-            color: var(--box-color-checked);
-          }
-        </style>
+        }
+        
+      </style>
 
-        <div style="display: flex; align-items: flex-start;">
-          <div class="s-check-box">
-            <div>&#10003;</div>                
-          </div>
-          
-          <label>${this.labelText}</label>                
+      <article style="display: flex; align-items: flex-start;">
+        <div part="box">
+          <div>&#10003;</div>                
         </div>
-        `;
-
-      this.labelElement = this.querySelector("label");
-    }
-
-    this.onclick = this.toggle.bind(this);
+        
+        <label part="label"><slot></slot></label>
+                        
+      </article>
+      `;
   }
 
   get value() {
@@ -95,12 +108,12 @@ class CheckBox extends HTMLElement {
   }
 
   get text() {
-    if (this.contentType === "default") return this.labelText;
+    if (this.isRegular) return this.innerText;
     else return undefined;
   }
 
   set text(val) {
-    if (this.contentType === "default") this.labelElement.innerHTML = val;
+    if (this.isRegular) this.innerHTML = val;
   }
 
   attributeChangedCallback(name, oldValue, newValue) {

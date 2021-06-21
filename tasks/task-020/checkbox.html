@@ -7,25 +7,64 @@
   <link rel="stylesheet" href="../../css/bundle.css">
 
   <style>
-    :root {
-      --label-color: black;
-      --label-color-checked: black;
+    /* apply the style to the element */
+    check-box {
+      --label-color: inherit;
+      --label-color-checked: inherit;
       --box-border: #aaa;
       --box-border-checked: black;
       --box-content: block;
       --box-color-checked: white;
       --box-background-color-checked: #3f48cc;
       --gutter-width: 0.5rem;
+
+      width: fit-content;
+      display: block;
     }
+
+
+    .test {
+      /* styling using css variables */
+      --gutter-width: 2rem;
+    }
+
+    .test::part(box) {
+      /* direct styling using css part */
+      border: 2px solid red;
+    }
+
+    check-box[custom] {
+      border: 1px solid #aaa;
+    }
+
+    check-box[custom].active p {
+      color: red;
+    }
+
   </style>
 
   <script defer src="./checkbox.js"></script>
 </head>
 
-<body>
+<body style="padding:40px">
 
-  <check-box label="Some text">
+  <div style="color: blue">
+    <check-box> Regular </check-box>
+  </div>
+
+  <div style="height:40px"></div>
+
+  <div style="color: green">
+    <check-box class="test"> Regular with test class </check-box>
+  </div>
+
+  <div style="height:40px"></div>
+
+  <check-box custom>
+    <h3> This is custom checkbox </h3>
+    <p> I become red when you select me! </p>
   </check-box>
+
 
 </body>
 </html>
