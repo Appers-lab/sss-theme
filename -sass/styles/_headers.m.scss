@@ -1,0 +1,53 @@
+
+.s-page-header {
+
+    // css variables for this component
+    --box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1), 0 1px 3px 0 rgba(0,0,0,0.08);
+    --text-color: black;
+    --bg-color: white;
+
+    height: 3.5*$spacer;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    // modifiers
+    &--no-shadow {
+        --box-shadow: none;
+    }
+
+    &--dark {
+        --text-color: white;
+        --bg-color: #{$primary-color};
+    }
+
+    &__title {
+
+        @include center(true, true);
+
+        img {
+            width: 120px;
+        }
+        h1 {
+            font-size: $font-size-lg;
+            color: var(--text-color);
+            font-weight: $font-weight-bolder;
+        }
+    }
+
+    menu {
+        li {
+            font-size: $font-size-lg;
+
+            a, button {
+                font-weight: $font-weight-normal;
+                color: var(--text-color);
+            }
+        }
+    }
+}
