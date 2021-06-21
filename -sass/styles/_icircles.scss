@@ -1,0 +1,49 @@
+
+.s-icircle {
+    margin-left: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    
+    
+    &:hover {
+        background-color: shift-color($primary-color, 20%);
+        transform: scale(1.1);
+        
+        &__icon {
+            font-size: 100px;
+        }
+    }
+    
+    &__icon {
+        //padding-top: 24px;
+        font-size: 90px;
+        transition: font-size 0.2s ease-in-out;
+    }
+    
+    &:hover &__icon {
+        font-size: 100px;
+    }
+
+    h2 {
+        //margin-top: 20px;
+        font-size: 1.5rem;
+        //font-weight: 600;
+        color: #fff;
+        //font-size: 2rem;
+        transition: font-size 0.2s ease-in-out;
+    }
+
+    &:hover h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+

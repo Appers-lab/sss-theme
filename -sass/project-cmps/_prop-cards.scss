@@ -118,3 +118,22 @@
     }
    }
 }
+
+.ss-prop-selection-section {
+  background-color: $primary-color-shade;
+  //color: $light-grey;
+  padding: 2rem;
+  text-align: center;
+
+  &__q {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding:0.25rem;
+    color: white;
+  }
+}

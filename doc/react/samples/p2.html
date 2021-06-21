@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> A react web component that triggers on click event to the outside worls </h1>
+<p style="margin-bottom: 50px"> Hopefully your browser supports latest javascript syntax!</p>
+
+<section>
+    <h2>Below is the element hosting the react component </h2>
+    <span id="host1" onchange="done(this)"></span>
+</section>
+
+
+<script>
+    // on click handler for the html element hosting teh react component
+
+    function done(el) {
+        alert(`Ok! Done! you clicked 3 times! The host value is ${el.value}`);
+
+    }
+
+</script>
+
+
+<!-- module script for teh react part -->
+<script type="module">
+
+    import { h, render } from 'https://unpkg.com/preact@latest?module';
+    import { useState, useEffect } from 'https://unpkg.com/preact@latest/hooks/dist/hooks.module.js?module';
+    import htm from 'https://unpkg.com/htm?module';
+
+    // Initialize htm with Preact
+    const html = htm.bind(h);
+
+    // your react component
+    function Something(props) {
+
+        // counter state
+        const [counter, setCounter] = useState(1);
+
+        // set element value to 1;
+        props.host.value = 1;
+
+        const handleClick = () => {
+            props.host.value = counter;
+            if (counter <= 2 )
+                setCounter(counter+1);
+            else {
+                setCounter(0);
+                props.host.dispatchEvent(new Event("change"));
+            }
+        }
+
+        return html`
+        <h2>Hello ${props.name}!</h2>
+        <p> After pressing the button 3 times an on-change event will be sent to the html world!</p>
+        <button onClick=${handleClick}> Count! (${counter})</button>
+        `;
+    }
+
+    // rendering the component on the host element. Note we passed a reference to the host element as a prop
+    var host = document.getElementById("host1");
+    render(html`<${Something} name="Payam" host=${host} />`, host);
+</script>
+
+
+
+</body>
+</html>

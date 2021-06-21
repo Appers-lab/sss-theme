@@ -4,13 +4,15 @@ $primary-color: #3f48cc;
 $primary-color-shade: shift-color($primary-color, 50%);
 $primary-bg-light: shift-color($primary-color, -95%);
 
-$secondary-color: #FF0000;
+$secondary-color: #ff0000;
 
 $body-color: #222;
 
 $light-grey: #e5e5e5;
 $grey: #aaa;
 $dark-grey: #777;
+
+$red: #dc3545;
 
 $font-size-base: 1rem;
 
