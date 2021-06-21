@@ -1,63 +1,53 @@
-$header-bg-color: cyan;
-$header-text-color: black;
-$header-link-color: black;
 
 .s-page-header {
-    padding: 0.5rem 0 5rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    // css variables for this component
+    --box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1), 0 1px 3px 0 rgba(0,0,0,0.08);
+    --text-color: black;
+    --bg-color: white;
+
+    height: 3.5*$spacer;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    // modifiers
+    &--no-shadow {
+        --box-shadow: none;
+    }
+
+    &--dark {
+        --text-color: white;
+        --bg-color: #{$primary-color};
+    }
 
     &__title {
-        float: left;
-        width: 50%;
-        text-align: center;
-        color: $header-text-color;
+
+        @include center(true, true);
 
         img {
-            padding: 0 0 0.5rem 0;
-            width: 20rem;
-            height: 5rem;
+            width: 120px;
         }
         h1 {
-            padding: 0.5rem 0 0 0;
-            font-size: 2rem;
+            font-size: $font-size-lg;
+            color: var(--text-color);
+            font-weight: $font-weight-bolder;
         }
     }
 
     menu {
-        font-size: 1.5rem;
-        line-height: 0.9rem;
-    }
+        li {
+            font-size: $font-size-lg;
 
-    &__left-menu {
-        float: left;
-        width: 25%;
-        padding: 1.5rem 0;
-    }
-
-    &__right-menu {
-        float: right;
-        padding: 1.5rem 1rem 0;
-    }
-
-    a {
-        color: $header-link-color;
-        text-decoration: none;
-    }
-
-    i {
-        font-style: normal;
-    }
-
-    button {
-        color: $header-text-color;
-        padding: 0 1rem 2rem 1rem;
-    }
-
-    &--no-shadow {
-        box-shadow: unset;
-    }
-
-    &__background-color {
-        background-color: $header-bg-color;
+            a, button {
+                font-weight: $font-weight-normal;
+                color: var(--text-color);
+            }
+        }
     }
 }
