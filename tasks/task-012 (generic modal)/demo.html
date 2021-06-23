@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+        mo-dal {
+            display: block;
+        }
+
+        .temp-container {
+
+            background-color: green;
+            border: 1px solid black;
+
+
+
+        }
+
+        .s-modal {
+            /*--bg-color: yellow;*/
+            /*--align-y: flex-end;*/
+            --align-x: center;
+            --padding: 3rem 0 0 0;
+            --open-animation: fade-in 0.4s ease-in-out;
+            --close-animation: fade-out 0.4s ease-in-out;
+
+        }
+
+        .s-modal > * {
+            padding: 1rem;
+            width:992px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <mo-dal id="my-modal" class="s-modal">
+        <article class="temp-container">
+            <h3>This modal header</h3>
+            <p> And a paragraph </p>
+            <button onclick="toggle()">Close</button>
+        </article>
+    </mo-dal>
+
+    <button onclick="toggle()">Toggle</button>
+
+
+    <script src="modal.js"></script>
+
+    <script>
+        var modal = document.getElementById("my-modal");
+        var isOpen = false;
+
+        function toggle() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                /*modal.setAttribute("data-z-index", 200);
+                modal.setAttribute("open", 1);*/
+                modal.open({noAnimation:false, zIndex:300});
+            }
+            else
+                modal.close({noAnimation:false});
+        }
+
+    </script>
+
+
+</body>
+</html>
