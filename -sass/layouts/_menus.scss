@@ -27,6 +27,7 @@ menu {
 
 menu.menu--fill {
   > li > a,
+  > li > button,
   > li {
     flex: 1 1 auto;
     text-align: center;
@@ -35,6 +36,7 @@ menu.menu--fill {
 
 menu.menu--justified {
   > li > a,
+  > li > button,
   > li {
     flex-basis: 0;
     flex-grow: 1;
