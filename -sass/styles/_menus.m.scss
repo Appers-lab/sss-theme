@@ -1,12 +1,12 @@
 
 .s-btn-menu {
 
-    i {
-        font-size: 1.5em;
-    }
-
     li > button {
         color: inherit;
+
+        & > i {
+            font-size: $font-size-sm*2;
+        }
 
         & > p {
             font-size: $font-size-sm;

@@ -1,0 +1,11 @@
+.stick-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+    position: sticky;
+    bottom: 0;
+}
+
+.stick-top {
+    padding-top: env(safe-area-inset-top);
+    position: sticky;
+    top: 0;
+}
