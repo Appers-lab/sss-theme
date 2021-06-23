@@ -3,11 +3,30 @@
     border: 1px;
     border-style: hidden;
     border-radius: 10px;
-    box-shadow: 0px 5px 10px gray;
+    box-shadow: 0px 5px 10px lightgray;
     
     &__image > img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    
+    &__header {
+        margin: 0px 10px;
+        padding: 5px;
+        border-bottom: 1px gray solid;
+    }
+    
+    &__body {
+        padding: 10px;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    
+    &__footer {
+        margin: 0px 10px;
+        padding: 5px;
+        border-top: 1px gray solid;
     }
 }
 
