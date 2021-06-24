@@ -1,12 +1,25 @@
 
 .s-section {
-  @include container;
+
+  --header-size: #{$font-size-sm};
+  --border-top: 1px solid #E1E1E1;
+  --border-bottom: 1px solid #E1E1E1;
+
+  &--font-lg {
+    --header-size: #{$font-size-base};
+  }
+
+  &--no-border {
+    --border-top: unset;
+    --border-bottom: unset;
+  }
 
   h2 {
+    @include container;
     //padding: 1.125 * $spacer $spacer 0.375 * $spacer $spacer;
     margin-top: 1.5*$spacer;
     margin-bottom: $spacer;
-    font-size: $font-size-sm;
+    font-size: var(--header-size);
     color: black;
     font-weight: 400;
   }
@@ -14,18 +27,8 @@
   &__content {
     background: white;
     //padding: 0.5 * $spacer $spacer;
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
-
-    &--no-border {
-      border-top: unset;
-      border-bottom: unset;
-    }
+    border-top: var(--border-top);
+    border-bottom: var(--border-bottom);
   }
 
-  &--font-lg {
-    h2 {
-      font-size: $font-size-base;
-    }
-  }
 }
