@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Min Max Box</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="../../css/bundle.css">
+
+  <style>
+    /* apply the style to the element */
+    min-max-box#mmbox1 {
+      --layout: row;
+    }
+
+    min-max-box#mmbox2 {
+      --layout: column;
+      --text-color: red;
+    }
+
+
+  </style>
+
+  <script defer src="./min-max-box.js"></script>
+</head>
+
+<body style="padding:40px">
+
+  <div style="color: blue">
+    <h1> A row layout </h1>
+    <min-max-box id="mmbox1"></min-max-box>
+    <div class="spacer-3"></div>
+    <button onclick="showValue1()">Log value</button>
+  </div>
+
+  <div style="color: green">
+    <h1> A column layout </h1>
+    <min-max-box id="mmbox2"></min-max-box>
+    <div class="spacer-3"></div>
+    <button onclick="showValue2()">Log value</button>
+  </div>
+
+  <script>
+
+    function showValue1() {
+      console.log("Value is", mmbox1.value);
+    }
+
+    function showValue2() {
+      console.log("Value is", mmbox2.value);
+    }
+
+  </script>
+
+</body>
+</html>
