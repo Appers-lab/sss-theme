@@ -58,6 +58,8 @@
     align-items: center;
     background-color: $primary-color;
 
+    @include container;
+
     &__avatar {
         // profile img
         img {
@@ -65,17 +67,20 @@
             height: 45px;
             border: 2px solid white;
             border-radius: 50%;
-            margin-left: 1.25*$spacer;
-            margin-right: 1.25*$spacer;
+            margin-right: 1*$spacer;
         }
     }
 
     &__title {
+        min-width: 0; // this is for text-truncate
+
         // profile name
         h2 {
             font-weight: $font-weight-bold;
             font-size: $font-size-lg;
             color: white;
+
+            @include text-truncate();
         }
         // profile location
         p {
@@ -88,11 +93,16 @@
     &__menu {
         margin-left: auto;
 
+        menu {
+            flex-flow: nowrap;
+        }
+        
         // menu links
         menu > li > button {
             font-weight: $font-weight-bold;
             font-size: $font-size-lg;
             color: white;
+            padding-right: 0rem;
         }
         // close icon
         menu > li > button > i {

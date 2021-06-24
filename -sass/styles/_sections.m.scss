@@ -1,18 +1,31 @@
 
 .s-section {
-  background: #F9F9F9;
+  @include container;
 
   h2 {
-    padding: 1.125 * $spacer $spacer 0.375 * $spacer $spacer;
-    font-size: $font-size-base;
+    //padding: 1.125 * $spacer $spacer 0.375 * $spacer $spacer;
+    margin-top: 1.5*$spacer;
+    margin-bottom: $spacer;
+    font-size: $font-size-sm;
     color: black;
     font-weight: 400;
   }
 
   &__content {
     background: white;
-    padding: 0.5 * $spacer $spacer;
+    //padding: 0.5 * $spacer $spacer;
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
+
+    @at-root &--no-border {
+      border-top: unset;
+      border-bottom: unset;
+    }
+  }
+
+  &--font-lg {
+    h2 {
+      font-size: $font-size-base;
+    }
   }
 }

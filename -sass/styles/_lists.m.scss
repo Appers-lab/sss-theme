@@ -16,6 +16,22 @@
     }
   }
 
+  &__icon {
+    @at-root &--fill-circle {
+      display:flex;
+      background-color: $primary-color;
+      min-width: 36px;
+      min-height: 36px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: 1.25rem;
+        color: white;  
+      }
+    }
+  }
+  
   &__content {
     width: 100%;
     display: flex;
