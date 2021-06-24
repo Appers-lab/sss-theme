@@ -17,7 +17,7 @@
     border-top: 1px solid #E1E1E1;
     border-bottom: 1px solid #E1E1E1;
 
-    @at-root &--no-border {
+    &--no-border {
       border-top: unset;
       border-bottom: unset;
     }
