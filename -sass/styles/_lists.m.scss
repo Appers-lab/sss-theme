@@ -1,6 +1,13 @@
 
 .s-listview {
 
+  --content-border-bottom: 1px solid #{$light-grey};
+
+  &--no-item-border {
+    --content-border-bottom: unset;
+  }
+
+
   li {
     display: flex;
     align-items: center;
@@ -11,26 +18,42 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      margin-left: $spacer;
-      margin-right: $spacer;
+      margin-left: $padding-x-base;
+      margin-right: $padding-x-base;
     }
   }
 
+  &__icon {
+    margin-left: $padding-x-base;
+    margin-right: $padding-x-base;
+    display:flex;
+    background-color: $primary-color;
+    min-width: 36px;
+    min-height: 36px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 1.25rem;
+      color: white;
+    }
+  }
+  
   &__content {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $light-grey;
+    border-bottom: var(--content-border-bottom);
     padding: 0.6*$spacer $spacer;
     min-height: 3.5*$spacer;
   }
 
-  @at-root &--no-border &__content {
+  li:last-child &__content {
     border-bottom: unset;
   }
 
-  &__img + &__content {
+  &__img + &__content, &__icon + &__content {
     padding-left: 0;
   }
 
