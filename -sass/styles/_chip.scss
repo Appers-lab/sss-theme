@@ -1,0 +1,47 @@
+.s-chip {
+    background-color: $light-grey;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 1000px;
+    
+    $chip-height: 30px;
+    
+    &__image > img {
+        width: $chip-height;
+        height: $chip-height;
+        border-radius: 50%;
+    }
+    
+    &__image > i {
+        width: $chip-height;
+        height: $chip-height;
+        font-size: 20px;
+        border-radius: 50%;
+    }
+    
+    &__title {
+        margin: 0 0.5*$spacer;
+    }
+    
+    &__close {
+        height: $chip-height;
+    }
+    
+    &__close > i {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $grey;
+        color: $light-grey;
+    }
+    
+    &__close > i:hover {
+        color: $light-grey;
+        background-color: #555555;
+    }
+    
+}
