@@ -1,10 +1,11 @@
 .s-chip {
+    $chip-height: 30px;
+    
     background-color: $light-grey;
     display: inline-flex;
     align-items: center;
     border-radius: 1000px;
-    
-    $chip-height: 30px;
+    height: $chip-height;
     
     &__image > img {
         width: $chip-height;
@@ -15,8 +16,7 @@
     &__image > i {
         width: $chip-height;
         height: $chip-height;
-        font-size: 20px;
-        border-radius: 50%;
+        margin-left: 0.5*$spacer;
     }
     
     &__title {
