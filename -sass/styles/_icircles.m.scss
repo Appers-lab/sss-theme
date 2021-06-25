@@ -1,16 +1,15 @@
 
 .s-icircle {
-    --circle-radius: 12.5rem;
+    --circle-radius: 9rem;
     --circle-color: #{$primary-color};
     --text-color: white;
-    --box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 
     width: var(--circle-radius);
     height: var(--circle-radius);
     border-radius: 50%;
     background-color: var(--circle-color);
     color: var(--text-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     
@@ -20,7 +19,7 @@
     }
     
     &__icon {
-        font-size: 5rem;
+        font-size: 4rem;
         svg {
             width: 5rem;
             animation: test 0.2s ease-in-out;
@@ -32,12 +31,12 @@
     }
     
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: #fff;
         transition: font-size 0.2s ease-in-out;
     }
 
     &:hover h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 }
