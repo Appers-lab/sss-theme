@@ -1,9 +1,15 @@
 
-.s-icircle {
+.s-icircle {    
     --circle-radius: 12.5rem;
     --circle-color: #{$primary-color};
+    --icon-size: 5rem;
+    --font-size: 1.5rem;
     --text-color: white;
     --box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     width: var(--circle-radius);
     height: var(--circle-radius);
@@ -13,31 +19,45 @@
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    
+
     &:hover {
         background-color: shift-color($primary-color, 20%);
         transform: scale(1.1);
     }
     
     &__icon {
-        font-size: 5rem;
+        i {
+            font-size: var(--icon-size);
+        }
+
         svg {
-            width: 5rem;
-            animation: test 0.2s ease-in-out;
-            @keyframes test {
+            width: var(--icon-size);
+            height: var(--icon-size);
+            animation: init 0.2s ease-in-out;
+            @keyframes init {
                 from { width: 1rem; }
-                to   { width: 6rem; }
+                to   { width: calc(var(--icon-size)); }
             }
         }
     }
     
     h2 {
-        font-size: 1.5rem;
-        color: #fff;
+        font-size: var(--font-size);
+        color: var(--text-color);
         transition: font-size 0.2s ease-in-out;
     }
 
     &:hover h2 {
-        font-size: 1.8rem;
+        font-size: calc(1.2*var(--font-size));
+    }
+   
+    &--sm {
+        --circle-radius: 8rem;
+        --font-size: 1.25rem;
+    }
+
+    &--light {
+        --circle-color: white;
+        --text-color: #{$primary-color};
     }
 }
