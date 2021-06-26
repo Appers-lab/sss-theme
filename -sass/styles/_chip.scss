@@ -1,36 +1,37 @@
 .s-chip {
-    $chip-height: 30px;
+    --chip-height: 30px;
     
     background-color: $light-grey;
     display: inline-flex;
     align-items: center;
     border-radius: 1000px;
-    height: $chip-height;
+    height: var(--chip-height);
     
     &__image > img {
-        width: $chip-height;
-        height: $chip-height;
+        width: var(--chip-height);
+        height: var(--chip-height);
         border-radius: 50%;
     }
     
     &__image > i {
-        width: $chip-height;
-        height: $chip-height;
+        width: var(--chip-height);
+        height: var(--chip-height);
         margin-left: 0.5*$spacer;
     }
     
     &__title {
         margin: 0 0.5*$spacer;
+        white-space: nowrap;
     }
     
     &__close {
-        height: $chip-height;
+        height: var(--chip-height);
     }
     
     &__close > i {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
+        width: calc(0.75 * var(--chip-height));
+        height: calc(0.75 * var(--chip-height));
+        margin-right: 0.25*$spacer;
         border-radius: 50%;
         display: flex;
         align-items: center;
