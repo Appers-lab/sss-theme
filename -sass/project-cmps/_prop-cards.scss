@@ -120,20 +120,29 @@
 }
 
 .ss-prop-selection-section {
-  background-color: $primary-color-shade;
-  //color: $light-grey;
-  padding: 2rem;
+
+
+  --bg-color: #{$primary-color-shade};
+  --text-color: white;
+
+  &--light {
+    --bg-color: #{$primary-bg-light};
+    --text-color: black;
+  }
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 4*$spacer 2*$spacer;
   text-align: center;
 
   &__q {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.7rem;
+    //font-size: 1.7rem;
     font-weight: 600;
     border: 2px solid #fff;
     border-radius: 5px;
     padding:0.25rem;
-    color: white;
   }
 }
