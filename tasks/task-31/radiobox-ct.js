@@ -1,6 +1,4 @@
 
-// generator function that creates two classes RadioBox and RadioBoxGroup. These classes will use the closure of this function to communicate with each other.
-
 function controller() {
 
     /**
@@ -50,7 +48,6 @@ function controller() {
         setRadioboxGroupValue(group, "");
     }
 
-    // the radio group element: to be called "radio-box-group"
     const RadioBoxGroup = class extends HTMLElement {
 
         connectedCallback() {
@@ -77,29 +74,35 @@ function controller() {
         }
     };
 
-
-    // the radio box element: to be called "radio-box"
-    const RadioBox = class extends HTMLElement {
+    const RadioBox  = class extends HTMLElement {
 
         connectedCallback() {
 
-            this.state = false;
+            this.isRegular = !this.hasAttribute("custom");
+
+            // shadow dom only if it's a regular radiobox
+            if (this.isRegular)
+                this.attachShadow({ mode: "open" });
+
+            // state of the checkbox
+            this.state = false; //!!this.getAttribute("value");
+
+            // event handlers
+            this.addEventListener("click", this.toggle.bind(this));
 
             this.emptyAllowed = !this.hasAttribute("no-empty");
-
-            if (!this.hasAttribute("custom")) {
-                this.contentType = "default";
-                this.labelText = this.getAttribute("label") || this.innerHTML;
-            } else {
-                this.contentType = "custom";
-            }
 
             this.value = this.getAttribute("value") || "1";
             this.group = this.getAttribute("group") || "default";
 
             addRadiobox(this);
-            this.updateClass();
+
             this.render();
+
+            if (this.isRegular)
+                this.article = this.shadowRoot.querySelector("article");
+
+            this.updateClass();
         }
 
         // TODO: remove callback
@@ -112,26 +115,70 @@ function controller() {
         }
 
         updateClass() {
-            if (this.state)
+            if (this.state) {
                 this.classList.add("active");
-            else
+                this.isRegular && this.article.classList.add("active");
+            }
+            else {
                 this.classList.remove("active");
+                this.isRegular && this.article.classList.remove("active");
+            }
         }
 
         render() {
-            if (this.contentType === "default") {
-                this.classList.add("default");
-                this.innerHTML = `
-                    <div class="d-flex align-items-top">
-                        <div>
-                            <div>&#10687;</div>                
-                        </div>                        
-                        <label>${this.labelText}</label>                
-                    </div>
-                `;
-                this.labelElement = this.querySelector("label");
-            }
-            this.onclick = this.toggle.bind(this);
+
+            // custom radiobox has its own html contents, no need to generate/render content for it
+            if (!this.isRegular) return;
+
+            this.shadowRoot.innerHTML = `
+            <style>
+                #wrapper {
+                    display: flex; 
+                    align-items: flex-start;
+                    cursor: pointer;
+                }   
+               
+                #box {
+                  width: 1.45rem;
+                  height: 1.45rem;
+                  margin-right: var(--gutter-width);
+                  border: var(--box-border);
+                  border-radius: 50%;                  
+                }
+                
+                #box > div {                  
+                  display: none;
+                  width: 100%;
+                  height: 100%;
+                  background-color: var(--box-color-checked);            
+                  border-radius: 50%;                  
+                }
+                
+                #wrapper.active > #box {
+                  background-color: var(--box-background-color-checked);
+                  border: 1px solid var(--box-border-checked);
+                }
+                
+                #wrapper.active > #box > div {
+                  display: block;                  
+                }
+                
+                #wrapper #label {
+                    cursor: pointer;
+                    width: fit-content;
+                }
+          </style>
+    
+          <article id="wrapper">
+          
+            <div id="box" part="box">
+              <div></div>                
+            </div>
+            
+            <label id="label" part="label"><slot></slot></label>
+                            
+          </article>
+          `;
         }
 
         get checked() {
@@ -144,22 +191,19 @@ function controller() {
         }
 
         get text() {
-            if (this.contentType === "default")
-                return this.labelText;
+            if (this.isRegular)
+                return this.innerText;
             else
                 return undefined;
         }
 
         set text(val) {
-            if (this.contentType === "default")
-                this.labelElement.innerHTML = val;
+            if (this.isRegular)
+                this.innerHTML = val;
         }
     };
 
-    return {
-        RadioBoxGroup,
-        RadioBox
-    }
+    return {RadioBoxGroup, RadioBox};
 }
 
-module.exports = controller;
+module.exports = controller();

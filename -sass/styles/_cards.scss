@@ -1,0 +1,32 @@
+
+.s-card {
+    //border: 1px;
+    //border-style: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px lightgray;
+    
+    &__image > img {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    &__header {
+        //margin: 0px 10px;
+        padding: 0.75*$spacer $spacer;
+        border-bottom: 1px solid $light-grey;
+    }
+    
+    &__body {
+        padding: 1.5*$spacer $spacer;
+
+        h2, p {
+            margin-bottom: 0.5*$spacer;
+        }
+    }
+    
+    &__footer {
+        border-top: 1px solid $light-grey;
+        padding: 0.75*$spacer $spacer;
+    }
+}
+

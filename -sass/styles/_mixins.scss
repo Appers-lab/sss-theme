@@ -87,3 +87,8 @@
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
+
+@mixin container() {
+  padding-left: $padding-x-base;
+  padding-right: $padding-x-base;
+}

@@ -4,7 +4,7 @@
 
 .re-gallery {
 
-  .modal-content {
+
     background-color: black;
     color: white;
     padding: 0px 20px 55px 20px;
@@ -17,16 +17,17 @@
       font-size: 2rem;
       font-weight: normal;
     }
-  }
+
 
   .modal-header {
     border-bottom: unset;
   }
 
   .-wrapper {
-    height: 533px;
+    height: 425px;
+    width: 752px;
     position: relative;
-
+    margin: 0 auto;
   }
 
   .-img {
