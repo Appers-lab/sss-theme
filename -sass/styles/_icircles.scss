@@ -2,6 +2,7 @@
 .s-icircle {    
     --circle-radius: 12.5rem;
     --circle-color: #{$primary-color};
+    --circle-color-hover: #{shift-color($primary-color, 20%)};
     --icon-size: 5rem;
     --font-size: 1.5rem;
     --text-color: white;
@@ -16,12 +17,12 @@
     border-radius: 50%;
     background-color: var(--circle-color);
     color: var(--text-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: 0 0rem 0.5rem rgba(0, 0, 0, 0.3);//var(--box-shadow);
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 
     &:hover {
-        background-color: shift-color($primary-color, 20%);
+        background-color: var(--circle-color-hover);
         transform: scale(1.1);
     }
     
@@ -53,11 +54,12 @@
    
     &--sm {
         --circle-radius: 8rem;
-        --font-size: 1.25rem;
+        --font-size: 1rem;
     }
 
     &--light {
         --circle-color: white;
+        --circle-color-hover: #{$light-grey};
         --text-color: #{$primary-color};
     }
 }
