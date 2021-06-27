@@ -39,7 +39,8 @@ $include-column-box-sizing: true !default;
 /* Base components
 =============================== */
 @import "bootstrap5/containers";
-@import "bootstrap5/dropdown";
+@import "layouts/dropdown";
+@import "layouts/collapse";
 @import "layouts/menus";
 @import "bootstrap5/modal";
 @import "bootstrap5/tables";

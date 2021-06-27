@@ -1,0 +1,11 @@
+.dropdown {
+  position: relative;
+  &__content {
+    position: absolute;
+    display: none;
+
+    &--open {
+      display: block;
+    }
+  }
+}

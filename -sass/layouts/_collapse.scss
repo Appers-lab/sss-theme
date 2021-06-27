@@ -1,0 +1,10 @@
+.collapse {
+  position: relative;
+  &__content {
+    display: none;
+
+    &--open {
+      display: block;
+    }
+  }
+}
