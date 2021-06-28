@@ -1,22 +1,24 @@
 .s-chip {
     --chip-height: 30px;
     
-    background-color: $light-grey;
+    background-color: var(--background-color, $light-grey);
     display: inline-flex;
     align-items: center;
-    border-radius: 1000px;
+    border-radius: var(--chip-height);
     height: var(--chip-height);
     
-    &__image > img {
-        width: var(--chip-height);
-        height: var(--chip-height);
-        border-radius: 50%;
-    }
-    
-    &__image > i {
-        width: var(--chip-height);
-        height: var(--chip-height);
-        margin-left: 0.5*$spacer;
+    &__image {
+        img {
+            width: var(--chip-height);
+            height: var(--chip-height);
+            border-radius: 50%;
+        }
+        
+        i {
+            width: var(--chip-height);
+            height: var(--chip-height);
+            margin-left: 0.5*$spacer;
+        }
     }
     
     &__title {
@@ -26,23 +28,22 @@
     
     &__close {
         height: var(--chip-height);
+        
+        & > i {
+            width: calc(0.75 * var(--chip-height));
+            height: calc(0.75 * var(--chip-height));
+            margin-right: 0.25*$spacer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $grey;
+            color: var(--background-color, $light-grey);
+        }
+        
+        & > i:hover {
+            color: var(--background-color, $light-grey);
+            background-color: #555555;
+        }
     }
-    
-    &__close > i {
-        width: calc(0.75 * var(--chip-height));
-        height: calc(0.75 * var(--chip-height));
-        margin-right: 0.25*$spacer;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $grey;
-        color: $light-grey;
-    }
-    
-    &__close > i:hover {
-        color: $light-grey;
-        background-color: #555555;
-    }
-    
 }
