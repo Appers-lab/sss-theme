@@ -1,6 +1,5 @@
 .collapse {
   &__content {
-    overflow: hidden;
     top: 2rem;
 
     &--open {
@@ -9,8 +8,14 @@
   }
 
   &__toggle {
-    height: 1rem + $menu-link-padding-x;
-    &--open > span {
+    padding-top: $menu-link-padding-x;
+    padding-bottom: $menu-link-padding-x;
+    height: auto;
+    &::after{
+      content: '>';
+    }
+    &--open::after {
+      content: 'v';
       transform: rotate(90deg);
     }
   }

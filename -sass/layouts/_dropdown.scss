@@ -1,6 +1,7 @@
 .dropdown {
   position: relative;
   &__content {
+    overflow: hidden;
     position: absolute;
     display: none;
 

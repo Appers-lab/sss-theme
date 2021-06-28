@@ -1,14 +1,14 @@
 .dropdown {
   &__content {
-    overflow: hidden;
     top: 2rem;
-
     &--open {
       animation: dropdown-animation 0.5s ease-in forwards;
     }
   }
   &__toggle {
-    height: 1rem + $menu-link-padding-x;
+    padding-top: $menu-link-padding-x;
+    padding-bottom: $menu-link-padding-x;
+    height: auto;
     @include caret();
     &--open {
       @include caret(end);

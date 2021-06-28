@@ -1,6 +1,7 @@
 .collapse {
   position: relative;
   &__content {
+    overflow: hidden;
     display: none;
 
     &--open {
