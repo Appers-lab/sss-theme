@@ -1,6 +1,6 @@
 
 //desktop setting
-body, .container {
+body, .container, .s-modal--fl > * {
   min-width: 1200px;
 }
 
@@ -33,7 +33,7 @@ body, .container {
 @import "styles/steps";
 @import "styles/icircles";
 @import "styles/panels";
-@import "layouts/sticks";
+@import "styles/steppers";
 
 /* Dropdown
 =========================== */

@@ -1,0 +1,55 @@
+$steppers-active-bg-color: #2074FC;
+
+.s-stepper {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  
+  & > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+
+    & > li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > label {
+        height: 2 * $spacer;
+        width: 2 * $spacer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $light-grey;
+        color: $grey;
+        border-radius: 50%;
+        margin-bottom: 0.5 * $spacer;
+      }
+      & > p {
+        color: $grey;
+      }
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: $light-grey;
+        height: 2px;
+        left: 0;
+        top: 25%;
+        z-index: -1;
+      }
+    }
+
+    .active {
+      & > label {
+        background: $steppers-active-bg-color;
+        color: white;
+      }
+      & > p {
+        color: black;
+      }
+      
+    }
+  }
+}
