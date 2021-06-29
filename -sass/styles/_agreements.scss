@@ -1,0 +1,17 @@
+.s-agreement-box {
+  width: 100%;
+  height: 20vw;
+  overflow-y: scroll;
+  padding: 2*$spacer;
+  border: 1px solid $grey;
+  background-color: $primary-bg-light;
+
+  h2, p, ul {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size:1rem;
+    font-weight: bold;
+  }
+}
