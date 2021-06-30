@@ -2,10 +2,21 @@
 .ss-prop-card {
   //@include rounded();
 
+  --card-width: 100%;
+  --img-height: 170px;
+
+
+  width:var(--card-width);
+
+  &--popup {
+    --card-width: 120px;
+    --img-height: var(--card-width);
+  }
+
   &__img {
     position: relative;
-    width: 100%;
-    height: 170px;
+    width: var(--card-width);
+    height: var(--img-height);
     cursor: pointer;
     margin-bottom: 0.25rem;
     //overflow: hidden;
@@ -31,7 +42,7 @@
   &__brokerage{
     position: absolute;
     bottom: -0.4rem;
-    right: 0px;
+    right: 0;
     color: white;
     background-color: black;
     opacity: 0.8;

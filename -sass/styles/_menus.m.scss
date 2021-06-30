@@ -2,7 +2,7 @@
 .s-btn-menu {
 
     width: 100%;
-    padding: 0.25*$spacer 0 0.5*$spacer 0;
+    padding: 0.3*$spacer 0 0 0;
 
     --border-top: none;
     --border-bottom: none;
@@ -29,6 +29,8 @@
         --active-text-color: #{$grey};
     }
 
+
+
     li > button {
         color: var(--text-color);
         font-size: $font-size-sm;
@@ -39,6 +41,10 @@
 
         &.active {
             color: var(--active-text-color);
+        }
+
+        p {
+            margin-top:0.25em;
         }
     }
 }
