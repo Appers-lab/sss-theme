@@ -25,7 +25,8 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  ul {
     margin-bottom: 1rem;
   }
 
@@ -40,5 +41,9 @@
 
   ul li {
     margin-left: 1.4rem;
+  }
+
+  iframe {
+    max-width: 420px;
   }
 }
