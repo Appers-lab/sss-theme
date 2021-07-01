@@ -48,7 +48,7 @@ mo-dal {
 
   & > * {
     background-color: white;
-    padding: $spacer;
+    //padding: $spacer;
     width: var(--content-width);
     min-height: var(--min-content-height, 0);
   }

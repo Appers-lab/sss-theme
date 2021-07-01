@@ -100,3 +100,9 @@ radio-box.default {
 min-max-box {
   --layout: row;
 }
+
+@media screen and (max-width: map-get($grid-breakpoints, "sm")){
+  min-max-box {
+    --layout: stack;
+  }
+}

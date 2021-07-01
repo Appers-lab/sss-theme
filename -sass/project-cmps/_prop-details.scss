@@ -1,43 +1,38 @@
 /* Prop details modal
 ======================= */
 
-@mixin re-modal-details-endo() {
+@mixin ss-prop-details-endo() {
   margin-bottom: 1.25rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #bbb;
 }
 
-.re-modal-details {
+.ss-prop-details {
 
   //width: $details-modal-col2-width;
-  padding: 0px 25px;
-  margin-bottom: 35px;
+  //padding: 0px 25px;
+  //margin-bottom: 35px;
 
-  h3,h4 {
+  /*h3,h4 {
     margin-bottom: unset;
+  }*/
+
+  &__price {
+    color: $primary-color;
+    font-weight: 400;
   }
 
-
-  .-header {
-
-    @include re-modal-details-endo();
-
-    .-price {
-      color: $primary-color;
-      font-weight: 400;
-    }
-
-    .-spf {
-      //line-height: 33px;
-      margin-left: 0.625rem;
-      font-style: italic;
-    }
-
-    .-address {
-      font-size: 0.75rem;
-      color: #777;
-    }
+  &__spf {
+    //line-height: 33px;
+    //margin-left: 0.625rem;
+    font-style: italic;
   }
+
+  &__address {
+    font-size: 0.75rem;
+    color: $grey;
+  }
+
 
   .-section {
 
@@ -47,7 +42,7 @@
     }
 
     &:not(:last-child) {
-      @include re-modal-details-endo();
+      @include ss-prop-details-endo();
     }
   }
 

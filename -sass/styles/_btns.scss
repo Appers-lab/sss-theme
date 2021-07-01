@@ -36,6 +36,7 @@ button:disabled {
 
   &:hover:not(:disabled) {
     background-color: $primary-color-shade;
+    color: white;
   }
 
   &:focus {

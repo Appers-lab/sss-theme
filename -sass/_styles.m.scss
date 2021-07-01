@@ -13,10 +13,12 @@ $spacer: 16px;
 
 /* Base components
 =============================== */
+@import "styles/agreements";
 @import "styles/btns";
 @import "styles/headers.m";
 @import "styles/contents.m";
-@import "styles/menus.m";
+@import "styles/menus";
+@import "styles/modals.m";
 @import "styles/cards";
 @import "styles/chip";
 @import "styles/lists.m";
