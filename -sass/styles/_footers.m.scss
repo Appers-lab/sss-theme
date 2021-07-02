@@ -7,59 +7,15 @@
   background: $light-grey;
   font-size: $font-size-sm;
 
-  &__mortgage-licence {
-    margin-bottom: 0.5 * $spacer;
-    text-align: justify;
-  }
+  a {
+    color: black;
 
-  &__real-estate-licence {
-    margin-bottom: 1.5 * $spacer;
-    text-align: justify;
-  }
-
-  &__contact-info {
-    display: flex;
-    margin-bottom: 1.5 * $spacer;
-
-    .bi-envelope {
-      margin-right: 0.2 * $spacer;
-    }
-
-    &__contact-info__email {
-      margin-right: 0.5 * $spacer;
-    }
-
-    .bi-headset {
-      margin-left: 0.5 * $spacer;
-      margin-right: 0.2 * $spacer;
-    }
-  }
-
-  &__copyright {
-    margin-bottom: $spacer;
-
-    &__copyrights {
-      margin-bottom: 0.5 * $spacer;
-    }
-
-    &__term-policy {
-      display: flex;
-      justify-content: center;
+    &:visited {
       color: black;
+    }
 
-      & > a {
-        color: black;
-
-        &:visited {
-          color: black;
-        }
-
-        &:hover {
-            color: $dark-grey;
-        }
-      }      
+    &:hover {
+      color: $dark-grey;
     }
   }
-
-  
 }
