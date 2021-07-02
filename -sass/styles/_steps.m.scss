@@ -1,0 +1,20 @@
+
+.s-steps-leftbar {
+
+  &__step {
+    font-weight: bold;
+    font-size: $font-size-sm;
+    background-color: #3f48cc;
+    color: white;
+    text-align: center;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  &__content {
+    margin-bottom: 2*$spacer;
+  }
+
+}

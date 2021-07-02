@@ -4,6 +4,12 @@
 $details-modal-y-margin: 72px;
 $details-modal-col2-width: 500px;
 
+/* styles
+=========================== */
+appos-edit {
+  display: block;
+}
+
 /* Components
 ========================= */
 @import "project-cmps/banners";
@@ -15,4 +21,4 @@ $details-modal-col2-width: 500px;
 @import "project-cmps/prop-cards";
 @import "project-cmps/prop-details";
 @import "project-cmps/search-map";
-@import "project-cmps/vt-modal";
+

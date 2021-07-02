@@ -13,10 +13,12 @@ $spacer: 16px;
 
 /* Base components
 =============================== */
+@import "styles/agreements";
 @import "styles/btns";
 @import "styles/headers.m";
 @import "styles/contents.m";
-@import "styles/menus.m";
+@import "styles/menus";
+@import "styles/modals.m";
 @import "styles/cards";
 @import "styles/chip";
 @import "styles/lists.m";
@@ -29,6 +31,7 @@ $spacer: 16px;
 @import "styles/sections.m";
 @import "styles/action-sheet.m";
 @import "styles/steppers";
+@import "styles/steps.m";
 @import "styles/agreements";
 
 /* To be moved/refactored
