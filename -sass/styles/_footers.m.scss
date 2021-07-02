@@ -1,21 +1,26 @@
 .s-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  //
   padding: $spacer;
-  background: $light-grey;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: white; //$light-grey;
   font-size: $font-size-sm;
+  border-top: 1px solid #E1E1E1;
 
-  a {
-    color: black;
+  i {
+    font-size: 2em;
+  }
 
-    &:visited {
-      color: black;
-    }
+  section {
+    text-align: center;
+    margin-bottom: 0.25*$spacer;
 
-    &:hover {
+    a, span {
       color: $dark-grey;
     }
+
   }
+
+
+
 }
