@@ -1,0 +1,26 @@
+.s-footer {
+
+  //
+  padding: $spacer;
+  padding-bottom: env(safe-area-inset-bottom);
+  background: white; //$light-grey;
+  font-size: $font-size-sm;
+  border-top: 1px solid #E1E1E1;
+
+  i {
+    font-size: 2em;
+  }
+
+  section {
+    text-align: center;
+    margin-bottom: 0.25*$spacer;
+
+    a, span {
+      color: $dark-grey;
+    }
+
+  }
+
+
+
+}
