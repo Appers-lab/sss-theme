@@ -73,3 +73,36 @@
     opacity: 0.5;
   }
 }
+
+.s-checkbox-list, .s-radiobox-list {
+  --item-padding: #{0.6*$spacer} #{$spacer};
+
+  margin: 0.5*$spacer 0;
+
+  li {
+    list-style-type: none;
+    padding: var(--item-padding);
+
+    .round-box::part(box) {
+      border-radius: 50%;
+    }
+
+    //item underline
+    &::after {
+      content: "";
+      display: block;
+      margin-left: 2*$spacer;
+      border-bottom: 1px solid #{$light-grey};
+      padding-bottom: 0.8*$spacer;
+    }
+  }
+
+  &--no-item-border {
+    --item-padding: #{0.4*$spacer} #{$spacer};
+    li {
+      &::after {
+        display: none;
+      }
+    }
+  }
+} 
