@@ -47,9 +47,17 @@
             a, button {
                 font-weight: $font-weight-normal;
                 color: var(--text-color);
+                i {
+                    //font-size: 2*$font-size-sm;
+                }
             }
         }
     }
+
+    &__right-menu {
+        margin-left: auto;
+    }
+
 }
 
 .s-profile-header {

@@ -1,16 +1,16 @@
-$steppers-active-bg-color: #2074FC;
 
 .s-stepper {
   text-align: center;
-  position: relative;
   width: 100%;
   
   & > ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    position: relative;
 
     & > li {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,11 +25,15 @@ $steppers-active-bg-color: #2074FC;
         color: $grey;
         border-radius: 50%;
         margin-bottom: 0.5 * $spacer;
+        z-index: 1;
+        font-size: $font-size-base;
       }
       & > p {
         color: $grey;
+        font-size: $font-size-sm;
+        font-weight: 300;
       }
-      &:after {
+      /*&:after {
         position: absolute;
         content: "";
         width: 100%;
@@ -37,17 +41,28 @@ $steppers-active-bg-color: #2074FC;
         height: 2px;
         left: 0;
         top: 25%;
-        z-index: -1;
-      }
+        z-index: 0;
+      }*/
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      background: $light-grey;
+      height: 2px;
+      left: 0;
+      top: $spacer;
+      z-index: 0;
     }
 
     .active {
       & > label {
-        background: $steppers-active-bg-color;
+        background: $primary-color;
         color: white;
       }
       & > p {
-        color: black;
+        color: $primary-color;
       }
       
     }

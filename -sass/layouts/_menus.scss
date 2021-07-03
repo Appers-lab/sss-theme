@@ -4,20 +4,28 @@
 // `<nav>`s, `<ul>`s or `<ol>`s.
 
 menu {
+
+  --link-padding-x: #{$menu-link-padding-x};
+  --link-padding-y: 0;
+
   display: flex;
   flex-wrap: wrap;
+  flex-direction: var(--flex-direction, row);
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
   align-items: center;
 
-  & > li > a, & > li > button {
-    display: block;
-    padding: 0 $menu-link-padding-x;
+  &.menu--column, &.menu--stack {
+    --flex-direction: column;
   }
 
-  &.menu--column {
-    flex-direction: column;
+  & > li > a, & > li > button {
+    display: block;
+    padding-top: var(--link-padding-y);
+    padding-bottom: var(--link-padding-y);
+    padding-left: var(--link-padding-x);
+    padding-right: var(--link-padding-x)
   }
 }
 
@@ -26,6 +34,8 @@ menu {
 //
 
 menu.menu--fill {
+  --link-padding-x: 0;
+
   > li > a,
   > li > button,
   > li {
@@ -35,6 +45,8 @@ menu.menu--fill {
 }
 
 menu.menu--justified {
+  --link-padding-x: 0;
+
   > li > a,
   > li > button,
   > li {

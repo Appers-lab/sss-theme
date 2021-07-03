@@ -1,0 +1,45 @@
+
+/* content section
+(blog post, static pages, etc)
+===================================== */
+
+.s-content {
+  //padding: 2rem;
+  color: $body-color;
+  letter-spacing: 0.063px;
+  line-height: 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+
+  p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  p,
+  ul li {
+    line-height: 1.8;
+  }
+
+  ul li {
+    margin-left: 1.4rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+}

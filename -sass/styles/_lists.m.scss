@@ -8,9 +8,10 @@
   }
 
 
-  li {
+  li > a, li > button {
     display: flex;
     align-items: center;
+    color: unset;
   }
 
   &__img {

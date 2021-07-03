@@ -2,79 +2,112 @@
 /* modal gallery
 =================== */
 
-.re-gallery {
+.ss-gallery-display {
+  background-color: black;
+  color: white;
+  //padding: 0px 20px 55px 20px;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding: 2rem;
 
+  &__wrapper {
+    height: 100%;
+    width:100%;
+    position: relative;
+    max-width: 1200px;
+  }
 
-    background-color: black;
+  &__img {
+    @include cover();
+
+    img {
+      //@include rounded();
+    }
+  }
+
+  &__footer {
     color: white;
-    padding: 0px 20px 55px 20px;
+    background-color: black;
+    padding: 0.1rem;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    opacity:0.8;
 
-    .close, h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
       color: white;
+      font-size: 1.5rem;
+
+      &:disabled {
+        color: $grey;
+      }
+
     }
 
-    .close {
-      font-size: 2rem;
-      font-weight: normal;
+  }
+
+  /*&__next, &__prev {
+    @include center(true, false);
+    color: white;
+    border: unset;
+    background-color: black;
+    font-size: 2.625rem;
+    padding:1rem;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: white;
+      color: black;
+      font-weight:bold;
     }
 
+    outline: 0;
+
+  }
+
+  &__prev {
+    left:0;
+  }
+
+  &__next {
+    right:0;
+  }
+
+  &__page-num {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    width:100%;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0;
+    left:0;
+    opacity:0.8;
+  }*/
+
+  /* to be removed */
+  .close, h4 {
+    color: white;
+  }
+
+  .close {
+    font-size: 2rem;
+    font-weight: normal;
+  }
 
   .modal-header {
     border-bottom: unset;
   }
-
-  .-wrapper {
-    height: 425px;
-    width: 752px;
-    position: relative;
-    margin: 0 auto;
-  }
-
-  .-img {
-    @include cover();
-
-    img {
-      @include cover();
-      @include rounded();
-      object-fit:cover;
-    }
-  }
-
-  .-next, .-prev {
-    @include center(true, false);
-    color: white;
-    border: unset;
-    background-color: transparent;
-    font-size: 2.625rem;
-
-    &:hover {
-      background-color: #999;
-      font-weight:bold;
-    }
-  }
-
-  .-prev {
-    left:-50px;
-
-    &:after {
-      content: "<";
-    }
-  }
-
-  .-next {
-    right:-50px;
-
-    &:after {
-      content: ">";
-    }
-  }
-
-  .-page-num {
-    color: white;
-    text-align: center;
-    padding-top:0.5rem;
-  }
 }
+
 
 
 /* prop gallery
