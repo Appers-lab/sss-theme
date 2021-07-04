@@ -12,7 +12,7 @@ mo-dal {
   }
 
   --align-x: center;
-  --padding: 3rem 0 0 0;
+  --margin-top: #{3*$spacer};
   --open-animation: fade-in 0.4s ease-in-out;
   --close-animation: fade-out 0.4s ease-in-out;
 
@@ -39,7 +39,7 @@ mo-dal {
   }
 
   &.s-modal--fl {
-    --padding: 0;
+    --margin-top: 0;
     --content-width: 100vw;
     --min-content-height: 100vh;
     --open-animation: slide-in-bottom 0.4s ease-in-out;
