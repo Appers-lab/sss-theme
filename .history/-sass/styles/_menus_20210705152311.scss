@@ -27,7 +27,7 @@ menu > li > a, menu > li > button {
     cursor: default;
     border-bottom: 2px solid $primary-color;
     &:hover {
-      font-size: $font-size-base;
+      //font-size: $font-size-base;
     }
   }
 
@@ -88,7 +88,6 @@ menu.s-btn-menu {
   }
 }
 
-
 menu.s-menu-pilled {
   display:flex;
   flex-direction: row;
@@ -96,14 +95,13 @@ menu.s-menu-pilled {
   align-items: center;
   background-color: #ececec;
   border-radius: 10px;
+  margin: 1em;
   padding-bottom: 5px;
   padding-top: 5px;
   width: 100vw;
 
   & > li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
     border-radius: 10px;
     margin-left: 5px;
     margin-right: 5px;
