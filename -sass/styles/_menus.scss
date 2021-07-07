@@ -27,7 +27,7 @@ menu > li > a, menu > li > button {
     cursor: default;
     border-bottom: 2px solid $primary-color;
     &:hover {
-      font-size: $font-size-base;
+      // font-size: $font-size-base;
     }
   }
 
@@ -87,7 +87,6 @@ menu.s-btn-menu {
     }
   }
 }
-
 
 menu.s-menu-pilled {
   display:flex;
