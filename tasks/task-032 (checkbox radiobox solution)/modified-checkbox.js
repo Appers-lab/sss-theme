@@ -62,8 +62,8 @@ class CheckBox extends HTMLElement {
             }   
            
             #box {
-              width: 1.25rem;
-              height: 1.25rem;
+              min-width: 1.25rem;
+              min-height: 1.25rem;
               margin-right: var(--gutter-width);
               border: 1px solid var(--box-border);
             }
@@ -85,7 +85,7 @@ class CheckBox extends HTMLElement {
             
             #wrapper #label {
                 cursor: pointer;
-                width: fit-content;
+                width: 100%;
             }        
       </style>
 

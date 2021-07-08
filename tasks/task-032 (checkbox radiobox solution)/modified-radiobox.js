@@ -133,8 +133,8 @@ class RadioBox extends HTMLElement {
             }   
             
             #box {
-                width: 1.25rem;
-                height: 1.25rem;
+                min-width: 1.25rem;
+                min-height: 1.25rem;
                 margin-right: var(--gutter-width);
                 border: var(--box-border);
                 border-radius: 50%;                 
@@ -147,8 +147,6 @@ class RadioBox extends HTMLElement {
             
             #box > svg {      
                 display: none;
-                width: 100%;
-                height: 100%;          
             }
             
             #wrapper.active > #box {
@@ -162,7 +160,7 @@ class RadioBox extends HTMLElement {
             
             #wrapper #label {
                 cursor: pointer;
-                width: fit-content;
+                width: 100%;
             }
         </style>
 
