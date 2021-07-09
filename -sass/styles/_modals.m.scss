@@ -16,6 +16,7 @@ mo-dal {
     background-color: white;
     width: var(--content-width);
     min-height: var(--min-content-height, 0);
+    padding-bottom: 120px; //constant/env(safe-area-inset-bottom); -> none worked for safari ...
   }
 
   &.s-drawer {
