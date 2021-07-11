@@ -16,10 +16,9 @@ pagi-nation {
         --hover-bg-color: #{$primary-bg-light};
 
         &.active {
-          --text-color: black;
-          --bg-color: #{$light-grey};
-          --hover-text-color: black;
-          --hover-bg-color: #{$light-grey};
+          --text-color: #{$grey};
+          --hover-text-color: #{$grey};
+          --hover-bg-color: white;
         }
 
         &[role=prev], &[role=next], &[role=more] {
