@@ -15,6 +15,11 @@
     //list-style: none;
     display: flex;
     margin-bottom: 2rem;
+
+    iframe {
+      width: 560px;
+      height: 315px;
+    }
   }
  
   &__step{
