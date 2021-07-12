@@ -112,7 +112,7 @@
 
 /* prop gallery
 ========================= */
-.re-modal-gallery {
+.ss-gallery-grid {
 
   //width: calc(100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2)));
 
@@ -121,17 +121,18 @@
     margin: 2.5px;
     overflow: hidden;
     cursor: pointer;
+    height: 100px;
 
-    img {
-      @include cover();
-      object-fit: cover;
+    /*img {
+      //@include cover();
+      //object-fit: cover;
 
       height: 100px; //calc((100vw - (#{$details-modal-col2-width} + (#{$details-modal-y-margin} * 2))) * 3 / 8);
 
       &:hover {
         @include image-hover-grow();
       }
-    }
+    }*/
   }
 
   .-iframe-card {

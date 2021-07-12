@@ -1,0 +1,28 @@
+
+.s-section {
+
+  --bg-color: transparent;
+
+  padding: 3*$spacer;
+  background-color: var(--bg-color);
+
+  &--light {
+    --bg-color: #{$primary-bg-light};
+  }
+
+  hgroup {
+    text-align: center;
+    margin-bottom: 3*$spacer;
+
+    h2 {
+
+    }
+
+    p {
+      color: $grey;
+      margin-top:$spacer;
+      font-weight:300;
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+
+lazy-img {
+  & > div {
+    position: relative;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    @include cover();
+
+    & > div {
+      @include center(true, true);
+    }
+
+  }
+}
