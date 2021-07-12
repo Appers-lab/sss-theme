@@ -1,32 +1,27 @@
 .s-banner {
-    --banner-width: 100vw;
     --banner-height: 200px;
     
-    width: var(--banner-width);
     height: var(--banner-height);
     
     &__content {
         position: relative;
-        top: calc(-1 * var(--banner-height));
+        top: -100%; // 100% so that __overlay is positioned correctly
         color: white;
-        width: var(--banner-width);
         height: var(--banner-height);
         z-index: 3;
     }
     
     &__img {
         position: relative;
-        width: var(--banner-width);
         height: var(--banner-height);
         z-index: 1;
     }
     
     &__overlay {
-        position: absolute;
-        top: 0px;
+        position: relative;
+        top: -200%; // 200% since __overlay is after __content in HTML
         opacity: 0.5;
         background-color: black;
-        width: var(--banner-width);
         height: var(--banner-height);
         z-index: 2;
     }
