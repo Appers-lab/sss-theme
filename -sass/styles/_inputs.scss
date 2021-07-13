@@ -48,7 +48,7 @@ check-box {
   --box-border-checked: black;
   --box-content: block;
   --box-color-checked: white;
-  --box-background-color-checked: #3f48cc;
+  --box-background-color-checked: #{$primary-color};
   --gutter-width: 0.5rem;
 
   width: fit-content;
@@ -61,11 +61,10 @@ check-box {
 radio-box {
   --label-color: inherit;
   --label-color-checked: inherit;
-  --box-border: #aaa;
-  --box-border-checked: #{$primary-color};
+  --box-border: 1px solid #aaa;
+  --box-border-checked: 1px solid #{$primary-color};
   --box-color-checked: #{$primary-color};
   --box-background-color-checked: transparent;
-  --box-border: 1px solid #aaa;
   --gutter-width: 0.5rem;
 
   width: fit-content;
