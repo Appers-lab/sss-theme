@@ -1,0 +1,49 @@
+
+pagi-nation {
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+
+    li {
+      button {
+        --text-color: #{$primary-color};
+        --bg-color: white;
+        --hover-text-color: #{$primary-color};
+        --hover-bg-color: #{$primary-bg-light};
+
+        &.active {
+          --text-color: #{$grey};
+          --hover-text-color: #{$grey};
+          --hover-bg-color: white;
+        }
+
+        &[role=prev], &[role=next], &[role=more] {
+          border: 1px solid $light-grey;
+          /*--text-color: white;
+          --bg-color: #{$primary-color};
+          --hover-text-color: white;
+          --hover-bg-color: #{$primary-color-shade};*/
+        }
+
+        padding: .375rem .75rem;
+        //border: 1px solid $light-grey;
+        color: var(--text-color);
+        background-color: var(--bg-color);
+
+        &:hover {
+          color: var(--hover-text-color);
+          background-color: var(--hover-bg-color);
+        }
+
+
+      }
+    }
+
+
+  }
+
+}
