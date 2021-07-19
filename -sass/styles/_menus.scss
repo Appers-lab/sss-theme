@@ -27,7 +27,7 @@ menu > li > a, menu > li > button {
     cursor: default;
     border-bottom: 2px solid $primary-color;
     &:hover {
-      //font-size: $font-size-base;
+      // font-size: $font-size-base;
     }
   }
 
@@ -85,5 +85,32 @@ menu.s-btn-menu {
     p {
       margin-top:0.25em;
     }
+  }
+}
+
+menu.s-menu-pilled {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ececec;
+  border-radius: 0.8*$spacer;
+  padding: 0.4*$spacer;
+  width: 100vw;
+
+  & > li {
+    border-radius: 0.8*$spacer;
+    width: 25%;
+    text-align: center;
+  }
+  
+  & > li:first-of-type {
+    background-color: white;
+  }
+
+  & a:active, button:active {
+    color: black;
+    background-color: #c7c7c7;
+    border-radius: 0.8*$spacer;
   }
 }
