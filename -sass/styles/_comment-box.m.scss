@@ -44,9 +44,15 @@ $header_line-height: 50px;
       border-radius: 50%;
       object-position: 0px 0px;
     }
-
     &-right {
       padding: 0 10px 10px;
+      & .bi.bi-heart-fill {
+        color: red;
+        animation:1000ms like-heart-animation ease-in-out;
+      }
+      & .bi.bi-heart {
+        color: rgba(170, 170, 170, 1);
+      }
     }
 
     &-top {
@@ -65,4 +71,11 @@ $header_line-height: 50px;
       color: rgba(80, 80, 80, 1);
     }
   }
+}
+
+@keyframes like-heart-animation{ 
+  0% { opacity:0; transform:scale(0); }
+  15% { opacity:.9; transform:scale(1.2); }
+  30% { transform:scale(.95); }
+  80% { opacity:.9; transform:scale(1); }
 }
