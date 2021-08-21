@@ -3,7 +3,7 @@
   //@include rounded();
 
   --card-width: 100%;
-  --img-height: 170px;
+  --img-height: 225px;
 
 
   width:var(--card-width);
@@ -75,13 +75,14 @@
   }
 
   &__essentials {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 0.8rem;
     color: $body-color;
   }
 
   &__price {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     margin-right: 0.3125rem;
     color: #ff6d00;
   }
