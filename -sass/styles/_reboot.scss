@@ -18,11 +18,7 @@ h4,
 h5,
 h6 {
   color: black;
-  font-weight: 500;
-}
-
-h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 img {
@@ -77,4 +73,8 @@ textarea {
 
 button {
   height: $input-height;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
 }
