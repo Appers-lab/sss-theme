@@ -6,8 +6,8 @@
   height: 100vh;
 
   &__topbar {
-    padding: 0.5rem;
-    border: 0.25rem double $dark-grey;
+    padding: 0 0 1rem 0;
+    //border: 0.25rem double $dark-grey;
   }
 
   data-map {
