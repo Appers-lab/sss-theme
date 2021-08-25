@@ -4,6 +4,8 @@
 
   --card-width: 100%;
   --img-height: 225px;
+  border: 1px solid $body-color;
+
 
 
   width:var(--card-width);
@@ -53,6 +55,8 @@
     font-size: 0.6875rem;
     color: black;
     padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+
+    position: relative;
     
     div, span {
       @include dot-text-overflow();
@@ -66,32 +70,37 @@
 
   &__address {
     color: $dark-grey;
-
   }
 
   &__map-btn {
-    font-size: 0.9rem;
-    display: flex;
+    font-size: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.25*$spacer;
+    border: 1px solid $body-color;
+    color: $body-color;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color: #ebf0f7;
   }
 
-  &__essentials {
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: $body-color;
+  &__essentials {    
+    font-size: $font-size-sm;
+    //color: $body-color;
   }
 
   &__price {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 700;
     margin-right: 0.3125rem;
-    color: #ff6d00;
+    //color: #ff6d00;
   }
   &__price-psf {
     font-style: italic;
     margin-left: 0.3125rem;
     /* text-decoration: underline; */
-    color: #212529;
-    background-color: #eee;
+    //color: #212529;
+    //background-color: #eee;
     border-radius: 2px;
     padding: 0.125rem;
   }
@@ -99,7 +108,7 @@
 
   &:focus {
     //outline: none;
-    border: 3px solid rgba(235, 17, 17, 0.5);
+    border: 3px solid rgba(56, 17, 17, 0.5);
 
 
     animation: pulse 0.5s 6;
@@ -128,7 +137,7 @@
           box-shadow: 0 0 0 0 rgba(204, 44, 44, 0);
       }
     }
-   }
+   } 
 }
 
 .ss-prop-selection-section {

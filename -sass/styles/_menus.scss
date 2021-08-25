@@ -1,43 +1,55 @@
 
 menu {
+  
+  --bg-color: transparent;
+  --color-focus: #{$primary-color-shade};  
+  --color-link: #{$grey};
+  --color-link-active: #{$primary-color};
   --link-padding-y: #{0.5*$spacer};
-}
 
-menu > li > a,
-menu > li > button {
-  font-size: $font-size-base;
-  font-weight: normal;
-  color: $grey;
-  //text-decoration: none;
-  //padding-top: 0.5*$spacer;
-  //padding-bottom: 0.5*$spacer;
-  //cursor: pointer;
-}
-
-//@include transition($nav-link-transition);
-menu > li > a, menu > li > button {
-  &:hover,
-  &:focus {
-    color: $primary-color-shade;
-    //font-size: 1.05em;
+  &.menu__dark {
+    --bg-color: #{$primary-color};
+    --color-link-active: white;  
+    --color-focus: white; 
   }
 
-  &.active {
-    color: $primary-color;
-    cursor: default;
-    border-bottom: 2px solid $primary-color;
-    &:hover {
-      //font-size: $font-size-base;
+
+  & > li > a,
+  & > li > button {
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    color: var(--color-link);
+    //text-decoration: none;
+    //padding-top: 0.5*$spacer;
+    //padding-bottom: 0.5*$spacer;
+    //cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--color-focus);
+      //font-size: 1.05em;
+    }
+
+    &.active {
+      color: var(--color-link-active);
+      cursor: default;
+      border-bottom: 2px solid var(--color-link-active);
+      &:hover {
+        //font-size: $font-size-base;
+      }
+    }
+
+    // Disabled state lightens text
+    &[disabled] {
+      color: $grey;
+      pointer-events: none;
+      cursor: default;
     }
   }
 
-  // Disabled state lightens text
-  &[disabled] {
-    color: $grey;
-    pointer-events: none;
-    cursor: default;
-  }
 }
+
+
 
 menu.s-btn-menu {
 

@@ -1,4 +1,46 @@
 
 .ss-search-page-title-bar {
-  background-color: $primary-color;
+
+  --bg-color: #{$primary-color};
+  --color: white;
+
+  background-color: var(--bg-color);
+  color: var(--color);
+
+  a {
+    color: $grey;
+  }
+}
+
+.ss-search-bar-header {
+
+  background-color: #eee;
+  padding: $spacer 0;
+
+  input, select {
+    border: 2px solid #cfcfcf;
+  }
+
+  label {
+    font-weight: bold;
+    font-size:1.2rem;
+  }
+
+  &__action {
+    font-size:1.2rem;
+    color: $body-color;
+    border: 2px solid $body-color;
+    border-radius: 15px;
+    width: 120px;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+  }
+
+  &__go {
+    font-size:1.2rem;
+  }
+
 }
