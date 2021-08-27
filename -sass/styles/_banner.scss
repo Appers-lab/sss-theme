@@ -1,0 +1,32 @@
+.s-banner {
+    --banner-height: 200px;
+    
+    position: relative; // This is required so that elements with position:absolute start on the s-banner rather than on <body>.
+    height: var(--banner-height);
+    width: 100%;
+    
+    &__content {
+        position: absolute;
+        color: white;
+        height: var(--banner-height);
+        width: 100%;
+        z-index: 3;
+    }
+    
+    &__img {
+        position: absolute;
+        height: var(--banner-height);
+        width: 100%;
+        z-index: 1;
+    }
+    
+    &__overlay {
+        position: absolute;
+        opacity: 0.5;
+        background-color: black;
+        height: var(--banner-height);
+        width: 100%;
+        z-index: 2;
+    }
+    
+}
