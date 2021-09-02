@@ -51,5 +51,23 @@ mo-dal {
     //padding: $spacer;
     width: var(--content-width);
     min-height: var(--min-content-height, 0);
+    padding: 1.5*$spacer;
   }
+
+}
+
+.modal-header {
+
+  display: flex;
+
+  border-bottom: 1px solid $grey;
+  padding-bottom: 0.5*$spacer;
+
+  .close {
+    display: block;
+    margin-left: auto;
+    font-size: 1.8rem;
+    color: #dc4f4f;
+  }
+
 }
